@@ -42,3 +42,5 @@
 .\objects\mpu6050.o: ..\Bsp\ring_buffer.h
 .\objects\mpu6050.o: ..\Bsp\millisecondtimer.h
 .\objects\mpu6050.o: ..\Hardsware\Mpu6050\mpu6050.h
+.\objects\mpu6050.o: ..\RosLibs\geometry_msgs/Vector3.h
+.\objects\mpu6050.o: ..\RosLibs\ros/msg.h

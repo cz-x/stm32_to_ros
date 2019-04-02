@@ -698,7 +698,7 @@ I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_spi.h)(0x58953819)
 I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_tim.h)(0x58953819)
 I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h)(0x58953819)
 I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x58953819)
-F (..\User\main.c)(0x58953819)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Libraries\CMSIS -I ..\Libraries\STM32F10x_StdPeriph_Driver\inc -I ..\User -I ..\RosLibs -I ..\Bsp -I ..\Hardsware\Mpu6050 -I ..\Hardsware --cpp-I.\RTE\_moving_car-I"F:\Program Files (x86)\Keil5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include"-I"F:\Program Files (x86)\Keil5\ARM\CMSIS\Include"-D__UVISION_VERSION="526" -DSTM32F10X_CL -DUSE_STDPERIPH_DRIVER-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
+F (..\User\main.c)(0x5CA2F580)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Libraries\CMSIS -I ..\Libraries\STM32F10x_StdPeriph_Driver\inc -I ..\User -I ..\RosLibs -I ..\Bsp -I ..\Hardsware\Mpu6050 -I ..\Hardsware --cpp-I.\RTE\_moving_car-I"F:\Program Files (x86)\Keil5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include"-I"F:\Program Files (x86)\Keil5\ARM\CMSIS\Include"-D__UVISION_VERSION="526" -DSTM32F10X_CL -DUSE_STDPERIPH_DRIVER-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
 I (..\Libraries\CMSIS\stm32f10x.h)(0x58953819)
 I (..\Libraries\CMSIS\core_cm3.h)(0x58953819)
 I (F:\Program Files (x86)\Keil5\ARM\ARMCC\include\stdint.h)(0x599EDB3E)
@@ -932,9 +932,9 @@ I (..\RosLibs\ros/time.h)(0x5B96216E)
 I (..\RosLibs\ros/duration.h)(0x5B96216E)
 I (F:\Program Files (x86)\Keil5\ARM\ARMCC\include\math.h)(0x599EDB3E)
 I (..\Bsp\round.h)(0x5B96216E)
-F (..\Hardsware\Mpu6050\mpu6050.cpp)(0x5CA099A6)(--cpp -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Libraries\CMSIS -I ..\Libraries\STM32F10x_StdPeriph_Driver\inc -I ..\User -I ..\RosLibs -I ..\Bsp -I ..\Hardsware\Mpu6050 -I ..\Hardsware --cpp-I.\RTE\_moving_car-I"F:\Program Files (x86)\Keil5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include"-I"F:\Program Files (x86)\Keil5\ARM\CMSIS\Include"-D__UVISION_VERSION="526" -DSTM32F10X_CL -DUSE_STDPERIPH_DRIVER-o .\objects\mpu6050.o --omf_browse .\objects\mpu6050.crf --depend .\objects\mpu6050.d)
-I (..\Hardsware\Mpu6050\mpu6050.h)(0x5CA09A8E)
-I (..\Hardsware\include.h)(0x5CA0A19E)
+F (..\Hardsware\Mpu6050\mpu6050.cpp)(0x5CA34048)(--cpp -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Libraries\CMSIS -I ..\Libraries\STM32F10x_StdPeriph_Driver\inc -I ..\User -I ..\RosLibs -I ..\Bsp -I ..\Hardsware\Mpu6050 -I ..\Hardsware --cpp-I.\RTE\_moving_car-I"F:\Program Files (x86)\Keil5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include"-I"F:\Program Files (x86)\Keil5\ARM\CMSIS\Include"-D__UVISION_VERSION="526" -DSTM32F10X_CL -DUSE_STDPERIPH_DRIVER-o .\objects\mpu6050.o --omf_browse .\objects\mpu6050.crf --depend .\objects\mpu6050.d)
+I (..\Hardsware\Mpu6050\mpu6050.h)(0x5CA34048)
+I (..\Hardsware\include.h)(0x5CA2F5C3)
 I (..\Bsp\Wire.h)(0x5B96216E)
 I (..\Bsp\WireBase.h)(0x5B96216E)
 I (..\Bsp\config.h)(0x5B96216E)
@@ -974,3 +974,5 @@ I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_wwdg.h)(0x58953819)
 I (..\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x58953819)
 I (..\Bsp\ring_buffer.h)(0x5B96216E)
 I (..\Bsp\millisecondtimer.h)(0x5B96216E)
+I (..\RosLibs\geometry_msgs/Vector3.h)(0x5B96216E)
+I (..\RosLibs\ros/msg.h)(0x5C978BDD)

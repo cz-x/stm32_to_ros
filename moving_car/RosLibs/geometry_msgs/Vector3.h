@@ -12,9 +12,9 @@ namespace geometry_msgs
   class Vector3 : public ros::Msg
   {
     public:
-      float x;
-      float y;
-      float z;
+      float  x;
+      float  y;
+      float  z;
 
     virtual int serialize(unsigned char *outbuffer) const
     {

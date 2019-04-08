@@ -32,6 +32,7 @@
 ".\objects\ringbuffer.o"
 ".\objects\wire.o"
 ".\objects\wirebase.o"
+".\objects\millisecondtimer.o"
 ".\objects\duration.o"
 ".\objects\time.o"
 ".\objects\mpu6050.o"

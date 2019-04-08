@@ -14,7 +14,7 @@ Section Cross References
     startup_stm32f10x_hd.o(RESET) refers to stm32f10x_it.o(i.SVC_Handler) for SVC_Handler
     startup_stm32f10x_hd.o(RESET) refers to stm32f10x_it.o(i.DebugMon_Handler) for DebugMon_Handler
     startup_stm32f10x_hd.o(RESET) refers to stm32f10x_it.o(i.PendSV_Handler) for PendSV_Handler
-    startup_stm32f10x_hd.o(RESET) refers to stm32f10x_it.o(i.SysTick_Handler) for SysTick_Handler
+    startup_stm32f10x_hd.o(RESET) refers to millisecondtimer.o(i.SysTick_Handler) for SysTick_Handler
     startup_stm32f10x_hd.o(RESET) refers to interrupt.o(i.USART1_IRQHandler) for USART1_IRQHandler
     startup_stm32f10x_hd.o(RESET) refers to interrupt.o(i.USART2_IRQHandler) for USART2_IRQHandler
     startup_stm32f10x_hd.o(RESET) refers to interrupt.o(i.USART3_IRQHandler) for USART3_IRQHandler
@@ -567,7 +567,39 @@ Section Cross References
     stm32f10x_wwdg.o(.ARM.exidx) refers to stm32f10x_wwdg.o(i.WWDG_Enable) for i.WWDG_Enable
     stm32f10x_wwdg.o(.ARM.exidx) refers to stm32f10x_wwdg.o(i.WWDG_GetFlagStatus) for i.WWDG_GetFlagStatus
     stm32f10x_wwdg.o(.ARM.exidx) refers to stm32f10x_wwdg.o(i.WWDG_ClearFlag) for i.WWDG_ClearFlag
+    main.o(i._Z11publish_imuv) refers to mpu6050.o(i._ZN3MPU17measure_gyroscopeEv) for MPU::measure_gyroscope()
+    main.o(i._Z11publish_imuv) refers to mpu6050.o(i._ZN3MPU20measure_accelerationEv) for MPU::measure_acceleration()
+    main.o(i._Z11publish_imuv) refers to main.o(i._ZN13geometry_msgs7Vector3aSERKS0_) for geometry_msgs::Vector3::operator =(const geometry_msgs::Vector3&)
+    main.o(i._Z11publish_imuv) refers to main.o(.data) for mpu_stay
+    main.o(i._Z11publish_imuv) refers to main.o(.bss) for mpu6050
+    main.o(i._Z9check_imuv) refers to mpu6050.o(i._ZN3MPU9check_mpuEv) for MPU::check_mpu()
+    main.o(i._Z9check_imuv) refers to main.o(t._ZN3ros11NodeHandle_I13STM32HardwareLi25ELi25ELi1024ELi1024EE8logerrorEPKc) for ros::NodeHandle_<STM32Hardware, (int)25, (int)25, (int)1024, (int)1024>::logerror(const char*)
+    main.o(i._Z9check_imuv) refers to main.o(.bss) for mpu6050
+    main.o(i._Z9check_imuv) refers to main.o(.data) for mpu_stay
+    main.o(i.__sti___6_main_c_Serial) refers to hardwareserial.o(i._ZN14HardwareSerialC1E14Serial_TypeDef) for HardwareSerial::HardwareSerial(Serial_TypeDef)
+    main.o(i.__sti___6_main_c_Serial) refers to aeabi_atexit.o(.text) for __aeabi_atexit
+    main.o(i.__sti___6_main_c_Serial) refers to main.o(i._ZN13geometry_msgs7Vector3C1Ev) for geometry_msgs::Vector3::Vector3()
+    main.o(i.__sti___6_main_c_Serial) refers to wire.o(i._ZN7TwoWireC1Eh) for TwoWire::TwoWire(unsigned char)
+    main.o(i.__sti___6_main_c_Serial) refers to main.o(t._ZN3ros11NodeHandle_I13STM32HardwareLi25ELi25ELi1024ELi1024EEC1Ev) for ros::NodeHandle_<STM32Hardware, (int)25, (int)25, (int)1024, (int)1024>::NodeHandle_()
+    main.o(i.__sti___6_main_c_Serial) refers to main.o(i._ZN3ros3MsgC2Ev) for ros::Msg::Msg__sub_object()
+    main.o(i.__sti___6_main_c_Serial) refers to main.o(.bss) for Serial
+    main.o(i.__sti___6_main_c_Serial) refers to main.o(i._ZN14HardwareSerialD1Ev) for HardwareSerial::~HardwareSerial()
+    main.o(i.__sti___6_main_c_Serial) refers to main.o(i._ZN3MPUD1Ev) for MPU::~MPU()
+    main.o(i.__sti___6_main_c_Serial) refers to main.o(.constdata__ZTVN9riki_msgs3ImuE) for vtable for riki_msgs::Imu
+    main.o(i.main) refers to mpu6050.o(i._ZN3MPU4initEv) for MPU::init()
+    main.o(i.main) refers to hardwareserial.o(i._ZN14HardwareSerial5beginEj) for HardwareSerial::begin(unsigned)
+    main.o(i.main) refers to main.o(t._ZN3ros11NodeHandle_I13STM32HardwareLi25ELi25ELi1024ELi1024EE8spinOnceEv) for ros::NodeHandle_<STM32Hardware, (int)25, (int)25, (int)1024, (int)1024>::spinOnce()
+    main.o(i.main) refers to millisecondtimer.o(i.millis) for millis
+    main.o(i.main) refers to main.o(i._Z9check_imuv) for check_imu()
+    main.o(i.main) refers to main.o(i._Z11publish_imuv) for publish_imu()
+    main.o(i.main) refers to main.o(.bss) for mpu6050
+    main.o(i.main) refers to main.o(.data) for is_first
+    main.o(.ARM.exidx) refers to main.o(i._Z9check_imuv) for i._Z9check_imuv
+    main.o(.ARM.exidx) refers to main.o(i._Z11publish_imuv) for i._Z11publish_imuv
     main.o(.ARM.exidx) refers to main.o(i.main) for i.main
+    main.o(.ARM.exidx) refers to main.o(i.__sti___6_main_c_Serial) for i.__sti___6_main_c_Serial
+    main.o(.init_array) refers to main.o(i.__sti___6_main_c_Serial) for __sti___6_main_c_Serial
+    main.o(.init_array) refers to cpp_init.o(.text) for __cpp_initialize__aeabi_
     stm32f10x_it.o(.ARM.exidx) refers to stm32f10x_it.o(i.NMI_Handler) for i.NMI_Handler
     stm32f10x_it.o(.ARM.exidx) refers to stm32f10x_it.o(i.HardFault_Handler) for i.HardFault_Handler
     stm32f10x_it.o(.ARM.exidx) refers to stm32f10x_it.o(i.MemManage_Handler) for i.MemManage_Handler
@@ -576,7 +608,6 @@ Section Cross References
     stm32f10x_it.o(.ARM.exidx) refers to stm32f10x_it.o(i.SVC_Handler) for i.SVC_Handler
     stm32f10x_it.o(.ARM.exidx) refers to stm32f10x_it.o(i.DebugMon_Handler) for i.DebugMon_Handler
     stm32f10x_it.o(.ARM.exidx) refers to stm32f10x_it.o(i.PendSV_Handler) for i.PendSV_Handler
-    stm32f10x_it.o(.ARM.exidx) refers to stm32f10x_it.o(i.SysTick_Handler) for i.SysTick_Handler
     hardwareserial.o(i._ZN14HardwareSerial3irqEv) refers to stm32f10x_usart.o(i.USART_GetITStatus) for USART_GetITStatus
     hardwareserial.o(i._ZN14HardwareSerial3irqEv) refers to stm32f10x_usart.o(i.USART_ReceiveData) for USART_ReceiveData
     hardwareserial.o(i._ZN14HardwareSerial3irqEv) refers to ringbuffer.o(i._ZN10RingBuffer10store_charEh) for RingBuffer::store_char(unsigned char)
@@ -688,6 +719,17 @@ Section Cross References
     wirebase.o(.ARM.exidx) refers to wirebase.o(i._ZN8WireBase5writeEPc) for i._ZN8WireBase5writeEPc
     wirebase.o(.ARM.exidx) refers to wirebase.o(i._ZN8WireBase9availableEv) for i._ZN8WireBase9availableEv
     wirebase.o(.ARM.exidx) refers to wirebase.o(i._ZN8WireBase4readEv) for i._ZN8WireBase4readEv
+    millisecondtimer.o(i.SysTick_Handler) refers to millisecondtimer.o(.data) for _counter
+    millisecondtimer.o(i.delay) refers to millisecondtimer.o(.data) for _counter
+    millisecondtimer.o(i.initialise) refers to millisecondtimer.o(.data) for _counter
+    millisecondtimer.o(i.initialise) refers to system_stm32f10x.o(.data) for SystemCoreClock
+    millisecondtimer.o(i.millis) refers to millisecondtimer.o(.data) for _counter
+    millisecondtimer.o(i.reset) refers to millisecondtimer.o(.data) for _counter
+    millisecondtimer.o(.ARM.exidx) refers to millisecondtimer.o(i.initialise) for i.initialise
+    millisecondtimer.o(.ARM.exidx) refers to millisecondtimer.o(i.delay) for i.delay
+    millisecondtimer.o(.ARM.exidx) refers to millisecondtimer.o(i.SysTick_Handler) for i.SysTick_Handler
+    millisecondtimer.o(.ARM.exidx) refers to millisecondtimer.o(i.millis) for i.millis
+    millisecondtimer.o(.ARM.exidx) refers to millisecondtimer.o(i.reset) for i.reset
     duration.o(i._ZN3ros8DurationmIERKS0_) refers to duration.o(i._ZN3ros22normalizeSecNSecSignedERlS0_) for ros::normalizeSecNSecSigned(long&, long&)
     duration.o(i._ZN3ros8DurationmLEd) refers to dflti.o(.text) for __aeabi_i2d
     duration.o(i._ZN3ros8DurationmLEd) refers to dmul.o(.text) for __aeabi_dmul
@@ -708,22 +750,33 @@ Section Cross References
     mpu6050.o(i._ZN3MPU10send_valueEih) refers to wirebase.o(i._ZN8WireBase17beginTransmissionEi) for WireBase::beginTransmission(int)
     mpu6050.o(i._ZN3MPU10send_valueEih) refers to wirebase.o(i._ZN8WireBase5writeEh) for WireBase::write(unsigned char)
     mpu6050.o(i._ZN3MPU10send_valueEih) refers to wirebase.o(i._ZN8WireBase15endTransmissionEv) for WireBase::endTransmission()
+    mpu6050.o(i._ZN3MPU17measure_gyroscopeEv) refers to mpu6050.o(i._ZN3MPU10send_valueEih) for MPU::send_value(int, unsigned char)
+    mpu6050.o(i._ZN3MPU17measure_gyroscopeEv) refers to wirebase.o(i._ZN8WireBase11requestFromEii) for WireBase::requestFrom(int, int)
+    mpu6050.o(i._ZN3MPU17measure_gyroscopeEv) refers to wirebase.o(i._ZN8WireBase4readEv) for WireBase::read()
+    mpu6050.o(i._ZN3MPU17measure_gyroscopeEv) refers to wirebase.o(i._ZN8WireBase9availableEv) for WireBase::available()
+    mpu6050.o(i._ZN3MPU17measure_gyroscopeEv) refers to fflti.o(.text) for __aeabi_i2f
     mpu6050.o(i._ZN3MPU17write_to_registerEihh) refers to wirebase.o(i._ZN8WireBase17beginTransmissionEi) for WireBase::beginTransmission(int)
     mpu6050.o(i._ZN3MPU17write_to_registerEihh) refers to wirebase.o(i._ZN8WireBase5writeEh) for WireBase::write(unsigned char)
     mpu6050.o(i._ZN3MPU17write_to_registerEihh) refers to wirebase.o(i._ZN8WireBase15endTransmissionEv) for WireBase::endTransmission()
+    mpu6050.o(i._ZN3MPU20measure_accelerationEv) refers to mpu6050.o(i._ZN3MPU10send_valueEih) for MPU::send_value(int, unsigned char)
+    mpu6050.o(i._ZN3MPU20measure_accelerationEv) refers to wirebase.o(i._ZN8WireBase11requestFromEii) for WireBase::requestFrom(int, int)
+    mpu6050.o(i._ZN3MPU20measure_accelerationEv) refers to wirebase.o(i._ZN8WireBase4readEv) for WireBase::read()
+    mpu6050.o(i._ZN3MPU20measure_accelerationEv) refers to wirebase.o(i._ZN8WireBase9availableEv) for WireBase::available()
+    mpu6050.o(i._ZN3MPU20measure_accelerationEv) refers to fflti.o(.text) for __aeabi_i2f
     mpu6050.o(i._ZN3MPU4initEv) refers to wire.o(i._ZN7TwoWire5beginEh) for TwoWire::begin(unsigned char)
     mpu6050.o(i._ZN3MPU8check_idEih) refers to wirebase.o(i._ZN8WireBase17beginTransmissionEi) for WireBase::beginTransmission(int)
     mpu6050.o(i._ZN3MPU8check_idEih) refers to wirebase.o(i._ZN8WireBase5writeEh) for WireBase::write(unsigned char)
     mpu6050.o(i._ZN3MPU8check_idEih) refers to wirebase.o(i._ZN8WireBase15endTransmissionEv) for WireBase::endTransmission()
     mpu6050.o(i._ZN3MPU8check_idEih) refers to wirebase.o(i._ZN8WireBase11requestFromEii) for WireBase::requestFrom(int, int)
     mpu6050.o(i._ZN3MPU8check_idEih) refers to wirebase.o(i._ZN8WireBase4readEv) for WireBase::read()
+    mpu6050.o(i._ZN3MPU9check_mpuEv) refers to mpu6050.o(i._ZN3MPU8check_idEih) for MPU::check_id(int, unsigned char)
+    mpu6050.o(i._ZN3MPU9check_mpuEv) refers to mpu6050.o(i._ZN3MPU17write_to_registerEihh) for MPU::write_to_register(int, unsigned char, unsigned char)
     mpu6050.o(.ARM.exidx) refers to mpu6050.o(i._ZN3MPU4initEv) for i._ZN3MPU4initEv
     mpu6050.o(.ARM.exidx) refers to mpu6050.o(i._ZN3MPU10send_valueEih) for i._ZN3MPU10send_valueEih
     mpu6050.o(.ARM.exidx) refers to mpu6050.o(i._ZN3MPU8check_idEih) for i._ZN3MPU8check_idEih
     mpu6050.o(.ARM.exidx) refers to mpu6050.o(i._ZN3MPU17write_to_registerEihh) for i._ZN3MPU17write_to_registerEihh
-    mpu6050.o(.ARM.exidx) refers to mpu6050.o(i._ZN3MPU15check_gyroscopeEv) for i._ZN3MPU15check_gyroscopeEv
+    mpu6050.o(.ARM.exidx) refers to mpu6050.o(i._ZN3MPU9check_mpuEv) for i._ZN3MPU9check_mpuEv
     mpu6050.o(.ARM.exidx) refers to mpu6050.o(i._ZN3MPU17measure_gyroscopeEv) for i._ZN3MPU17measure_gyroscopeEv
-    mpu6050.o(.ARM.exidx) refers to mpu6050.o(i._ZN3MPU19check_accelerometerEv) for i._ZN3MPU19check_accelerometerEv
     mpu6050.o(.ARM.exidx) refers to mpu6050.o(i._ZN3MPU20measure_accelerationEv) for i._ZN3MPU20measure_accelerationEv
     pure_virt.o(i.__cxa_pure_virtual) refers to cpp_signal.o(.text) for __rt_SIGPVFN
     pure_virt.o(.ARM.exidx) refers to pure_virt.o(i.__cxa_pure_virtual) for i.__cxa_pure_virtual
@@ -811,12 +864,46 @@ Section Cross References
     printfa.o(i._printf_pre_padding) refers (Special) to iusefp.o(.text) for __I$use$fp
     printfa.o(i._snputc) refers (Special) to iusefp.o(.text) for __I$use$fp
     printfa.o(i._sputc) refers (Special) to iusefp.o(.text) for __I$use$fp
+    mallocr.o(i.__free$realloc) refers to mvars.o(.data) for __microlib_freelist
+    mallocr.o(i.__malloc$realloc) refers to mallocr.o(i.internal_alloc) for internal_alloc
+    mallocr.o(i.__malloc$realloc) refers to mvars.o(.data) for __microlib_freelist_initialised
+    mallocr.o(i.__malloc$realloc) refers to startup_stm32f10x_hd.o(HEAP) for __heap_base
+    mallocr.o(i.__malloc$realloc) refers to mvars.o(.data) for __microlib_freelist
+    mallocr.o(i.internal_alloc) refers to memcpya.o(.text) for __aeabi_memcpy
+    mallocr.o(i.internal_alloc) refers to mvars.o(.data) for __microlib_freelist
+    mallocr.o(i.realloc) refers to mallocr.o(i.__free$realloc) for free
+    mallocr.o(i.realloc) refers to mallocr.o(i.internal_alloc) for internal_alloc
+    mallocr.o(i.realloc) refers to mallocr.o(i.__malloc$realloc) for malloc
+    mallocr.o(i.realloc) refers to mvars.o(.data) for __microlib_freelist
+    mallocra.o(i.__aligned_malloc$realloc) refers to mallocra.o(i.internal_alloc) for internal_alloc
+    mallocra.o(i.__aligned_malloc$realloc) refers to mvars.o(.data) for __microlib_freelist_initialised
+    mallocra.o(i.__aligned_malloc$realloc) refers to startup_stm32f10x_hd.o(HEAP) for __heap_base
+    mallocra.o(i.__aligned_malloc$realloc) refers to mvars.o(.data) for __microlib_freelist
+    mallocra.o(i.__free$realloc$memalign) refers to mvars.o(.data) for __microlib_freelist
+    mallocra.o(i.__malloc$realloc$memalign) refers to mallocra.o(i.__aligned_malloc$realloc) for __aligned_malloc$realloc
+    mallocra.o(i.__realloc$memalign) refers to mallocra.o(i.__free$realloc$memalign) for __free$realloc$memalign
+    mallocra.o(i.__realloc$memalign) refers to mallocra.o(i.internal_alloc) for internal_alloc
+    mallocra.o(i.__realloc$memalign) refers to mallocra.o(i.__malloc$realloc$memalign) for __malloc$realloc$memalign
+    mallocra.o(i.__realloc$memalign) refers to mvars.o(.data) for __microlib_freelist
+    mallocra.o(i.internal_alloc) refers to memcpya.o(.text) for __aeabi_memcpy
+    mallocra.o(i.internal_alloc) refers to mvars.o(.data) for __microlib_freelist
+    cpp_init.o(.emb_text) refers (Special) to entry8a.o(.ARM.Collect$$$$00000009) for _main_cpp_init$empty
+    cpp_init.o(.init_array) refers (Special) to entry8a.o(.ARM.Collect$$$$00000009) for _main_cpp_init$empty
+    cpp_init.o(.init_array) refers to cpp_init.o(.text) for __cpp_initialize__aeabi_
+    cpp_init.o(.dummy_text) refers (Special) to entry8a.o(.ARM.Collect$$$$00000009) for _main_cpp_init$empty
+    cpp_init.o(.text) refers (Special) to entry8a.o(.ARM.Collect$$$$00000009) for _main_cpp_init$empty
+    aeabi_atexit.o(.text) refers (Special) to cxa_finalize.o(.text) for __cxa_finalize
+    aeabi_atexit.o(.text) refers to mallocr.o(i.__malloc$realloc) for malloc
+    aeabi_atexit.o(.text) refers to cpp_dtor.o(.text) for __rt_ddtor_pointer_addr
     dmul.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
     dmul.o(.text) refers to depilogue.o(.text) for _double_epilogue
+    fflti.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    fflti.o(.text) refers to fepilogue.o(.text) for _float_epilogue
     dflti.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
     dflti.o(.text) refers to depilogue.o(.text) for _double_epilogue
     dfixi.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
     dfixi.o(.text) refers to llushr.o(.text) for __aeabi_llsr
+    cfcmple.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
     type_info_dtor.o(.ARM.exidx) refers to type_info_dtor.o(i._ZNSt9type_infoD1Ev) for i._ZNSt9type_infoD1Ev
     type_info_dtor.o(.ARM.exidx) refers to type_info_dtor.o(i._ZNSt9type_infoD0Ev) for i._ZNSt9type_infoD0Ev
     arm_exceptions_callterm.o(.text) refers to arm_exceptions_globs.o(.text) for __cxa_get_globals
@@ -828,12 +915,27 @@ Section Cross References
     entry2.o(__vectab_stack_and_reset_area) refers to startup_stm32f10x_hd.o(STACK) for __initial_sp
     entry2.o(__vectab_stack_and_reset_area) refers to entry.o(.ARM.Collect$$$$00000000) for __main
     entry5.o(.ARM.Collect$$$$00000004) refers to init.o(.text) for __scatterload
+    entry8a.o(.ARM.Collect$$$$00000009) refers (Weak) to cpp_init.o(.text) for __cpp_initialize__aeabi_
     entry9a.o(.ARM.Collect$$$$0000000B) refers to main.o(i.main) for main
     entry9b.o(.ARM.Collect$$$$0000000C) refers to main.o(i.main) for main
+    entry10b.o(.ARM.Collect$$$$0000000E) refers (Weak) to cxa_finalize.o(.text) for __cxa_finalize
     fputc.o(i.fputc) refers (Special) to iusesemip.o(.text) for __I$use$semihosting$fputc
     fputc.o(i.fputc) refers (Special) to semi.o(.text) for __semihosting_library_function
     uldiv.o(.text) refers to llushr.o(.text) for __aeabi_llsr
     uldiv.o(.text) refers to llshl.o(.text) for __aeabi_llsl
+    malloc.o(i.free) refers to mvars.o(.data) for __microlib_freelist
+    malloc.o(i.malloc) refers to mvars.o(.data) for __microlib_freelist_initialised
+    malloc.o(i.malloc) refers to mvars.o(.data) for __microlib_freelist
+    malloc.o(i.malloc) refers to startup_stm32f10x_hd.o(HEAP) for __heap_base
+    malloca.o(i.__aligned_malloc) refers to mvars.o(.data) for __microlib_freelist_initialised
+    malloca.o(i.__aligned_malloc) refers to mvars.o(.data) for __microlib_freelist
+    malloca.o(i.__aligned_malloc) refers to startup_stm32f10x_hd.o(HEAP) for __heap_base
+    malloca.o(i.__free$memalign) refers to mvars.o(.data) for __microlib_freelist
+    malloca.o(i.__malloc$memalign) refers to malloca.o(i.__aligned_malloc) for __aligned_malloc
+    cpp_dtor.o(.text) refers to cpp_dtor.o(.data) for .data
+    cxa_finalize.o(.text) refers (Special) to cpp_final.o(.text) for __rt_lib_shutdown_cpp_2
+    cxa_finalize.o(.text) refers to cpp_dtor.o(.text) for __rt_ddtor_pointer_addr
+    cxa_finalize.o(.text) refers to mallocr.o(i.__free$realloc) for free
     depilogue.o(.text) refers to llshl.o(.text) for __aeabi_llsl
     depilogue.o(.text) refers to llushr.o(.text) for __aeabi_llsr
     dadd.o(.text) refers to llshl.o(.text) for __aeabi_llsl
@@ -848,45 +950,170 @@ Section Cross References
     arm_exceptions_support.o(.text) refers to arm_exceptions_support.o(.constdata) for .constdata
     arm_exceptions_support.o(.ARM.exidx) refers to arm_exceptions_support.o(.text) for .text
     arm_exceptions_globs.o(.text) refers to cpp_memory.o(.text) for __rt_eh_globals_addr
-    arm_exceptions_globs.o(.text) refers to malloc.o(i.malloc) for malloc
+    arm_exceptions_globs.o(.text) refers to mallocr.o(i.__malloc$realloc) for malloc
     arm_exceptions_globs.o(.text) refers to arm_exceptions_mem.o(.text) for __ARM_exceptions_buffer_init
     arm_exceptions_globs.o(.ARM.exidx) refers to arm_exceptions_globs.o(.text) for .text
     init.o(.text) refers to entry5.o(.ARM.Collect$$$$00000004) for __main_after_scatterload
-    arm_exceptions_mem.o(.text) refers to malloc.o(i.malloc) for malloc
+    cpp_final.o(.text) refers (Special) to entry10b.o(.ARM.Collect$$$$0000000E) for __rt_final_cpp$nonempty
+    arm_exceptions_mem.o(.text) refers to mallocr.o(i.__malloc$realloc) for malloc
     arm_exceptions_mem.o(.ARM.exidx) refers to arm_exceptions_mem.o(.text) for .text
-    malloc.o(i.free) refers to mvars.o(.data) for __microlib_freelist
-    malloc.o(i.malloc) refers to mvars.o(.data) for __microlib_freelist_initialised
-    malloc.o(i.malloc) refers to mvars.o(.data) for __microlib_freelist
-    malloc.o(i.malloc) refers to startup_stm32f10x_hd.o(HEAP) for __heap_base
-    mallocr.o(i.__free$realloc) refers to mvars.o(.data) for __microlib_freelist
-    mallocr.o(i.__malloc$realloc) refers to mallocr.o(i.internal_alloc) for internal_alloc
-    mallocr.o(i.__malloc$realloc) refers to mvars.o(.data) for __microlib_freelist_initialised
-    mallocr.o(i.__malloc$realloc) refers to startup_stm32f10x_hd.o(HEAP) for __heap_base
-    mallocr.o(i.__malloc$realloc) refers to mvars.o(.data) for __microlib_freelist
-    mallocr.o(i.internal_alloc) refers to memcpya.o(.text) for __aeabi_memcpy
-    mallocr.o(i.internal_alloc) refers to mvars.o(.data) for __microlib_freelist
-    mallocr.o(i.realloc) refers to mallocr.o(i.__free$realloc) for __free$realloc
-    mallocr.o(i.realloc) refers to mallocr.o(i.internal_alloc) for internal_alloc
-    mallocr.o(i.realloc) refers to mallocr.o(i.__malloc$realloc) for __malloc$realloc
-    mallocr.o(i.realloc) refers to mvars.o(.data) for __microlib_freelist
-    malloca.o(i.__aligned_malloc) refers to mvars.o(.data) for __microlib_freelist_initialised
-    malloca.o(i.__aligned_malloc) refers to mvars.o(.data) for __microlib_freelist
-    malloca.o(i.__aligned_malloc) refers to startup_stm32f10x_hd.o(HEAP) for __heap_base
-    malloca.o(i.__free$memalign) refers to mvars.o(.data) for __microlib_freelist
-    malloca.o(i.__malloc$memalign) refers to malloca.o(i.__aligned_malloc) for __aligned_malloc
-    mallocra.o(i.__aligned_malloc$realloc) refers to mallocra.o(i.internal_alloc) for internal_alloc
-    mallocra.o(i.__aligned_malloc$realloc) refers to mvars.o(.data) for __microlib_freelist_initialised
-    mallocra.o(i.__aligned_malloc$realloc) refers to startup_stm32f10x_hd.o(HEAP) for __heap_base
-    mallocra.o(i.__aligned_malloc$realloc) refers to mvars.o(.data) for __microlib_freelist
-    mallocra.o(i.__free$realloc$memalign) refers to mvars.o(.data) for __microlib_freelist
-    mallocra.o(i.__malloc$realloc$memalign) refers to mallocra.o(i.__aligned_malloc$realloc) for __aligned_malloc$realloc
-    mallocra.o(i.__realloc$memalign) refers to mallocra.o(i.__free$realloc$memalign) for __free$realloc$memalign
-    mallocra.o(i.__realloc$memalign) refers to mallocra.o(i.internal_alloc) for internal_alloc
-    mallocra.o(i.__realloc$memalign) refers to mallocra.o(i.__malloc$realloc$memalign) for __malloc$realloc$memalign
-    mallocra.o(i.__realloc$memalign) refers to mvars.o(.data) for __microlib_freelist
-    mallocra.o(i.internal_alloc) refers to memcpya.o(.text) for __aeabi_memcpy
-    mallocra.o(i.internal_alloc) refers to mvars.o(.data) for __microlib_freelist
     cpp_memory.o(.text) refers to cpp_memory.o(.data) for .data
+    main.o(t._ZN3ros11NodeHandle_I13STM32HardwareLi25ELi25ELi1024ELi1024EE8logerrorEPKc) refers to main.o(i._ZN3ros3MsgC2Ev) for ros::Msg::Msg__sub_object()
+    main.o(t._ZN3ros11NodeHandle_I13STM32HardwareLi25ELi25ELi1024ELi1024EE8logerrorEPKc) refers to main.o(.constdata__ZTVN14rosserial_msgs3LogE) for vtable for rosserial_msgs::Log
+    main.o(.ARM.exidx) refers to main.o(t._ZN3ros11NodeHandle_I13STM32HardwareLi25ELi25ELi1024ELi1024EE8logerrorEPKc) for t._ZN3ros11NodeHandle_I13STM32HardwareLi25ELi25ELi1024ELi1024EE8logerrorEPKc
+    main.o(i._ZN8std_msgs4TimeC1Ev) refers to main.o(i._ZN3ros3MsgC2Ev) for ros::Msg::Msg__sub_object()
+    main.o(i._ZN8std_msgs4TimeC1Ev) refers to main.o(.constdata__ZTVN8std_msgs4TimeE) for vtable for std_msgs::Time
+    main.o(.ARM.exidx) refers to main.o(i._ZN8std_msgs4TimeC1Ev) for i._ZN8std_msgs4TimeC1Ev
+    main.o(t._ZN3ros11NodeHandle_I13STM32HardwareLi25ELi25ELi1024ELi1024EE15requestSyncTimeEv) refers to main.o(i._ZN8std_msgs4TimeC1Ev) for std_msgs::Time::Time()
+    main.o(t._ZN3ros11NodeHandle_I13STM32HardwareLi25ELi25ELi1024ELi1024EE15requestSyncTimeEv) refers to main.o(i._ZN13STM32Hardware4timeEv) for STM32Hardware::time()
+    main.o(.ARM.exidx) refers to main.o(t._ZN3ros11NodeHandle_I13STM32HardwareLi25ELi25ELi1024ELi1024EE15requestSyncTimeEv) for t._ZN3ros11NodeHandle_I13STM32HardwareLi25ELi25ELi1024ELi1024EE15requestSyncTimeEv
+    main.o(i._ZN14rosserial_msgs20RequestParamResponse11deserializeEPh) refers to mallocr.o(i.realloc) for realloc
+    main.o(.ARM.exidx) refers to main.o(i._ZN14rosserial_msgs20RequestParamResponse11deserializeEPh) for i._ZN14rosserial_msgs20RequestParamResponse11deserializeEPh
+    main.o(.ARM.exidx) refers to main.o(i._ZN8std_msgs4Time11deserializeEPh) for i._ZN8std_msgs4Time11deserializeEPh
+    main.o(t._ZN3ros11NodeHandle_I13STM32HardwareLi25ELi25ELi1024ELi1024EE15negotiateTopicsEv) refers to main.o(i._ZN3ros3MsgC2Ev) for ros::Msg::Msg__sub_object()
+    main.o(t._ZN3ros11NodeHandle_I13STM32HardwareLi25ELi25ELi1024ELi1024EE15negotiateTopicsEv) refers to main.o(.constdata__ZTVN14rosserial_msgs9TopicInfoE) for vtable for rosserial_msgs::TopicInfo
+    main.o(.ARM.exidx) refers to main.o(t._ZN3ros11NodeHandle_I13STM32HardwareLi25ELi25ELi1024ELi1024EE15negotiateTopicsEv) for t._ZN3ros11NodeHandle_I13STM32HardwareLi25ELi25ELi1024ELi1024EE15negotiateTopicsEv
+    main.o(t._ZN3ros11NodeHandle_I13STM32HardwareLi25ELi25ELi1024ELi1024EE8spinOnceEv) refers to main.o(i._ZN13STM32Hardware4timeEv) for STM32Hardware::time()
+    main.o(t._ZN3ros11NodeHandle_I13STM32HardwareLi25ELi25ELi1024ELi1024EE8spinOnceEv) refers to hardwareserial.o(i._ZN14HardwareSerial9availableEv) for HardwareSerial::available()
+    main.o(t._ZN3ros11NodeHandle_I13STM32HardwareLi25ELi25ELi1024ELi1024EE8spinOnceEv) refers to hardwareserial.o(i._ZN14HardwareSerial4readEv) for HardwareSerial::read()
+    main.o(t._ZN3ros11NodeHandle_I13STM32HardwareLi25ELi25ELi1024ELi1024EE8spinOnceEv) refers to main.o(t._ZN3ros11NodeHandle_I13STM32HardwareLi25ELi25ELi1024ELi1024EE15requestSyncTimeEv) for ros::NodeHandle_<STM32Hardware, (int)25, (int)25, (int)1024, (int)1024>::requestSyncTime()
+    main.o(t._ZN3ros11NodeHandle_I13STM32HardwareLi25ELi25ELi1024ELi1024EE8spinOnceEv) refers to main.o(t._ZN3ros11NodeHandle_I13STM32HardwareLi25ELi25ELi1024ELi1024EE15negotiateTopicsEv) for ros::NodeHandle_<STM32Hardware, (int)25, (int)25, (int)1024, (int)1024>::negotiateTopics()
+    main.o(t._ZN3ros11NodeHandle_I13STM32HardwareLi25ELi25ELi1024ELi1024EE8spinOnceEv) refers to main.o(t._ZN3ros11NodeHandle_I13STM32HardwareLi25ELi25ELi1024ELi1024EE8syncTimeEPh) for ros::NodeHandle_<STM32Hardware, (int)25, (int)25, (int)1024, (int)1024>::syncTime(unsigned char*)
+    main.o(t._ZN3ros11NodeHandle_I13STM32HardwareLi25ELi25ELi1024ELi1024EE8spinOnceEv) refers to main.o(i._ZN14rosserial_msgs20RequestParamResponse11deserializeEPh) for rosserial_msgs::RequestParamResponse::deserialize(unsigned char*)
+    main.o(.ARM.exidx) refers to main.o(t._ZN3ros11NodeHandle_I13STM32HardwareLi25ELi25ELi1024ELi1024EE8spinOnceEv) for t._ZN3ros11NodeHandle_I13STM32HardwareLi25ELi25ELi1024ELi1024EE8spinOnceEv
+    main.o(t._ZN3ros11NodeHandle_I13STM32HardwareLi25ELi25ELi1024ELi1024EEC1Ev) refers to main.o(i._ZN3ros3MsgC2Ev) for ros::Msg::Msg__sub_object()
+    main.o(t._ZN3ros11NodeHandle_I13STM32HardwareLi25ELi25ELi1024ELi1024EEC1Ev) refers to main.o(.constdata__ZTVN3ros15NodeHandleBase_E) for vtable for ros::NodeHandleBase_
+    main.o(t._ZN3ros11NodeHandle_I13STM32HardwareLi25ELi25ELi1024ELi1024EEC1Ev) refers to main.o(.constdata__ZTVN3ros11NodeHandle_I13STM32HardwareLi25ELi25ELi1024ELi1024EEE) for vtable for ros::NodeHandle_<STM32Hardware, (int)25, (int)25, (int)1024, (int)1024>
+    main.o(t._ZN3ros11NodeHandle_I13STM32HardwareLi25ELi25ELi1024ELi1024EEC1Ev) refers to main.o(.bss) for Serial
+    main.o(t._ZN3ros11NodeHandle_I13STM32HardwareLi25ELi25ELi1024ELi1024EEC1Ev) refers to main.o(.constdata__ZTVN14rosserial_msgs20RequestParamResponseE) for vtable for rosserial_msgs::RequestParamResponse
+    main.o(.ARM.exidx) refers to main.o(t._ZN3ros11NodeHandle_I13STM32HardwareLi25ELi25ELi1024ELi1024EEC1Ev) for t._ZN3ros11NodeHandle_I13STM32HardwareLi25ELi25ELi1024ELi1024EEC1Ev
+    main.o(i._ZNK13geometry_msgs7Vector39serializeEPh) refers to cfcmple.o(.text) for __aeabi_cfcmple
+    main.o(.ARM.exidx) refers to main.o(i._ZNK13geometry_msgs7Vector39serializeEPh) for i._ZNK13geometry_msgs7Vector39serializeEPh
+    main.o(.ARM.exidx) refers to main.o(i._ZN13geometry_msgs7Vector311deserializeEPh) for i._ZN13geometry_msgs7Vector311deserializeEPh
+    main.o(i._ZN3ros3MsgC2Ev) refers to main.o(.constdata__ZTVN3ros3MsgE) for vtable for ros::Msg
+    main.o(.ARM.exidx) refers to main.o(i._ZN3ros3MsgC2Ev) for i._ZN3ros3MsgC2Ev
+    main.o(.ARM.exidx) refers to main.o(i._ZN13geometry_msgs7Vector3aSERKS0_) for i._ZN13geometry_msgs7Vector3aSERKS0_
+    main.o(i._ZN13STM32Hardware4timeEv) refers to millisecondtimer.o(i.millis) for millis
+    main.o(.ARM.exidx) refers to main.o(i._ZN13STM32Hardware4timeEv) for i._ZN13STM32Hardware4timeEv
+    main.o(t._ZN3ros11NodeHandle_I13STM32HardwareLi25ELi25ELi1024ELi1024EE8syncTimeEPh) refers to main.o(i._ZN8std_msgs4TimeC1Ev) for std_msgs::Time::Time()
+    main.o(t._ZN3ros11NodeHandle_I13STM32HardwareLi25ELi25ELi1024ELi1024EE8syncTimeEPh) refers to main.o(i._ZN13STM32Hardware4timeEv) for STM32Hardware::time()
+    main.o(t._ZN3ros11NodeHandle_I13STM32HardwareLi25ELi25ELi1024ELi1024EE8syncTimeEPh) refers to main.o(i._ZN8std_msgs4Time11deserializeEPh) for std_msgs::Time::deserialize(unsigned char*)
+    main.o(t._ZN3ros11NodeHandle_I13STM32HardwareLi25ELi25ELi1024ELi1024EE8syncTimeEPh) refers to time.o(i._ZN3ros16normalizeSecNSecERmS0_) for ros::normalizeSecNSec(unsigned long&, unsigned long&)
+    main.o(.ARM.exidx) refers to main.o(t._ZN3ros11NodeHandle_I13STM32HardwareLi25ELi25ELi1024ELi1024EE8syncTimeEPh) for t._ZN3ros11NodeHandle_I13STM32HardwareLi25ELi25ELi1024ELi1024EE8syncTimeEPh
+    main.o(.ARM.exidx) refers to main.o(i._ZN14HardwareSerialD1Ev) for i._ZN14HardwareSerialD1Ev
+    main.o(i._ZN13geometry_msgs7Vector3C1Ev) refers to main.o(i._ZN3ros3MsgC2Ev) for ros::Msg::Msg__sub_object()
+    main.o(i._ZN13geometry_msgs7Vector3C1Ev) refers to main.o(.constdata__ZTVN13geometry_msgs7Vector3E) for vtable for geometry_msgs::Vector3
+    main.o(.ARM.exidx) refers to main.o(i._ZN13geometry_msgs7Vector3C1Ev) for i._ZN13geometry_msgs7Vector3C1Ev
+    main.o(i._ZN3MPUD1Ev) refers to wire.o(i._ZN7TwoWireD1Ev) for TwoWire::~TwoWire()
+    main.o(.ARM.exidx) refers to main.o(i._ZN3MPUD1Ev) for i._ZN3MPUD1Ev
+    main.o(.constdata__ZTVN3ros3MsgE) refers to main.o(.constdata__ZTIN3ros3MsgE) for typeinfo for ros::Msg
+    main.o(.constdata__ZTVN3ros3MsgE) refers to pure_virt.o(i.__cxa_pure_virtual) for __cxa_pure_virtual
+    main.o(.constdata__ZTVN8std_msgs4TimeE) refers to main.o(.constdata__ZTIN8std_msgs4TimeE) for typeinfo for std_msgs::Time
+    main.o(.constdata__ZTVN8std_msgs4TimeE) refers to main.o(i._ZNK8std_msgs4Time9serializeEPh) for std_msgs::Time::serialize(unsigned char*) const
+    main.o(.constdata__ZTVN8std_msgs4TimeE) refers to main.o(i._ZN8std_msgs4Time11deserializeEPh) for std_msgs::Time::deserialize(unsigned char*)
+    main.o(.constdata__ZTVN8std_msgs4TimeE) refers to main.o(i._ZN8std_msgs4Time7getTypeEv) for std_msgs::Time::getType()
+    main.o(.constdata__ZTVN8std_msgs4TimeE) refers to main.o(i._ZN8std_msgs4Time6getMD5Ev) for std_msgs::Time::getMD5()
+    main.o(.constdata__ZTVN14rosserial_msgs9TopicInfoE) refers to main.o(.constdata__ZTIN14rosserial_msgs9TopicInfoE) for typeinfo for rosserial_msgs::TopicInfo
+    main.o(.constdata__ZTVN14rosserial_msgs9TopicInfoE) refers to main.o(i._ZNK14rosserial_msgs9TopicInfo9serializeEPh) for rosserial_msgs::TopicInfo::serialize(unsigned char*) const
+    main.o(.constdata__ZTVN14rosserial_msgs9TopicInfoE) refers to main.o(i._ZN14rosserial_msgs9TopicInfo11deserializeEPh) for rosserial_msgs::TopicInfo::deserialize(unsigned char*)
+    main.o(.constdata__ZTVN14rosserial_msgs9TopicInfoE) refers to main.o(i._ZN14rosserial_msgs9TopicInfo7getTypeEv) for rosserial_msgs::TopicInfo::getType()
+    main.o(.constdata__ZTVN14rosserial_msgs9TopicInfoE) refers to main.o(i._ZN14rosserial_msgs9TopicInfo6getMD5Ev) for rosserial_msgs::TopicInfo::getMD5()
+    main.o(.constdata__ZTVN14rosserial_msgs3LogE) refers to main.o(.constdata__ZTIN14rosserial_msgs3LogE) for typeinfo for rosserial_msgs::Log
+    main.o(.constdata__ZTVN14rosserial_msgs3LogE) refers to main.o(i._ZNK14rosserial_msgs3Log9serializeEPh) for rosserial_msgs::Log::serialize(unsigned char*) const
+    main.o(.constdata__ZTVN14rosserial_msgs3LogE) refers to main.o(i._ZN14rosserial_msgs3Log11deserializeEPh) for rosserial_msgs::Log::deserialize(unsigned char*)
+    main.o(.constdata__ZTVN14rosserial_msgs3LogE) refers to main.o(i._ZN14rosserial_msgs3Log7getTypeEv) for rosserial_msgs::Log::getType()
+    main.o(.constdata__ZTVN14rosserial_msgs3LogE) refers to main.o(i._ZN14rosserial_msgs3Log6getMD5Ev) for rosserial_msgs::Log::getMD5()
+    main.o(.constdata__ZTVN14rosserial_msgs20RequestParamResponseE) refers to main.o(.constdata__ZTIN14rosserial_msgs20RequestParamResponseE) for typeinfo for rosserial_msgs::RequestParamResponse
+    main.o(.constdata__ZTVN14rosserial_msgs20RequestParamResponseE) refers to main.o(i._ZNK14rosserial_msgs20RequestParamResponse9serializeEPh) for rosserial_msgs::RequestParamResponse::serialize(unsigned char*) const
+    main.o(.constdata__ZTVN14rosserial_msgs20RequestParamResponseE) refers to main.o(i._ZN14rosserial_msgs20RequestParamResponse11deserializeEPh) for rosserial_msgs::RequestParamResponse::deserialize(unsigned char*)
+    main.o(.constdata__ZTVN14rosserial_msgs20RequestParamResponseE) refers to main.o(i._ZN14rosserial_msgs20RequestParamResponse7getTypeEv) for rosserial_msgs::RequestParamResponse::getType()
+    main.o(.constdata__ZTVN14rosserial_msgs20RequestParamResponseE) refers to main.o(i._ZN14rosserial_msgs20RequestParamResponse6getMD5Ev) for rosserial_msgs::RequestParamResponse::getMD5()
+    main.o(.constdata__ZTVN3ros15NodeHandleBase_E) refers to main.o(.constdata__ZTIN3ros15NodeHandleBase_E) for typeinfo for ros::NodeHandleBase_
+    main.o(.constdata__ZTVN3ros15NodeHandleBase_E) refers to pure_virt.o(i.__cxa_pure_virtual) for __cxa_pure_virtual
+    main.o(.constdata__ZTVN13geometry_msgs7Vector3E) refers to main.o(.constdata__ZTIN13geometry_msgs7Vector3E) for typeinfo for geometry_msgs::Vector3
+    main.o(.constdata__ZTVN13geometry_msgs7Vector3E) refers to main.o(i._ZNK13geometry_msgs7Vector39serializeEPh) for geometry_msgs::Vector3::serialize(unsigned char*) const
+    main.o(.constdata__ZTVN13geometry_msgs7Vector3E) refers to main.o(i._ZN13geometry_msgs7Vector311deserializeEPh) for geometry_msgs::Vector3::deserialize(unsigned char*)
+    main.o(.constdata__ZTVN13geometry_msgs7Vector3E) refers to main.o(i._ZN13geometry_msgs7Vector37getTypeEv) for geometry_msgs::Vector3::getType()
+    main.o(.constdata__ZTVN13geometry_msgs7Vector3E) refers to main.o(i._ZN13geometry_msgs7Vector36getMD5Ev) for geometry_msgs::Vector3::getMD5()
+    main.o(.constdata__ZTVN9riki_msgs3ImuE) refers to main.o(.constdata__ZTIN9riki_msgs3ImuE) for typeinfo for riki_msgs::Imu
+    main.o(.constdata__ZTVN9riki_msgs3ImuE) refers to main.o(i._ZNK9riki_msgs3Imu9serializeEPh) for riki_msgs::Imu::serialize(unsigned char*) const
+    main.o(.constdata__ZTVN9riki_msgs3ImuE) refers to main.o(i._ZN9riki_msgs3Imu11deserializeEPh) for riki_msgs::Imu::deserialize(unsigned char*)
+    main.o(.constdata__ZTVN9riki_msgs3ImuE) refers to main.o(i._ZN9riki_msgs3Imu7getTypeEv) for riki_msgs::Imu::getType()
+    main.o(.constdata__ZTVN9riki_msgs3ImuE) refers to main.o(i._ZN9riki_msgs3Imu6getMD5Ev) for riki_msgs::Imu::getMD5()
+    main.o(.constdata__ZTVN3ros11NodeHandle_I13STM32HardwareLi25ELi25ELi1024ELi1024EEE) refers to main.o(.constdata__ZTIN3ros11NodeHandle_I13STM32HardwareLi25ELi25ELi1024ELi1024EEE) for typeinfo for ros::NodeHandle_<STM32Hardware, (int)25, (int)25, (int)1024, (int)1024>
+    main.o(.constdata__ZTVN3ros11NodeHandle_I13STM32HardwareLi25ELi25ELi1024ELi1024EEE) refers to main.o(t._ZN3ros11NodeHandle_I13STM32HardwareLi25ELi25ELi1024ELi1024EE7publishEiPKNS_3MsgE) for ros::NodeHandle_<STM32Hardware, (int)25, (int)25, (int)1024, (int)1024>::publish(int, const ros::Msg*)
+    main.o(.constdata__ZTVN3ros11NodeHandle_I13STM32HardwareLi25ELi25ELi1024ELi1024EEE) refers to main.o(t._ZN3ros11NodeHandle_I13STM32HardwareLi25ELi25ELi1024ELi1024EE8spinOnceEv) for ros::NodeHandle_<STM32Hardware, (int)25, (int)25, (int)1024, (int)1024>::spinOnce()
+    main.o(.constdata__ZTVN3ros11NodeHandle_I13STM32HardwareLi25ELi25ELi1024ELi1024EEE) refers to main.o(t._ZN3ros11NodeHandle_I13STM32HardwareLi25ELi25ELi1024ELi1024EE9connectedEv) for ros::NodeHandle_<STM32Hardware, (int)25, (int)25, (int)1024, (int)1024>::connected()
+    main.o(.constdata__ZTIN3ros15NodeHandleBase_E) refers to lib_rtti_impl.o(.constdata__ZTVN10__cxxabiv117__class_type_infoE) for vtable for __cxxabiv1::__class_type_info
+    main.o(.constdata__ZTIN3ros15NodeHandleBase_E) refers to main.o(.constdata__ZTSN3ros15NodeHandleBase_E) for typeinfo name for ros::NodeHandleBase_
+    main.o(.constdata__ZTIN3ros3MsgE) refers to lib_rtti_impl.o(.constdata__ZTVN10__cxxabiv117__class_type_infoE) for vtable for __cxxabiv1::__class_type_info
+    main.o(.constdata__ZTIN3ros3MsgE) refers to main.o(.constdata__ZTSN3ros3MsgE) for typeinfo name for ros::Msg
+    main.o(.constdata__ZTIN3ros11NodeHandle_I13STM32HardwareLi25ELi25ELi1024ELi1024EEE) refers to lib_rtti_impl.o(.constdata__ZTVN10__cxxabiv120__si_class_type_infoE) for vtable for __cxxabiv1::__si_class_type_info
+    main.o(.constdata__ZTIN3ros11NodeHandle_I13STM32HardwareLi25ELi25ELi1024ELi1024EEE) refers to main.o(.constdata__ZTSN3ros11NodeHandle_I13STM32HardwareLi25ELi25ELi1024ELi1024EEE) for typeinfo name for ros::NodeHandle_<STM32Hardware, (int)25, (int)25, (int)1024, (int)1024>
+    main.o(.constdata__ZTIN3ros11NodeHandle_I13STM32HardwareLi25ELi25ELi1024ELi1024EEE) refers to main.o(.constdata__ZTIN3ros15NodeHandleBase_E) for typeinfo for ros::NodeHandleBase_
+    main.o(.constdata__ZTIN8std_msgs4TimeE) refers to lib_rtti_impl.o(.constdata__ZTVN10__cxxabiv120__si_class_type_infoE) for vtable for __cxxabiv1::__si_class_type_info
+    main.o(.constdata__ZTIN8std_msgs4TimeE) refers to main.o(.constdata__ZTSN8std_msgs4TimeE) for typeinfo name for std_msgs::Time
+    main.o(.constdata__ZTIN8std_msgs4TimeE) refers to main.o(.constdata__ZTIN3ros3MsgE) for typeinfo for ros::Msg
+    main.o(.constdata__ZTIN14rosserial_msgs9TopicInfoE) refers to lib_rtti_impl.o(.constdata__ZTVN10__cxxabiv120__si_class_type_infoE) for vtable for __cxxabiv1::__si_class_type_info
+    main.o(.constdata__ZTIN14rosserial_msgs9TopicInfoE) refers to main.o(.constdata__ZTSN14rosserial_msgs9TopicInfoE) for typeinfo name for rosserial_msgs::TopicInfo
+    main.o(.constdata__ZTIN14rosserial_msgs9TopicInfoE) refers to main.o(.constdata__ZTIN3ros3MsgE) for typeinfo for ros::Msg
+    main.o(.constdata__ZTIN14rosserial_msgs3LogE) refers to lib_rtti_impl.o(.constdata__ZTVN10__cxxabiv120__si_class_type_infoE) for vtable for __cxxabiv1::__si_class_type_info
+    main.o(.constdata__ZTIN14rosserial_msgs3LogE) refers to main.o(.constdata__ZTSN14rosserial_msgs3LogE) for typeinfo name for rosserial_msgs::Log
+    main.o(.constdata__ZTIN14rosserial_msgs3LogE) refers to main.o(.constdata__ZTIN3ros3MsgE) for typeinfo for ros::Msg
+    main.o(.constdata__ZTIN14rosserial_msgs20RequestParamResponseE) refers to lib_rtti_impl.o(.constdata__ZTVN10__cxxabiv120__si_class_type_infoE) for vtable for __cxxabiv1::__si_class_type_info
+    main.o(.constdata__ZTIN14rosserial_msgs20RequestParamResponseE) refers to main.o(.constdata__ZTSN14rosserial_msgs20RequestParamResponseE) for typeinfo name for rosserial_msgs::RequestParamResponse
+    main.o(.constdata__ZTIN14rosserial_msgs20RequestParamResponseE) refers to main.o(.constdata__ZTIN3ros3MsgE) for typeinfo for ros::Msg
+    main.o(.constdata__ZTIN9riki_msgs3ImuE) refers to lib_rtti_impl.o(.constdata__ZTVN10__cxxabiv120__si_class_type_infoE) for vtable for __cxxabiv1::__si_class_type_info
+    main.o(.constdata__ZTIN9riki_msgs3ImuE) refers to main.o(.constdata__ZTSN9riki_msgs3ImuE) for typeinfo name for riki_msgs::Imu
+    main.o(.constdata__ZTIN9riki_msgs3ImuE) refers to main.o(.constdata__ZTIN3ros3MsgE) for typeinfo for ros::Msg
+    main.o(.constdata__ZTIN13geometry_msgs7Vector3E) refers to lib_rtti_impl.o(.constdata__ZTVN10__cxxabiv120__si_class_type_infoE) for vtable for __cxxabiv1::__si_class_type_info
+    main.o(.constdata__ZTIN13geometry_msgs7Vector3E) refers to main.o(.constdata__ZTSN13geometry_msgs7Vector3E) for typeinfo name for geometry_msgs::Vector3
+    main.o(.constdata__ZTIN13geometry_msgs7Vector3E) refers to main.o(.constdata__ZTIN3ros3MsgE) for typeinfo for ros::Msg
+    main.o(.ARM.exidx) refers to main.o(t._ZN3ros11NodeHandle_I13STM32HardwareLi25ELi25ELi1024ELi1024EE9connectedEv) for t._ZN3ros11NodeHandle_I13STM32HardwareLi25ELi25ELi1024ELi1024EE9connectedEv
+    main.o(t._ZN3ros11NodeHandle_I13STM32HardwareLi25ELi25ELi1024ELi1024EE7publishEiPKNS_3MsgE) refers to hardwareserial.o(i._ZN14HardwareSerial5writeEh) for HardwareSerial::write(unsigned char)
+    main.o(t._ZN3ros11NodeHandle_I13STM32HardwareLi25ELi25ELi1024ELi1024EE7publishEiPKNS_3MsgE) refers to main.o(t._ZN3ros11NodeHandle_I13STM32HardwareLi25ELi25ELi1024ELi1024EE8logerrorEPKc) for ros::NodeHandle_<STM32Hardware, (int)25, (int)25, (int)1024, (int)1024>::logerror(const char*)
+    main.o(t._ZN3ros11NodeHandle_I13STM32HardwareLi25ELi25ELi1024ELi1024EE7publishEiPKNS_3MsgE) refers to main.o(.constdata__ZZN3ros11NodeHandle_I13STM32HardwareLi25ELi25ELi1024ELi1024EE7publishEiPKNS_3MsgEEs) for ros::NodeHandle_<STM32Hardware, (int)25, (int)25, (int)1024, (int)1024>::publish(int, const ros::Msg*)::string
+    main.o(.ARM.exidx) refers to main.o(t._ZN3ros11NodeHandle_I13STM32HardwareLi25ELi25ELi1024ELi1024EE7publishEiPKNS_3MsgE) for t._ZN3ros11NodeHandle_I13STM32HardwareLi25ELi25ELi1024ELi1024EE7publishEiPKNS_3MsgE
+    main.o(.ARM.exidx) refers to main.o(i._ZNK8std_msgs4Time9serializeEPh) for i._ZNK8std_msgs4Time9serializeEPh
+    main.o(i._ZN8std_msgs4Time7getTypeEv) refers to main.o(.constdata__ZZN8std_msgs4Time7getTypeEvEs) for std_msgs::Time::getType()::string
+    main.o(.ARM.exidx) refers to main.o(i._ZN8std_msgs4Time7getTypeEv) for i._ZN8std_msgs4Time7getTypeEv
+    main.o(i._ZN8std_msgs4Time6getMD5Ev) refers to main.o(.constdata__ZZN8std_msgs4Time6getMD5EvEs) for std_msgs::Time::getMD5()::string
+    main.o(.ARM.exidx) refers to main.o(i._ZN8std_msgs4Time6getMD5Ev) for i._ZN8std_msgs4Time6getMD5Ev
+    main.o(i._ZNK14rosserial_msgs9TopicInfo9serializeEPh) refers to strlen.o(.text) for strlen
+    main.o(i._ZNK14rosserial_msgs9TopicInfo9serializeEPh) refers to memcpya.o(.text) for __aeabi_memcpy
+    main.o(.ARM.exidx) refers to main.o(i._ZNK14rosserial_msgs9TopicInfo9serializeEPh) for i._ZNK14rosserial_msgs9TopicInfo9serializeEPh
+    main.o(.ARM.exidx) refers to main.o(i._ZN14rosserial_msgs9TopicInfo11deserializeEPh) for i._ZN14rosserial_msgs9TopicInfo11deserializeEPh
+    main.o(i._ZN14rosserial_msgs9TopicInfo7getTypeEv) refers to main.o(.constdata__ZZN14rosserial_msgs9TopicInfo7getTypeEvEs) for rosserial_msgs::TopicInfo::getType()::string
+    main.o(.ARM.exidx) refers to main.o(i._ZN14rosserial_msgs9TopicInfo7getTypeEv) for i._ZN14rosserial_msgs9TopicInfo7getTypeEv
+    main.o(i._ZN14rosserial_msgs9TopicInfo6getMD5Ev) refers to main.o(.constdata__ZZN14rosserial_msgs9TopicInfo6getMD5EvEs) for rosserial_msgs::TopicInfo::getMD5()::string
+    main.o(.ARM.exidx) refers to main.o(i._ZN14rosserial_msgs9TopicInfo6getMD5Ev) for i._ZN14rosserial_msgs9TopicInfo6getMD5Ev
+    main.o(i._ZNK14rosserial_msgs3Log9serializeEPh) refers to strlen.o(.text) for strlen
+    main.o(i._ZNK14rosserial_msgs3Log9serializeEPh) refers to memcpya.o(.text) for __aeabi_memcpy
+    main.o(.ARM.exidx) refers to main.o(i._ZNK14rosserial_msgs3Log9serializeEPh) for i._ZNK14rosserial_msgs3Log9serializeEPh
+    main.o(.ARM.exidx) refers to main.o(i._ZN14rosserial_msgs3Log11deserializeEPh) for i._ZN14rosserial_msgs3Log11deserializeEPh
+    main.o(i._ZN14rosserial_msgs3Log7getTypeEv) refers to main.o(.constdata__ZZN14rosserial_msgs3Log7getTypeEvEs) for rosserial_msgs::Log::getType()::string
+    main.o(.ARM.exidx) refers to main.o(i._ZN14rosserial_msgs3Log7getTypeEv) for i._ZN14rosserial_msgs3Log7getTypeEv
+    main.o(i._ZN14rosserial_msgs3Log6getMD5Ev) refers to main.o(.constdata__ZZN14rosserial_msgs3Log6getMD5EvEs) for rosserial_msgs::Log::getMD5()::string
+    main.o(.ARM.exidx) refers to main.o(i._ZN14rosserial_msgs3Log6getMD5Ev) for i._ZN14rosserial_msgs3Log6getMD5Ev
+    main.o(i._ZNK14rosserial_msgs20RequestParamResponse9serializeEPh) refers to strlen.o(.text) for strlen
+    main.o(i._ZNK14rosserial_msgs20RequestParamResponse9serializeEPh) refers to memcpya.o(.text) for __aeabi_memcpy
+    main.o(.ARM.exidx) refers to main.o(i._ZNK14rosserial_msgs20RequestParamResponse9serializeEPh) for i._ZNK14rosserial_msgs20RequestParamResponse9serializeEPh
+    main.o(i._ZN14rosserial_msgs20RequestParamResponse7getTypeEv) refers to main.o(.constdata) for rosserial_msgs::REQUESTPARAM
+    main.o(.ARM.exidx) refers to main.o(i._ZN14rosserial_msgs20RequestParamResponse7getTypeEv) for i._ZN14rosserial_msgs20RequestParamResponse7getTypeEv
+    main.o(i._ZN14rosserial_msgs20RequestParamResponse6getMD5Ev) refers to main.o(.constdata__ZZN14rosserial_msgs20RequestParamResponse6getMD5EvEs) for rosserial_msgs::RequestParamResponse::getMD5()::string
+    main.o(.ARM.exidx) refers to main.o(i._ZN14rosserial_msgs20RequestParamResponse6getMD5Ev) for i._ZN14rosserial_msgs20RequestParamResponse6getMD5Ev
+    main.o(i._ZNK9riki_msgs3Imu9serializeEPh) refers to main.o(i._ZNK13geometry_msgs7Vector39serializeEPh) for geometry_msgs::Vector3::serialize(unsigned char*) const
+    main.o(.ARM.exidx) refers to main.o(i._ZNK9riki_msgs3Imu9serializeEPh) for i._ZNK9riki_msgs3Imu9serializeEPh
+    main.o(i._ZN9riki_msgs3Imu11deserializeEPh) refers to main.o(i._ZN13geometry_msgs7Vector311deserializeEPh) for geometry_msgs::Vector3::deserialize(unsigned char*)
+    main.o(.ARM.exidx) refers to main.o(i._ZN9riki_msgs3Imu11deserializeEPh) for i._ZN9riki_msgs3Imu11deserializeEPh
+    main.o(i._ZN9riki_msgs3Imu7getTypeEv) refers to main.o(.constdata__ZZN9riki_msgs3Imu7getTypeEvEs) for riki_msgs::Imu::getType()::string
+    main.o(.ARM.exidx) refers to main.o(i._ZN9riki_msgs3Imu7getTypeEv) for i._ZN9riki_msgs3Imu7getTypeEv
+    main.o(i._ZN9riki_msgs3Imu6getMD5Ev) refers to main.o(.constdata__ZZN9riki_msgs3Imu6getMD5EvEs) for riki_msgs::Imu::getMD5()::string
+    main.o(.ARM.exidx) refers to main.o(i._ZN9riki_msgs3Imu6getMD5Ev) for i._ZN9riki_msgs3Imu6getMD5Ev
+    main.o(i._ZN13geometry_msgs7Vector37getTypeEv) refers to main.o(.constdata__ZZN13geometry_msgs7Vector37getTypeEvEs) for geometry_msgs::Vector3::getType()::string
+    main.o(.ARM.exidx) refers to main.o(i._ZN13geometry_msgs7Vector37getTypeEv) for i._ZN13geometry_msgs7Vector37getTypeEv
+    main.o(i._ZN13geometry_msgs7Vector36getMD5Ev) refers to main.o(.constdata__ZZN13geometry_msgs7Vector36getMD5EvEs) for geometry_msgs::Vector3::getMD5()::string
+    main.o(.ARM.exidx) refers to main.o(i._ZN13geometry_msgs7Vector36getMD5Ev) for i._ZN13geometry_msgs7Vector36getMD5Ev
     wire.o(.constdata__ZTV7TwoWire) refers to wire.o(.constdata__ZTI7TwoWire) for typeinfo for TwoWire
     wire.o(.constdata__ZTV7TwoWire) refers to wire.o(i._ZN7TwoWire7processEv) for TwoWire::process()
     wire.o(.constdata__ZTV7TwoWire) refers to wire.o(i._ZN7TwoWire5beginEh) for TwoWire::begin(unsigned char)
@@ -972,15 +1199,13 @@ Section Cross References
 
 Removing Unused input sections from the image.
 
-    Removing startup_stm32f10x_hd.o(HEAP), (512 bytes).
     Removing core_cm3.o(.emb_text), (32 bytes).
-    Removing system_stm32f10x.o(i.SystemCoreClockUpdate), (256 bytes).
+    Removing system_stm32f10x.o(i.SystemCoreClockUpdate), (252 bytes).
     Removing system_stm32f10x.o(.ARM.exidx), (8 bytes).
     Removing system_stm32f10x.o(.ARM.exidx), (8 bytes).
     Removing system_stm32f10x.o(.ARM.exidx), (8 bytes).
     Removing system_stm32f10x.o(.ARM.exidx), (8 bytes).
     Removing system_stm32f10x.o(.data), (20 bytes).
-    Removing misc.o(i.NVIC_Init), (112 bytes).
     Removing misc.o(i.NVIC_PriorityGroupConfig), (20 bytes).
     Removing misc.o(i.NVIC_SetVectorTable), (20 bytes).
     Removing misc.o(i.NVIC_SystemLPConfig), (32 bytes).
@@ -1344,15 +1569,11 @@ Removing Unused input sections from the image.
     Removing stm32f10x_gpio.o(i.GPIO_EXTILineConfig), (64 bytes).
     Removing stm32f10x_gpio.o(i.GPIO_EventOutputCmd), (12 bytes).
     Removing stm32f10x_gpio.o(i.GPIO_EventOutputConfig), (32 bytes).
-    Removing stm32f10x_gpio.o(i.GPIO_Init), (278 bytes).
     Removing stm32f10x_gpio.o(i.GPIO_PinLockConfig), (18 bytes).
     Removing stm32f10x_gpio.o(i.GPIO_PinRemapConfig), (144 bytes).
     Removing stm32f10x_gpio.o(i.GPIO_ReadInputData), (8 bytes).
-    Removing stm32f10x_gpio.o(i.GPIO_ReadInputDataBit), (18 bytes).
     Removing stm32f10x_gpio.o(i.GPIO_ReadOutputData), (8 bytes).
     Removing stm32f10x_gpio.o(i.GPIO_ReadOutputDataBit), (18 bytes).
-    Removing stm32f10x_gpio.o(i.GPIO_ResetBits), (4 bytes).
-    Removing stm32f10x_gpio.o(i.GPIO_SetBits), (4 bytes).
     Removing stm32f10x_gpio.o(i.GPIO_StructInit), (16 bytes).
     Removing stm32f10x_gpio.o(i.GPIO_Write), (4 bytes).
     Removing stm32f10x_gpio.o(i.GPIO_WriteBit), (10 bytes).
@@ -1473,9 +1694,7 @@ Removing Unused input sections from the image.
     Removing stm32f10x_rcc.o(i.RCC_ADCCLKConfig), (24 bytes).
     Removing stm32f10x_rcc.o(i.RCC_AHBPeriphClockCmd), (32 bytes).
     Removing stm32f10x_rcc.o(i.RCC_AHBPeriphResetCmd), (32 bytes).
-    Removing stm32f10x_rcc.o(i.RCC_APB1PeriphClockCmd), (32 bytes).
     Removing stm32f10x_rcc.o(i.RCC_APB1PeriphResetCmd), (32 bytes).
-    Removing stm32f10x_rcc.o(i.RCC_APB2PeriphClockCmd), (32 bytes).
     Removing stm32f10x_rcc.o(i.RCC_APB2PeriphResetCmd), (32 bytes).
     Removing stm32f10x_rcc.o(i.RCC_AdjustHSICalibrationValue), (24 bytes).
     Removing stm32f10x_rcc.o(i.RCC_BackupResetCmd), (12 bytes).
@@ -1483,7 +1702,6 @@ Removing Unused input sections from the image.
     Removing stm32f10x_rcc.o(i.RCC_ClearITPendingBit), (12 bytes).
     Removing stm32f10x_rcc.o(i.RCC_ClockSecuritySystemCmd), (12 bytes).
     Removing stm32f10x_rcc.o(i.RCC_DeInit), (92 bytes).
-    Removing stm32f10x_rcc.o(i.RCC_GetClocksFreq), (400 bytes).
     Removing stm32f10x_rcc.o(i.RCC_GetFlagStatus), (60 bytes).
     Removing stm32f10x_rcc.o(i.RCC_GetITStatus), (24 bytes).
     Removing stm32f10x_rcc.o(i.RCC_GetSYSCLKSource), (16 bytes).
@@ -1552,7 +1770,6 @@ Removing Unused input sections from the image.
     Removing stm32f10x_rcc.o(.ARM.exidx), (8 bytes).
     Removing stm32f10x_rcc.o(.ARM.exidx), (8 bytes).
     Removing stm32f10x_rcc.o(.ARM.exidx), (8 bytes).
-    Removing stm32f10x_rcc.o(.data), (20 bytes).
     Removing stm32f10x_rtc.o(i.RTC_ClearFlag), (16 bytes).
     Removing stm32f10x_rtc.o(i.RTC_ClearITPendingBit), (16 bytes).
     Removing stm32f10x_rtc.o(i.RTC_EnterConfigMode), (20 bytes).
@@ -1872,13 +2089,9 @@ Removing Unused input sections from the image.
     Removing stm32f10x_usart.o(i.USART_ClearFlag), (18 bytes).
     Removing stm32f10x_usart.o(i.USART_ClockInit), (34 bytes).
     Removing stm32f10x_usart.o(i.USART_ClockStructInit), (12 bytes).
-    Removing stm32f10x_usart.o(i.USART_Cmd), (24 bytes).
     Removing stm32f10x_usart.o(i.USART_DMACmd), (18 bytes).
     Removing stm32f10x_usart.o(i.USART_DeInit), (156 bytes).
-    Removing stm32f10x_usart.o(i.USART_GetFlagStatus), (26 bytes).
     Removing stm32f10x_usart.o(i.USART_HalfDuplexCmd), (24 bytes).
-    Removing stm32f10x_usart.o(i.USART_ITConfig), (74 bytes).
-    Removing stm32f10x_usart.o(i.USART_Init), (216 bytes).
     Removing stm32f10x_usart.o(i.USART_IrDACmd), (24 bytes).
     Removing stm32f10x_usart.o(i.USART_IrDAConfig), (18 bytes).
     Removing stm32f10x_usart.o(i.USART_LINBreakDetectLengthConfig), (18 bytes).
@@ -1887,7 +2100,6 @@ Removing Unused input sections from the image.
     Removing stm32f10x_usart.o(i.USART_OverSampling8Cmd), (22 bytes).
     Removing stm32f10x_usart.o(i.USART_ReceiverWakeUpCmd), (24 bytes).
     Removing stm32f10x_usart.o(i.USART_SendBreak), (10 bytes).
-    Removing stm32f10x_usart.o(i.USART_SendData), (8 bytes).
     Removing stm32f10x_usart.o(i.USART_SetAddress), (18 bytes).
     Removing stm32f10x_usart.o(i.USART_SetGuardTime), (16 bytes).
     Removing stm32f10x_usart.o(i.USART_SetPrescaler), (16 bytes).
@@ -1941,6 +2153,9 @@ Removing Unused input sections from the image.
     Removing stm32f10x_wwdg.o(.ARM.exidx), (8 bytes).
     Removing stm32f10x_wwdg.o(.ARM.exidx), (8 bytes).
     Removing main.o(.ARM.exidx), (8 bytes).
+    Removing main.o(.ARM.exidx), (8 bytes).
+    Removing main.o(.ARM.exidx), (8 bytes).
+    Removing main.o(.ARM.exidx), (8 bytes).
     Removing stm32f10x_it.o(.ARM.exidx), (8 bytes).
     Removing stm32f10x_it.o(.ARM.exidx), (8 bytes).
     Removing stm32f10x_it.o(.ARM.exidx), (8 bytes).
@@ -1949,15 +2164,9 @@ Removing Unused input sections from the image.
     Removing stm32f10x_it.o(.ARM.exidx), (8 bytes).
     Removing stm32f10x_it.o(.ARM.exidx), (8 bytes).
     Removing stm32f10x_it.o(.ARM.exidx), (8 bytes).
-    Removing stm32f10x_it.o(.ARM.exidx), (8 bytes).
-    Removing hardwareserial.o(i._ZN14HardwareSerial4readEv), (34 bytes).
-    Removing hardwareserial.o(i._ZN14HardwareSerial5beginEj), (304 bytes).
     Removing hardwareserial.o(i._ZN14HardwareSerial5flushEv), (6 bytes).
     Removing hardwareserial.o(i._ZN14HardwareSerial5printEPKcz), (42 bytes).
-    Removing hardwareserial.o(i._ZN14HardwareSerial5writeEh), (52 bytes).
     Removing hardwareserial.o(i._ZN14HardwareSerial6putstrEPKc), (32 bytes).
-    Removing hardwareserial.o(i._ZN14HardwareSerial9availableEv), (18 bytes).
-    Removing hardwareserial.o(i._ZN14HardwareSerialC1E14Serial_TypeDef), (68 bytes).
     Removing hardwareserial.o(.ARM.exidx), (8 bytes).
     Removing hardwareserial.o(.ARM.exidx), (8 bytes).
     Removing hardwareserial.o(.ARM.exidx), (8 bytes).
@@ -1967,27 +2176,11 @@ Removing Unused input sections from the image.
     Removing hardwareserial.o(.ARM.exidx), (8 bytes).
     Removing hardwareserial.o(.ARM.exidx), (8 bytes).
     Removing hardwareserial.o(.ARM.exidx), (8 bytes).
-    Removing hardwareserial.o(.constdata), (48 bytes).
     Removing interrupt.o(.ARM.exidx), (8 bytes).
     Removing interrupt.o(.ARM.exidx), (8 bytes).
     Removing interrupt.o(.ARM.exidx), (8 bytes).
-    Removing ringbuffer.o(i._ZN10RingBufferC1Ev), (22 bytes).
     Removing ringbuffer.o(.ARM.exidx), (8 bytes).
     Removing ringbuffer.o(.ARM.exidx), (8 bytes).
-    Removing wire.o(i._ZN7TwoWire11i2c_get_ackEv), (50 bytes).
-    Removing wire.o(i._ZN7TwoWire12i2c_send_ackEv), (30 bytes).
-    Removing wire.o(i._ZN7TwoWire12i2c_shift_inEv), (60 bytes).
-    Removing wire.o(i._ZN7TwoWire13i2c_send_nackEv), (30 bytes).
-    Removing wire.o(i._ZN7TwoWire13i2c_shift_outEh), (60 bytes).
-    Removing wire.o(i._ZN7TwoWire5beginEh), (112 bytes).
-    Removing wire.o(i._ZN7TwoWire7processEv), (170 bytes).
-    Removing wire.o(i._ZN7TwoWire7set_sclEb), (56 bytes).
-    Removing wire.o(i._ZN7TwoWire7set_sdaEb), (56 bytes).
-    Removing wire.o(i._ZN7TwoWire8i2c_stopEv), (30 bytes).
-    Removing wire.o(i._ZN7TwoWire8sda_readEv), (28 bytes).
-    Removing wire.o(i._ZN7TwoWire9i2c_startEv), (22 bytes).
-    Removing wire.o(i._ZN7TwoWireC1Eh), (24 bytes).
-    Removing wire.o(i._ZN7TwoWireD1Ev), (8 bytes).
     Removing wire.o(.ARM.exidx), (8 bytes).
     Removing wire.o(.ARM.exidx), (8 bytes).
     Removing wire.o(.ARM.exidx), (8 bytes).
@@ -2002,19 +2195,11 @@ Removing Unused input sections from the image.
     Removing wire.o(.ARM.exidx), (8 bytes).
     Removing wire.o(.ARM.exidx), (8 bytes).
     Removing wire.o(.ARM.exidx), (8 bytes).
-    Removing wirebase.o(i._ZN8WireBase11requestFromEhi), (64 bytes).
-    Removing wirebase.o(i._ZN8WireBase11requestFromEii), (20 bytes).
-    Removing wirebase.o(i._ZN8WireBase15endTransmissionEv), (38 bytes).
-    Removing wirebase.o(i._ZN8WireBase17beginTransmissionEh), (22 bytes).
-    Removing wirebase.o(i._ZN8WireBase17beginTransmissionEi), (16 bytes).
-    Removing wirebase.o(i._ZN8WireBase4readEv), (84 bytes).
     Removing wirebase.o(i._ZN8WireBase5beginEh), (20 bytes).
     Removing wirebase.o(i._ZN8WireBase5writeEPc), (28 bytes).
     Removing wirebase.o(i._ZN8WireBase5writeEPhi), (30 bytes).
     Removing wirebase.o(i._ZN8WireBase5writeEPii), (20 bytes).
-    Removing wirebase.o(i._ZN8WireBase5writeEh), (44 bytes).
     Removing wirebase.o(i._ZN8WireBase5writeEi), (16 bytes).
-    Removing wirebase.o(i._ZN8WireBase9availableEv), (16 bytes).
     Removing wirebase.o(.ARM.exidx), (8 bytes).
     Removing wirebase.o(.ARM.exidx), (8 bytes).
     Removing wirebase.o(.ARM.exidx), (8 bytes).
@@ -2028,6 +2213,14 @@ Removing Unused input sections from the image.
     Removing wirebase.o(.ARM.exidx), (8 bytes).
     Removing wirebase.o(.ARM.exidx), (8 bytes).
     Removing wirebase.o(.ARM.exidx), (8 bytes).
+    Removing millisecondtimer.o(i.delay), (24 bytes).
+    Removing millisecondtimer.o(i.initialise), (108 bytes).
+    Removing millisecondtimer.o(i.reset), (12 bytes).
+    Removing millisecondtimer.o(.ARM.exidx), (8 bytes).
+    Removing millisecondtimer.o(.ARM.exidx), (8 bytes).
+    Removing millisecondtimer.o(.ARM.exidx), (8 bytes).
+    Removing millisecondtimer.o(.ARM.exidx), (8 bytes).
+    Removing millisecondtimer.o(.ARM.exidx), (8 bytes).
     Removing duration.o(i._ZN3ros22normalizeSecNSecSignedERlS0_), (44 bytes).
     Removing duration.o(i._ZN3ros8DurationmIERKS0_), (38 bytes).
     Removing duration.o(i._ZN3ros8DurationmLEd), (82 bytes).
@@ -2036,7 +2229,6 @@ Removing Unused input sections from the image.
     Removing duration.o(.ARM.exidx), (8 bytes).
     Removing duration.o(.ARM.exidx), (8 bytes).
     Removing duration.o(.ARM.exidx), (8 bytes).
-    Removing time.o(i._ZN3ros16normalizeSecNSecERmS0_), (36 bytes).
     Removing time.o(i._ZN3ros4Time8fromNSecEl), (44 bytes).
     Removing time.o(i._ZN3ros4TimemIERKNS_8DurationE), (38 bytes).
     Removing time.o(i._ZN3ros4TimepLERKNS_8DurationE), (34 bytes).
@@ -2044,15 +2236,6 @@ Removing Unused input sections from the image.
     Removing time.o(.ARM.exidx), (8 bytes).
     Removing time.o(.ARM.exidx), (8 bytes).
     Removing time.o(.ARM.exidx), (8 bytes).
-    Removing mpu6050.o(i._ZN3MPU10send_valueEih), (38 bytes).
-    Removing mpu6050.o(i._ZN3MPU15check_gyroscopeEv), (4 bytes).
-    Removing mpu6050.o(i._ZN3MPU17measure_gyroscopeEv), (2 bytes).
-    Removing mpu6050.o(i._ZN3MPU17write_to_registerEihh), (54 bytes).
-    Removing mpu6050.o(i._ZN3MPU19check_accelerometerEv), (4 bytes).
-    Removing mpu6050.o(i._ZN3MPU20measure_accelerationEv), (2 bytes).
-    Removing mpu6050.o(i._ZN3MPU4initEv), (16 bytes).
-    Removing mpu6050.o(i._ZN3MPU8check_idEih), (58 bytes).
-    Removing mpu6050.o(.ARM.exidx), (8 bytes).
     Removing mpu6050.o(.ARM.exidx), (8 bytes).
     Removing mpu6050.o(.ARM.exidx), (8 bytes).
     Removing mpu6050.o(.ARM.exidx), (8 bytes).
@@ -2068,14 +2251,74 @@ Removing Unused input sections from the image.
     Removing ddiv.o(.text), (222 bytes).
     Removing dfixul.o(.text), (48 bytes).
     Removing cdrcmple.o(.text), (48 bytes).
-    Removing wire.o(.constdata__ZTV7TwoWire), (16 bytes).
+    Removing main.o(.ARM.exidx), (8 bytes).
+    Removing main.o(.ARM.exidx), (8 bytes).
+    Removing main.o(.ARM.exidx), (8 bytes).
+    Removing main.o(.ARM.exidx), (8 bytes).
+    Removing main.o(.ARM.exidx), (8 bytes).
+    Removing main.o(.ARM.exidx), (8 bytes).
+    Removing main.o(.ARM.exidx), (8 bytes).
+    Removing main.o(.ARM.exidx), (8 bytes).
+    Removing main.o(.ARM.exidx), (8 bytes).
+    Removing main.o(i._ZN13geometry_msgs7Vector311deserializeEPh), (476 bytes).
+    Removing main.o(.ARM.exidx), (8 bytes).
+    Removing main.o(.ARM.exidx), (8 bytes).
+    Removing main.o(.ARM.exidx), (8 bytes).
+    Removing main.o(.ARM.exidx), (8 bytes).
+    Removing main.o(.ARM.exidx), (8 bytes).
+    Removing main.o(.ARM.exidx), (8 bytes).
+    Removing main.o(.ARM.exidx), (8 bytes).
+    Removing main.o(.ARM.exidx), (8 bytes).
+    Removing main.o(.constdata__ZTIN3ros15NodeHandleBase_E), (8 bytes).
+    Removing main.o(.constdata__ZTIN3ros3MsgE), (8 bytes).
+    Removing main.o(.constdata__ZTIN3ros11NodeHandle_I13STM32HardwareLi25ELi25ELi1024ELi1024EEE), (12 bytes).
+    Removing main.o(.constdata__ZTIN8std_msgs4TimeE), (12 bytes).
+    Removing main.o(.constdata__ZTIN14rosserial_msgs9TopicInfoE), (12 bytes).
+    Removing main.o(.constdata__ZTIN14rosserial_msgs3LogE), (12 bytes).
+    Removing main.o(.constdata__ZTIN14rosserial_msgs20RequestParamResponseE), (12 bytes).
+    Removing main.o(.constdata__ZTIN9riki_msgs3ImuE), (12 bytes).
+    Removing main.o(.constdata__ZTIN13geometry_msgs7Vector3E), (12 bytes).
+    Removing main.o(.constdata__ZTSN3ros3MsgE), (11 bytes).
+    Removing main.o(.constdata__ZTSN3ros15NodeHandleBase_E), (24 bytes).
+    Removing main.o(.constdata__ZTSN3ros11NodeHandle_I13STM32HardwareLi25ELi25ELi1024ELi1024EEE), (61 bytes).
+    Removing main.o(.constdata__ZTSN8std_msgs4TimeE), (17 bytes).
+    Removing main.o(.constdata__ZTSN14rosserial_msgs9TopicInfoE), (29 bytes).
+    Removing main.o(.constdata__ZTSN14rosserial_msgs3LogE), (23 bytes).
+    Removing main.o(.constdata__ZTSN14rosserial_msgs20RequestParamResponseE), (41 bytes).
+    Removing main.o(.constdata__ZTSN9riki_msgs3ImuE), (17 bytes).
+    Removing main.o(.constdata__ZTSN13geometry_msgs7Vector3E), (26 bytes).
+    Removing main.o(t._ZN3ros11NodeHandle_I13STM32HardwareLi25ELi25ELi1024ELi1024EE9connectedEv), (8 bytes).
+    Removing main.o(.ARM.exidx), (8 bytes).
+    Removing main.o(.ARM.exidx), (8 bytes).
+    Removing main.o(.ARM.exidx), (8 bytes).
+    Removing main.o(.ARM.exidx), (8 bytes).
+    Removing main.o(.ARM.exidx), (8 bytes).
+    Removing main.o(.ARM.exidx), (8 bytes).
+    Removing main.o(i._ZN14rosserial_msgs9TopicInfo11deserializeEPh), (212 bytes).
+    Removing main.o(.ARM.exidx), (8 bytes).
+    Removing main.o(.ARM.exidx), (8 bytes).
+    Removing main.o(.ARM.exidx), (8 bytes).
+    Removing main.o(.ARM.exidx), (8 bytes).
+    Removing main.o(i._ZN14rosserial_msgs3Log11deserializeEPh), (54 bytes).
+    Removing main.o(.ARM.exidx), (8 bytes).
+    Removing main.o(.ARM.exidx), (8 bytes).
+    Removing main.o(.ARM.exidx), (8 bytes).
+    Removing main.o(.ARM.exidx), (8 bytes).
+    Removing main.o(.ARM.exidx), (8 bytes).
+    Removing main.o(.ARM.exidx), (8 bytes).
+    Removing main.o(.ARM.exidx), (8 bytes).
+    Removing main.o(i._ZN9riki_msgs3Imu11deserializeEPh), (34 bytes).
+    Removing main.o(.ARM.exidx), (8 bytes).
+    Removing main.o(.ARM.exidx), (8 bytes).
+    Removing main.o(.ARM.exidx), (8 bytes).
+    Removing main.o(.ARM.exidx), (8 bytes).
+    Removing main.o(.ARM.exidx), (8 bytes).
     Removing wire.o(.constdata__ZTI7TwoWire), (12 bytes).
     Removing wire.o(.constdata__ZTS7TwoWire), (9 bytes).
-    Removing wirebase.o(.constdata__ZTV8WireBase), (16 bytes).
     Removing wirebase.o(.constdata__ZTI8WireBase), (8 bytes).
     Removing wirebase.o(.constdata__ZTS8WireBase), (10 bytes).
 
-1102 unused section(s) (total 28309 bytes) removed from the image.
+1118 unused section(s) (total 26350 bytes) removed from the image.
 
 ==============================================================================
 
@@ -2086,38 +2329,42 @@ Image Symbol Table
     Symbol Name                              Value     Ov Type        Size  Object(Section)
 
     ../../../edgfe/lib_src/arm_exceptions.c  0x00000000   Number         0  arm_exceptions_callterm.o ABSOLUTE
-    ../../../edgfe/lib_src/arm_exceptions.c  0x00000000   Number         0  arm_exceptions_mem.o ABSOLUTE
-    ../../../edgfe/lib_src/arm_exceptions.c  0x00000000   Number         0  arm_exceptions_globs.o ABSOLUTE
-    ../../../edgfe/lib_src/arm_exceptions.c  0x00000000   Number         0  arm_exceptions_support.o ABSOLUTE
     ../../../edgfe/lib_src/arm_exceptions.c  0x00000000   Number         0  arm_exceptions_terminate.o ABSOLUTE
+    ../../../edgfe/lib_src/arm_exceptions.c  0x00000000   Number         0  arm_exceptions_support.o ABSOLUTE
+    ../../../edgfe/lib_src/arm_exceptions.c  0x00000000   Number         0  arm_exceptions_globs.o ABSOLUTE
+    ../../../edgfe/lib_src/arm_exceptions.c  0x00000000   Number         0  arm_exceptions_mem.o ABSOLUTE
     ../../../edgfe/lib_src/arm_noexceptions.c 0x00000000   Number         0  arm_begincatch_noexceptions.o ABSOLUTE
     ../../../edgfe/lib_src/pure_virt.c       0x00000000   Number         0  pure_virt.o ABSOLUTE
-    ../../../edgfe/lib_src/typeinfo.c        0x00000000   Number         0  lib_rtti_impl.o ABSOLUTE
     ../../../edgfe/lib_src/typeinfo.c        0x00000000   Number         0  type_info_dtor.o ABSOLUTE
+    ../../../edgfe/lib_src/typeinfo.c        0x00000000   Number         0  lib_rtti_impl.o ABSOLUTE
+    ../clib/microlib/cpp/cpp_dtor.c          0x00000000   Number         0  cpp_dtor.o ABSOLUTE
+    ../clib/microlib/cpp/cpp_final.c         0x00000000   Number         0  cpp_final.o ABSOLUTE
+    ../clib/microlib/cpp/cpp_init.c          0x00000000   Number         0  cpp_init.o ABSOLUTE
+    ../clib/microlib/cpp/cpp_init.c          0x00000000   Number         0  cpp_init.o ABSOLUTE
     ../clib/microlib/cpp/cpp_memory.c        0x00000000   Number         0  cpp_memory.o ABSOLUTE
     ../clib/microlib/cpp/cpp_signal.c        0x00000000   Number         0  cpp_signal.o ABSOLUTE
-    ../clib/microlib/division.c              0x00000000   Number         0  uidiv.o ABSOLUTE
     ../clib/microlib/division.c              0x00000000   Number         0  uldiv.o ABSOLUTE
+    ../clib/microlib/division.c              0x00000000   Number         0  uidiv.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry2.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7a.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11a.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11b.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10b.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry2.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry5.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7a.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7b.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8a.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8b.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9a.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10b.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10a.o ABSOLUTE
-    ../clib/microlib/longlong.c              0x00000000   Number         0  llshl.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9b.o ABSOLUTE
     ../clib/microlib/longlong.c              0x00000000   Number         0  llushr.o ABSOLUTE
     ../clib/microlib/longlong.c              0x00000000   Number         0  llsshr.o ABSOLUTE
-    ../clib/microlib/malloc/malloc.c         0x00000000   Number         0  malloca.o ABSOLUTE
-    ../clib/microlib/malloc/malloc.c         0x00000000   Number         0  malloc.o ABSOLUTE
+    ../clib/microlib/longlong.c              0x00000000   Number         0  llshl.o ABSOLUTE
     ../clib/microlib/malloc/malloc.c         0x00000000   Number         0  mallocr.o ABSOLUTE
     ../clib/microlib/malloc/malloc.c         0x00000000   Number         0  mallocra.o ABSOLUTE
+    ../clib/microlib/malloc/malloc.c         0x00000000   Number         0  malloca.o ABSOLUTE
+    ../clib/microlib/malloc/malloc.c         0x00000000   Number         0  malloc.o ABSOLUTE
     ../clib/microlib/malloc/mvars.c          0x00000000   Number         0  mvars.o ABSOLUTE
     ../clib/microlib/printf/printf.c         0x00000000   Number         0  printfa.o ABSOLUTE
     ../clib/microlib/stdio/fputc.c           0x00000000   Number         0  fputc.o ABSOLUTE
@@ -2130,18 +2377,23 @@ Image Symbol Table
     ../clib/microlib/string/strlen.c         0x00000000   Number         0  strlen.o ABSOLUTE
     ../clib/microlib/stubs.s                 0x00000000   Number         0  iusefp.o ABSOLUTE
     ../clib/microlib/stubs.s                 0x00000000   Number         0  iusesemip.o ABSOLUTE
+    ../clib/stdlib.c                         0x00000000   Number         0  aeabi_atexit.o ABSOLUTE
+    ../clib/stdlib.c                         0x00000000   Number         0  cxa_finalize.o ABSOLUTE
     ../fplib/microlib/fpadd.c                0x00000000   Number         0  dadd.o ABSOLUTE
     ../fplib/microlib/fpdiv.c                0x00000000   Number         0  ddiv.o ABSOLUTE
+    ../fplib/microlib/fpepilogue.c           0x00000000   Number         0  fepilogue.o ABSOLUTE
     ../fplib/microlib/fpepilogue.c           0x00000000   Number         0  depilogue.o ABSOLUTE
     ../fplib/microlib/fpfix.c                0x00000000   Number         0  dfixul.o ABSOLUTE
     ../fplib/microlib/fpfix.c                0x00000000   Number         0  dfixi.o ABSOLUTE
     ../fplib/microlib/fpflt.c                0x00000000   Number         0  dflti.o ABSOLUTE
+    ../fplib/microlib/fpflt.c                0x00000000   Number         0  fflti.o ABSOLUTE
     ../fplib/microlib/fpmul.c                0x00000000   Number         0  dmul.o ABSOLUTE
     ..\Bsp\RingBuffer.cpp                    0x00000000   Number         0  ringbuffer.o ABSOLUTE
     ..\Bsp\Wire.cpp                          0x00000000   Number         0  wire.o ABSOLUTE
     ..\Bsp\WireBase.cpp                      0x00000000   Number         0  wirebase.o ABSOLUTE
     ..\Bsp\hardwareserial.cpp                0x00000000   Number         0  hardwareserial.o ABSOLUTE
     ..\Bsp\interrupt.cpp                     0x00000000   Number         0  interrupt.o ABSOLUTE
+    ..\Bsp\millisecondtimer.c                0x00000000   Number         0  millisecondtimer.o ABSOLUTE
     ..\Hardsware\Mpu6050\mpu6050.cpp         0x00000000   Number         0  mpu6050.o ABSOLUTE
     ..\Libraries\CMSIS\core_cm3.c            0x00000000   Number         0  core_cm3.o ABSOLUTE
     ..\Libraries\CMSIS\startup\startup_stm32f10x_hd.s 0x00000000   Number         0  startup_stm32f10x_hd.o ABSOLUTE
@@ -2175,6 +2427,7 @@ Image Symbol Table
     ..\User\stm32f10x_it.c                   0x00000000   Number         0  stm32f10x_it.o ABSOLUTE
     ..\\Libraries\\CMSIS\\core_cm3.c         0x00000000   Number         0  core_cm3.o ABSOLUTE
     cdrcmple.s                               0x00000000   Number         0  cdrcmple.o ABSOLUTE
+    cfcmple.s                                0x00000000   Number         0  cfcmple.o ABSOLUTE
     dc.s                                     0x00000000   Number         0  dc.o ABSOLUTE
     handlers.s                               0x00000000   Number         0  handlers.o ABSOLUTE
     init.s                                   0x00000000   Number         0  init.o ABSOLUTE
@@ -2183,159 +2436,474 @@ Image Symbol Table
     .ARM.Collect$$$$00000001                 0x08000130   Section        4  entry2.o(.ARM.Collect$$$$00000001)
     .ARM.Collect$$$$00000004                 0x08000134   Section        4  entry5.o(.ARM.Collect$$$$00000004)
     .ARM.Collect$$$$00000008                 0x08000138   Section        0  entry7b.o(.ARM.Collect$$$$00000008)
-    .ARM.Collect$$$$0000000A                 0x08000138   Section        0  entry8b.o(.ARM.Collect$$$$0000000A)
-    .ARM.Collect$$$$0000000B                 0x08000138   Section        8  entry9a.o(.ARM.Collect$$$$0000000B)
-    .ARM.Collect$$$$0000000D                 0x08000140   Section        0  entry10a.o(.ARM.Collect$$$$0000000D)
-    .ARM.Collect$$$$0000000F                 0x08000140   Section        0  entry11a.o(.ARM.Collect$$$$0000000F)
-    .ARM.Collect$$$$00002712                 0x08000140   Section        4  entry2.o(.ARM.Collect$$$$00002712)
-    __lit__00000000                          0x08000140   Data           4  entry2.o(.ARM.Collect$$$$00002712)
-    .text                                    0x08000144   Section       36  startup_stm32f10x_hd.o(.text)
-    .text                                    0x08000168   Section       36  init.o(.text)
-    i.BusFault_Handler                       0x0800018c   Section        0  stm32f10x_it.o(i.BusFault_Handler)
-    i.DebugMon_Handler                       0x08000190   Section        0  stm32f10x_it.o(i.DebugMon_Handler)
-    i.HardFault_Handler                      0x08000192   Section        0  stm32f10x_it.o(i.HardFault_Handler)
-    i.MemManage_Handler                      0x08000196   Section        0  stm32f10x_it.o(i.MemManage_Handler)
-    i.NMI_Handler                            0x0800019a   Section        0  stm32f10x_it.o(i.NMI_Handler)
-    i.PendSV_Handler                         0x0800019c   Section        0  stm32f10x_it.o(i.PendSV_Handler)
-    i.SVC_Handler                            0x0800019e   Section        0  stm32f10x_it.o(i.SVC_Handler)
-    i.SysTick_Handler                        0x080001a0   Section        0  stm32f10x_it.o(i.SysTick_Handler)
-    i.SystemInit                             0x080001a4   Section        0  system_stm32f10x.o(i.SystemInit)
-    i.USART1_IRQHandler                      0x08000210   Section        0  interrupt.o(i.USART1_IRQHandler)
-    i.USART2_IRQHandler                      0x08000220   Section        0  interrupt.o(i.USART2_IRQHandler)
-    i.USART3_IRQHandler                      0x08000230   Section        0  interrupt.o(i.USART3_IRQHandler)
-    i.USART_ClearITPendingBit                0x08000240   Section        0  stm32f10x_usart.o(i.USART_ClearITPendingBit)
-    i.USART_GetITStatus                      0x0800025e   Section        0  stm32f10x_usart.o(i.USART_GetITStatus)
-    i.USART_ReceiveData                      0x080002b2   Section        0  stm32f10x_usart.o(i.USART_ReceiveData)
-    i.UsageFault_Handler                     0x080002bc   Section        0  stm32f10x_it.o(i.UsageFault_Handler)
-    i._Z11SetSysClockv                       0x080002c0   Section        0  system_stm32f10x.o(i._Z11SetSysClockv)
-    SetSysClock()                            0x080002c1   Thumb Code     8  system_stm32f10x.o(i._Z11SetSysClockv)
-    i._Z15SetSysClockTo72v                   0x080002c8   Section        0  system_stm32f10x.o(i._Z15SetSysClockTo72v)
-    SetSysClockTo72()                        0x080002c9   Thumb Code   264  system_stm32f10x.o(i._Z15SetSysClockTo72v)
-    i._ZN10RingBuffer10store_charEh          0x080003e0   Section        0  ringbuffer.o(i._ZN10RingBuffer10store_charEh)
-    i._ZN14HardwareSerial3irqEv              0x080003f8   Section        0  hardwareserial.o(i._ZN14HardwareSerial3irqEv)
-    i.__scatterload_copy                     0x08000440   Section       14  handlers.o(i.__scatterload_copy)
-    i.__scatterload_null                     0x0800044e   Section        2  handlers.o(i.__scatterload_null)
-    i.__scatterload_zeroinit                 0x08000450   Section       14  handlers.o(i.__scatterload_zeroinit)
-    i.main                                   0x0800045e   Section        0  main.o(i.main)
-    .data                                    0x20000000   Section       24  hardwareserial.o(.data)
-    .data                                    0x20000018   Section       12  interrupt.o(.data)
-    STACK                                    0x20000028   Section     1024  startup_stm32f10x_hd.o(STACK)
+    .ARM.Collect$$$$00000009                 0x08000138   Section        4  entry8a.o(.ARM.Collect$$$$00000009)
+    .ARM.Collect$$$$0000000A                 0x0800013c   Section        0  entry8b.o(.ARM.Collect$$$$0000000A)
+    .ARM.Collect$$$$0000000B                 0x0800013c   Section        8  entry9a.o(.ARM.Collect$$$$0000000B)
+    .ARM.Collect$$$$0000000D                 0x08000144   Section        0  entry10a.o(.ARM.Collect$$$$0000000D)
+    .ARM.Collect$$$$0000000E                 0x08000144   Section        4  entry10b.o(.ARM.Collect$$$$0000000E)
+    .ARM.Collect$$$$0000000F                 0x08000148   Section        0  entry11a.o(.ARM.Collect$$$$0000000F)
+    .ARM.Collect$$$$00002712                 0x08000148   Section        4  entry2.o(.ARM.Collect$$$$00002712)
+    __lit__00000000                          0x08000148   Data           4  entry2.o(.ARM.Collect$$$$00002712)
+    .text                                    0x0800014c   Section       36  startup_stm32f10x_hd.o(.text)
+    .text                                    0x08000170   Section        0  memcpya.o(.text)
+    .text                                    0x08000194   Section        0  memseta.o(.text)
+    .text                                    0x080001b8   Section        0  strlen.o(.text)
+    .text                                    0x080001c8   Section        0  cpp_init.o(.text)
+    .text                                    0x080001e8   Section        0  aeabi_atexit.o(.text)
+    .text                                    0x08000216   Section        0  fflti.o(.text)
+    .text                                    0x08000228   Section       20  cfcmple.o(.text)
+    .text                                    0x0800023c   Section        0  iusefp.o(.text)
+    .text                                    0x0800023c   Section        0  cpp_dtor.o(.text)
+    .text                                    0x08000244   Section        0  cpp_signal.o(.text)
+    .text                                    0x08000246   Section        0  cxa_finalize.o(.text)
+    .text                                    0x08000288   Section        0  fepilogue.o(.text)
+    .text                                    0x080002f8   Section       36  init.o(.text)
+    .text                                    0x0800031c   Section        0  cpp_final.o(.text)
+    i.BusFault_Handler                       0x0800031e   Section        0  stm32f10x_it.o(i.BusFault_Handler)
+    i.DebugMon_Handler                       0x08000322   Section        0  stm32f10x_it.o(i.DebugMon_Handler)
+    i.GPIO_Init                              0x08000324   Section        0  stm32f10x_gpio.o(i.GPIO_Init)
+    i.GPIO_ReadInputDataBit                  0x0800043a   Section        0  stm32f10x_gpio.o(i.GPIO_ReadInputDataBit)
+    i.GPIO_ResetBits                         0x0800044c   Section        0  stm32f10x_gpio.o(i.GPIO_ResetBits)
+    i.GPIO_SetBits                           0x08000450   Section        0  stm32f10x_gpio.o(i.GPIO_SetBits)
+    i.HardFault_Handler                      0x08000454   Section        0  stm32f10x_it.o(i.HardFault_Handler)
+    i.MemManage_Handler                      0x08000458   Section        0  stm32f10x_it.o(i.MemManage_Handler)
+    i.NMI_Handler                            0x0800045c   Section        0  stm32f10x_it.o(i.NMI_Handler)
+    i.NVIC_Init                              0x08000460   Section        0  misc.o(i.NVIC_Init)
+    i.PendSV_Handler                         0x080004d0   Section        0  stm32f10x_it.o(i.PendSV_Handler)
+    i.RCC_APB1PeriphClockCmd                 0x080004d4   Section        0  stm32f10x_rcc.o(i.RCC_APB1PeriphClockCmd)
+    i.RCC_APB2PeriphClockCmd                 0x080004f4   Section        0  stm32f10x_rcc.o(i.RCC_APB2PeriphClockCmd)
+    i.RCC_GetClocksFreq                      0x08000514   Section        0  stm32f10x_rcc.o(i.RCC_GetClocksFreq)
+    i.SVC_Handler                            0x080006a0   Section        0  stm32f10x_it.o(i.SVC_Handler)
+    i.SysTick_Handler                        0x080006a4   Section        0  millisecondtimer.o(i.SysTick_Handler)
+    i.SystemInit                             0x080006b4   Section        0  system_stm32f10x.o(i.SystemInit)
+    i.USART1_IRQHandler                      0x08000720   Section        0  interrupt.o(i.USART1_IRQHandler)
+    i.USART2_IRQHandler                      0x08000730   Section        0  interrupt.o(i.USART2_IRQHandler)
+    i.USART3_IRQHandler                      0x08000740   Section        0  interrupt.o(i.USART3_IRQHandler)
+    i.USART_ClearITPendingBit                0x08000750   Section        0  stm32f10x_usart.o(i.USART_ClearITPendingBit)
+    i.USART_Cmd                              0x0800076e   Section        0  stm32f10x_usart.o(i.USART_Cmd)
+    i.USART_GetFlagStatus                    0x08000786   Section        0  stm32f10x_usart.o(i.USART_GetFlagStatus)
+    i.USART_GetITStatus                      0x080007a0   Section        0  stm32f10x_usart.o(i.USART_GetITStatus)
+    i.USART_ITConfig                         0x080007f4   Section        0  stm32f10x_usart.o(i.USART_ITConfig)
+    i.USART_Init                             0x08000840   Section        0  stm32f10x_usart.o(i.USART_Init)
+    i.USART_ReceiveData                      0x08000918   Section        0  stm32f10x_usart.o(i.USART_ReceiveData)
+    i.USART_SendData                         0x08000922   Section        0  stm32f10x_usart.o(i.USART_SendData)
+    i.UsageFault_Handler                     0x0800092a   Section        0  stm32f10x_it.o(i.UsageFault_Handler)
+    i._Z11SetSysClockv                       0x0800092e   Section        0  system_stm32f10x.o(i._Z11SetSysClockv)
+    SetSysClock()                            0x0800092f   Thumb Code     8  system_stm32f10x.o(i._Z11SetSysClockv)
+    i._Z11publish_imuv                       0x08000938   Section        0  main.o(i._Z11publish_imuv)
+    i._Z15SetSysClockTo72v                   0x08000970   Section        0  system_stm32f10x.o(i._Z15SetSysClockTo72v)
+    SetSysClockTo72()                        0x08000971   Thumb Code   264  system_stm32f10x.o(i._Z15SetSysClockTo72v)
+    i._Z9check_imuv                          0x08000a88   Section        0  main.o(i._Z9check_imuv)
+    i._ZN10RingBuffer10store_charEh          0x08000acc   Section        0  ringbuffer.o(i._ZN10RingBuffer10store_charEh)
+    i._ZN10RingBufferC1Ev                    0x08000ae4   Section        0  ringbuffer.o(i._ZN10RingBufferC1Ev)
+    i._ZN13STM32Hardware4timeEv              0x08000afa   Section        0  main.o(i._ZN13STM32Hardware4timeEv)
+    i._ZN13geometry_msgs7Vector36getMD5Ev    0x08000b04   Section        0  main.o(i._ZN13geometry_msgs7Vector36getMD5Ev)
+    i._ZN13geometry_msgs7Vector37getTypeEv   0x08000b10   Section        0  main.o(i._ZN13geometry_msgs7Vector37getTypeEv)
+    i._ZN13geometry_msgs7Vector3C1Ev         0x08000b1c   Section        0  main.o(i._ZN13geometry_msgs7Vector3C1Ev)
+    i._ZN13geometry_msgs7Vector3aSERKS0_     0x08000b34   Section        0  main.o(i._ZN13geometry_msgs7Vector3aSERKS0_)
+    i._ZN14HardwareSerial3irqEv              0x08000b44   Section        0  hardwareserial.o(i._ZN14HardwareSerial3irqEv)
+    i._ZN14HardwareSerial4readEv             0x08000b8c   Section        0  hardwareserial.o(i._ZN14HardwareSerial4readEv)
+    i._ZN14HardwareSerial5beginEj            0x08000bb0   Section        0  hardwareserial.o(i._ZN14HardwareSerial5beginEj)
+    i._ZN14HardwareSerial5writeEh            0x08000ce0   Section        0  hardwareserial.o(i._ZN14HardwareSerial5writeEh)
+    i._ZN14HardwareSerial9availableEv        0x08000d14   Section        0  hardwareserial.o(i._ZN14HardwareSerial9availableEv)
+    i._ZN14HardwareSerialC1E14Serial_TypeDef 0x08000d28   Section        0  hardwareserial.o(i._ZN14HardwareSerialC1E14Serial_TypeDef)
+    i._ZN14HardwareSerialD1Ev                0x08000d6c   Section        0  main.o(i._ZN14HardwareSerialD1Ev)
+    i._ZN14rosserial_msgs20RequestParamResponse11deserializeEPh 0x08000d6e   Section        0  main.o(i._ZN14rosserial_msgs20RequestParamResponse11deserializeEPh)
+    i._ZN14rosserial_msgs20RequestParamResponse6getMD5Ev 0x08000eb4   Section        0  main.o(i._ZN14rosserial_msgs20RequestParamResponse6getMD5Ev)
+    i._ZN14rosserial_msgs20RequestParamResponse7getTypeEv 0x08000ec0   Section        0  main.o(i._ZN14rosserial_msgs20RequestParamResponse7getTypeEv)
+    i._ZN14rosserial_msgs3Log6getMD5Ev       0x08000ecc   Section        0  main.o(i._ZN14rosserial_msgs3Log6getMD5Ev)
+    i._ZN14rosserial_msgs3Log7getTypeEv      0x08000ed8   Section        0  main.o(i._ZN14rosserial_msgs3Log7getTypeEv)
+    i._ZN14rosserial_msgs9TopicInfo6getMD5Ev 0x08000ee4   Section        0  main.o(i._ZN14rosserial_msgs9TopicInfo6getMD5Ev)
+    i._ZN14rosserial_msgs9TopicInfo7getTypeEv 0x08000ef0   Section        0  main.o(i._ZN14rosserial_msgs9TopicInfo7getTypeEv)
+    i._ZN3MPU10send_valueEih                 0x08000efc   Section        0  mpu6050.o(i._ZN3MPU10send_valueEih)
+    i._ZN3MPU17measure_gyroscopeEv           0x08000f22   Section        0  mpu6050.o(i._ZN3MPU17measure_gyroscopeEv)
+    i._ZN3MPU17write_to_registerEihh         0x08000f96   Section        0  mpu6050.o(i._ZN3MPU17write_to_registerEihh)
+    i._ZN3MPU20measure_accelerationEv        0x08000fcc   Section        0  mpu6050.o(i._ZN3MPU20measure_accelerationEv)
+    i._ZN3MPU4initEv                         0x08001040   Section        0  mpu6050.o(i._ZN3MPU4initEv)
+    i._ZN3MPU8check_idEih                    0x08001050   Section        0  mpu6050.o(i._ZN3MPU8check_idEih)
+    i._ZN3MPU9check_mpuEv                    0x0800108a   Section        0  mpu6050.o(i._ZN3MPU9check_mpuEv)
+    i._ZN3MPUD1Ev                            0x080010fc   Section        0  main.o(i._ZN3MPUD1Ev)
+    i._ZN3ros16normalizeSecNSecERmS0_        0x08001110   Section        0  time.o(i._ZN3ros16normalizeSecNSecERmS0_)
+    i._ZN3ros3MsgC2Ev                        0x08001134   Section        0  main.o(i._ZN3ros3MsgC2Ev)
+    i._ZN7TwoWire11i2c_get_ackEv             0x08001140   Section        0  wire.o(i._ZN7TwoWire11i2c_get_ackEv)
+    i._ZN7TwoWire12i2c_send_ackEv            0x08001172   Section        0  wire.o(i._ZN7TwoWire12i2c_send_ackEv)
+    i._ZN7TwoWire12i2c_shift_inEv            0x08001190   Section        0  wire.o(i._ZN7TwoWire12i2c_shift_inEv)
+    i._ZN7TwoWire13i2c_send_nackEv           0x080011cc   Section        0  wire.o(i._ZN7TwoWire13i2c_send_nackEv)
+    i._ZN7TwoWire13i2c_shift_outEh           0x080011ea   Section        0  wire.o(i._ZN7TwoWire13i2c_shift_outEh)
+    i._ZN7TwoWire5beginEh                    0x08001228   Section        0  wire.o(i._ZN7TwoWire5beginEh)
+    i._ZN7TwoWire7processEv                  0x08001294   Section        0  wire.o(i._ZN7TwoWire7processEv)
+    i._ZN7TwoWire7set_sclEb                  0x08001340   Section        0  wire.o(i._ZN7TwoWire7set_sclEb)
+    i._ZN7TwoWire7set_sdaEb                  0x08001378   Section        0  wire.o(i._ZN7TwoWire7set_sdaEb)
+    i._ZN7TwoWire8i2c_stopEv                 0x080013b0   Section        0  wire.o(i._ZN7TwoWire8i2c_stopEv)
+    i._ZN7TwoWire8sda_readEv                 0x080013d0   Section        0  wire.o(i._ZN7TwoWire8sda_readEv)
+    i._ZN7TwoWire9i2c_startEv                0x080013ec   Section        0  wire.o(i._ZN7TwoWire9i2c_startEv)
+    i._ZN7TwoWireC1Eh                        0x08001404   Section        0  wire.o(i._ZN7TwoWireC1Eh)
+    i._ZN7TwoWireD1Ev                        0x0800141c   Section        0  wire.o(i._ZN7TwoWireD1Ev)
+    i._ZN8WireBase11requestFromEhi           0x08001424   Section        0  wirebase.o(i._ZN8WireBase11requestFromEhi)
+    i._ZN8WireBase11requestFromEii           0x08001464   Section        0  wirebase.o(i._ZN8WireBase11requestFromEii)
+    i._ZN8WireBase15endTransmissionEv        0x08001478   Section        0  wirebase.o(i._ZN8WireBase15endTransmissionEv)
+    i._ZN8WireBase17beginTransmissionEh      0x0800149e   Section        0  wirebase.o(i._ZN8WireBase17beginTransmissionEh)
+    i._ZN8WireBase17beginTransmissionEi      0x080014b4   Section        0  wirebase.o(i._ZN8WireBase17beginTransmissionEi)
+    i._ZN8WireBase4readEv                    0x080014c4   Section        0  wirebase.o(i._ZN8WireBase4readEv)
+    i._ZN8WireBase5writeEh                   0x08001518   Section        0  wirebase.o(i._ZN8WireBase5writeEh)
+    i._ZN8WireBase9availableEv               0x08001544   Section        0  wirebase.o(i._ZN8WireBase9availableEv)
+    i._ZN8std_msgs4Time11deserializeEPh      0x08001554   Section        0  main.o(i._ZN8std_msgs4Time11deserializeEPh)
+    i._ZN8std_msgs4Time6getMD5Ev             0x080015b0   Section        0  main.o(i._ZN8std_msgs4Time6getMD5Ev)
+    i._ZN8std_msgs4Time7getTypeEv            0x080015bc   Section        0  main.o(i._ZN8std_msgs4Time7getTypeEv)
+    i._ZN8std_msgs4TimeC1Ev                  0x080015c8   Section        0  main.o(i._ZN8std_msgs4TimeC1Ev)
+    i._ZN9riki_msgs3Imu6getMD5Ev             0x080015ec   Section        0  main.o(i._ZN9riki_msgs3Imu6getMD5Ev)
+    i._ZN9riki_msgs3Imu7getTypeEv            0x080015f8   Section        0  main.o(i._ZN9riki_msgs3Imu7getTypeEv)
+    i._ZNK13geometry_msgs7Vector39serializeEPh 0x08001604   Section        0  main.o(i._ZNK13geometry_msgs7Vector39serializeEPh)
+    i._ZNK14rosserial_msgs20RequestParamResponse9serializeEPh 0x080017b0   Section        0  main.o(i._ZNK14rosserial_msgs20RequestParamResponse9serializeEPh)
+    i._ZNK14rosserial_msgs3Log9serializeEPh  0x080018ae   Section        0  main.o(i._ZNK14rosserial_msgs3Log9serializeEPh)
+    i._ZNK14rosserial_msgs9TopicInfo9serializeEPh 0x080018de   Section        0  main.o(i._ZNK14rosserial_msgs9TopicInfo9serializeEPh)
+    i._ZNK8std_msgs4Time9serializeEPh        0x08001970   Section        0  main.o(i._ZNK8std_msgs4Time9serializeEPh)
+    i._ZNK9riki_msgs3Imu9serializeEPh        0x080019b4   Section        0  main.o(i._ZNK9riki_msgs3Imu9serializeEPh)
+    i.__cxa_pure_virtual                     0x080019d6   Section        0  pure_virt.o(i.__cxa_pure_virtual)
+    i.__free$realloc                         0x080019dc   Section        0  mallocr.o(i.__free$realloc)
+    i.__malloc$realloc                       0x08001a38   Section        0  mallocr.o(i.__malloc$realloc)
+    i.__scatterload_copy                     0x08001a88   Section       14  handlers.o(i.__scatterload_copy)
+    i.__scatterload_null                     0x08001a96   Section        2  handlers.o(i.__scatterload_null)
+    i.__scatterload_zeroinit                 0x08001a98   Section       14  handlers.o(i.__scatterload_zeroinit)
+    i.__sti___6_main_c_Serial                0x08001aa8   Section        0  main.o(i.__sti___6_main_c_Serial)
+    __sti___6_main_c_Serial                  0x08001aa9   Thumb Code   142  main.o(i.__sti___6_main_c_Serial)
+    i.internal_alloc                         0x08001b64   Section        0  mallocr.o(i.internal_alloc)
+    internal_alloc                           0x08001b65   Thumb Code    76  mallocr.o(i.internal_alloc)
+    i.main                                   0x08001bb4   Section        0  main.o(i.main)
+    i.millis                                 0x08001c54   Section        0  millisecondtimer.o(i.millis)
+    i.realloc                                0x08001c60   Section        0  mallocr.o(i.realloc)
+    t._ZN3ros11NodeHandle_I13STM32HardwareLi25ELi25ELi1024ELi1024EE15negotiateTopicsEv 0x08001ccc   Section        0  main.o(t._ZN3ros11NodeHandle_I13STM32HardwareLi25ELi25ELi1024ELi1024EE15negotiateTopicsEv)
+    t._ZN3ros11NodeHandle_I13STM32HardwareLi25ELi25ELi1024ELi1024EE15requestSyncTimeEv 0x08001df0   Section        0  main.o(t._ZN3ros11NodeHandle_I13STM32HardwareLi25ELi25ELi1024ELi1024EE15requestSyncTimeEv)
+    t._ZN3ros11NodeHandle_I13STM32HardwareLi25ELi25ELi1024ELi1024EE7publishEiPKNS_3MsgE 0x08001e10   Section        0  main.o(t._ZN3ros11NodeHandle_I13STM32HardwareLi25ELi25ELi1024ELi1024EE7publishEiPKNS_3MsgE)
+    t._ZN3ros11NodeHandle_I13STM32HardwareLi25ELi25ELi1024ELi1024EE8logerrorEPKc 0x08001ef4   Section        0  main.o(t._ZN3ros11NodeHandle_I13STM32HardwareLi25ELi25ELi1024ELi1024EE8logerrorEPKc)
+    t._ZN3ros11NodeHandle_I13STM32HardwareLi25ELi25ELi1024ELi1024EE8spinOnceEv 0x08001f24   Section        0  main.o(t._ZN3ros11NodeHandle_I13STM32HardwareLi25ELi25ELi1024ELi1024EE8spinOnceEv)
+    t._ZN3ros11NodeHandle_I13STM32HardwareLi25ELi25ELi1024ELi1024EE8syncTimeEPh 0x080021a8   Section        0  main.o(t._ZN3ros11NodeHandle_I13STM32HardwareLi25ELi25ELi1024ELi1024EE8syncTimeEPh)
+    t._ZN3ros11NodeHandle_I13STM32HardwareLi25ELi25ELi1024ELi1024EEC1Ev 0x08002248   Section        0  main.o(t._ZN3ros11NodeHandle_I13STM32HardwareLi25ELi25ELi1024ELi1024EEC1Ev)
+    .constdata                               0x08002304   Section       28  main.o(.constdata)
+    rosserial_msgs::REQUESTPARAM             0x08002304   Data          28  main.o(.constdata)
+    .constdata                               0x08002320   Section       48  hardwareserial.o(.constdata)
+    SERIAL_USART_CLK                         0x08002320   Data          12  hardwareserial.o(.constdata)
+    SERIAL_PORT_CLK                          0x0800232c   Data          12  hardwareserial.o(.constdata)
+    SERIAL_TX_PIN                            0x08002338   Data           6  hardwareserial.o(.constdata)
+    SERIAL_RX_PIN                            0x0800233e   Data           6  hardwareserial.o(.constdata)
+    SERIAL_IRQn                              0x08002344   Data           6  hardwareserial.o(.constdata)
+    SERILA_NVIC                              0x0800234a   Data           6  hardwareserial.o(.constdata)
+    .constdata__ZTV7TwoWire                  0x08002350   Section       16  wire.o(.constdata__ZTV7TwoWire)
+    .constdata__ZTV8WireBase                 0x08002360   Section       16  wirebase.o(.constdata__ZTV8WireBase)
+    .constdata__ZTVN13geometry_msgs7Vector3E 0x08002370   Section       24  main.o(.constdata__ZTVN13geometry_msgs7Vector3E)
+    .constdata__ZTVN14rosserial_msgs20RequestParamResponseE 0x08002388   Section       24  main.o(.constdata__ZTVN14rosserial_msgs20RequestParamResponseE)
+    .constdata__ZTVN14rosserial_msgs3LogE    0x080023a0   Section       24  main.o(.constdata__ZTVN14rosserial_msgs3LogE)
+    .constdata__ZTVN14rosserial_msgs9TopicInfoE 0x080023b8   Section       24  main.o(.constdata__ZTVN14rosserial_msgs9TopicInfoE)
+    .constdata__ZTVN3ros11NodeHandle_I13STM32HardwareLi25ELi25ELi1024ELi1024EEE 0x080023d0   Section       20  main.o(.constdata__ZTVN3ros11NodeHandle_I13STM32HardwareLi25ELi25ELi1024ELi1024EEE)
+    .constdata__ZTVN3ros15NodeHandleBase_E   0x080023e4   Section       20  main.o(.constdata__ZTVN3ros15NodeHandleBase_E)
+    .constdata__ZTVN3ros3MsgE                0x080023f8   Section       24  main.o(.constdata__ZTVN3ros3MsgE)
+    .constdata__ZTVN8std_msgs4TimeE          0x08002410   Section       24  main.o(.constdata__ZTVN8std_msgs4TimeE)
+    .constdata__ZTVN9riki_msgs3ImuE          0x08002428   Section       24  main.o(.constdata__ZTVN9riki_msgs3ImuE)
+    .constdata__ZZN13geometry_msgs7Vector36getMD5EvEs 0x08002440   Section       33  main.o(.constdata__ZZN13geometry_msgs7Vector36getMD5EvEs)
+    .constdata__ZZN13geometry_msgs7Vector37getTypeEvEs 0x08002461   Section       22  main.o(.constdata__ZZN13geometry_msgs7Vector37getTypeEvEs)
+    .constdata__ZZN14rosserial_msgs20RequestParamResponse6getMD5EvEs 0x08002477   Section       33  main.o(.constdata__ZZN14rosserial_msgs20RequestParamResponse6getMD5EvEs)
+    .constdata__ZZN14rosserial_msgs3Log6getMD5EvEs 0x08002498   Section       33  main.o(.constdata__ZZN14rosserial_msgs3Log6getMD5EvEs)
+    .constdata__ZZN14rosserial_msgs3Log7getTypeEvEs 0x080024b9   Section       19  main.o(.constdata__ZZN14rosserial_msgs3Log7getTypeEvEs)
+    .constdata__ZZN14rosserial_msgs9TopicInfo6getMD5EvEs 0x080024cc   Section       33  main.o(.constdata__ZZN14rosserial_msgs9TopicInfo6getMD5EvEs)
+    .constdata__ZZN14rosserial_msgs9TopicInfo7getTypeEvEs 0x080024ed   Section       25  main.o(.constdata__ZZN14rosserial_msgs9TopicInfo7getTypeEvEs)
+    .constdata__ZZN3ros11NodeHandle_I13STM32HardwareLi25ELi25ELi1024ELi1024EE7publishEiPKNS_3MsgEEs 0x08002506   Section       57  main.o(.constdata__ZZN3ros11NodeHandle_I13STM32HardwareLi25ELi25ELi1024ELi1024EE7publishEiPKNS_3MsgEEs)
+    .constdata__ZZN8std_msgs4Time6getMD5EvEs 0x0800253f   Section       33  main.o(.constdata__ZZN8std_msgs4Time6getMD5EvEs)
+    .constdata__ZZN8std_msgs4Time7getTypeEvEs 0x08002560   Section       14  main.o(.constdata__ZZN8std_msgs4Time7getTypeEvEs)
+    .constdata__ZZN9riki_msgs3Imu6getMD5EvEs 0x0800256e   Section       33  main.o(.constdata__ZZN9riki_msgs3Imu6getMD5EvEs)
+    .constdata__ZZN9riki_msgs3Imu7getTypeEvEs 0x0800258f   Section       14  main.o(.constdata__ZZN9riki_msgs3Imu7getTypeEvEs)
+    .init_array                              0x080025c0   Section        4  main.o(.init_array)
+    .init_array                              0x080025c4   Section        0  cpp_init.o(.init_array)
+    .data                                    0x20000000   Section       20  stm32f10x_rcc.o(.data)
+    APBAHBPrescTable                         0x20000000   Data          16  stm32f10x_rcc.o(.data)
+    ADCPrescTable                            0x20000010   Data           4  stm32f10x_rcc.o(.data)
+    .data                                    0x20000014   Section        2  main.o(.data)
+    .data                                    0x20000018   Section       24  hardwareserial.o(.data)
+    .data                                    0x20000030   Section       12  interrupt.o(.data)
+    .data                                    0x2000003c   Section        4  millisecondtimer.o(.data)
+    .data                                    0x20000040   Section        4  mvars.o(.data)
+    .data                                    0x20000044   Section        4  mvars.o(.data)
+    .data                                    0x20000048   Section        4  cpp_dtor.o(.data)
+    ddtor_pointer                            0x20000048   Data           4  cpp_dtor.o(.data)
+    .bss                                     0x2000004c   Section     2616  main.o(.bss)
+    HEAP                                     0x20000a88   Section      512  startup_stm32f10x_hd.o(HEAP)
+    STACK                                    0x20000c88   Section     1024  startup_stm32f10x_hd.o(STACK)
 
     Global Symbols
 
     Symbol Name                              Value     Ov Type        Size  Object(Section)
 
-    BuildAttributes$$THM_ISAv4$P$D$K$B$S$PE$A:L22UL41UL21$X:L11$S22US41US21$IEEE1$IW$USESV6$~STKCKD$USESV7$~SHL$OSPACE$ROPI$EBA8$UX$MICROLIB$REQ8$PRES8$EABIv2 0x00000000   Number         0  anon$$obj.o ABSOLUTE
+    BuildAttributes$$THM_ISAv4$P$D$K$B$S$PE$A:L22UL41UL21$X:L11$S22US41US21$IEEE1$IW$USESV6$~STKCKD$USESV7$~SHL$OTIME$ROPI$EBA8$UX$MICROLIB$REQ8$PRES8$EABIv2 0x00000000   Number         0  anon$$obj.o ABSOLUTE
     __ARM_use_no_argv                        0x00000000   Number         0  main.o ABSOLUTE
     __ARM::default_unexpected_handler()       - Undefined Weak Reference
+    typeinfo for ros::Subscriber_             - Undefined Weak Reference
     __ARM_exceptions_buffer_required          - Undefined Weak Reference
-    __cpp_initialize__aeabi_                  - Undefined Weak Reference
-    __cxa_finalize                            - Undefined Weak Reference
     __decompress                              - Undefined Weak Reference
     _clock_init                               - Undefined Weak Reference
     _microlib_exit                            - Undefined Weak Reference
     __Vectors_Size                           0x00000130   Number         0  startup_stm32f10x_hd.o ABSOLUTE
     __Vectors                                0x08000000   Data           4  startup_stm32f10x_hd.o(RESET)
+    __dso_handle                             0x08000000   Number         0  startup_stm32f10x_hd.o(RESET)
     __Vectors_End                            0x08000130   Data           0  startup_stm32f10x_hd.o(RESET)
     __main                                   0x08000131   Thumb Code     0  entry.o(.ARM.Collect$$$$00000000)
     _main_stk                                0x08000131   Thumb Code     0  entry2.o(.ARM.Collect$$$$00000001)
     _main_scatterload                        0x08000135   Thumb Code     0  entry5.o(.ARM.Collect$$$$00000004)
     __main_after_scatterload                 0x08000139   Thumb Code     0  entry5.o(.ARM.Collect$$$$00000004)
     _main_clock                              0x08000139   Thumb Code     0  entry7b.o(.ARM.Collect$$$$00000008)
-    _main_cpp_init                           0x08000139   Thumb Code     0  entry8b.o(.ARM.Collect$$$$0000000A)
-    _main_init                               0x08000139   Thumb Code     0  entry9a.o(.ARM.Collect$$$$0000000B)
-    __rt_final_cpp                           0x08000141   Thumb Code     0  entry10a.o(.ARM.Collect$$$$0000000D)
-    __rt_final_exit                          0x08000141   Thumb Code     0  entry11a.o(.ARM.Collect$$$$0000000F)
-    Reset_Handler                            0x08000145   Thumb Code     8  startup_stm32f10x_hd.o(.text)
-    ADC1_2_IRQHandler                        0x0800015f   Thumb Code     0  startup_stm32f10x_hd.o(.text)
-    ADC3_IRQHandler                          0x0800015f   Thumb Code     0  startup_stm32f10x_hd.o(.text)
-    CAN1_RX1_IRQHandler                      0x0800015f   Thumb Code     0  startup_stm32f10x_hd.o(.text)
-    CAN1_SCE_IRQHandler                      0x0800015f   Thumb Code     0  startup_stm32f10x_hd.o(.text)
-    DMA1_Channel1_IRQHandler                 0x0800015f   Thumb Code     0  startup_stm32f10x_hd.o(.text)
-    DMA1_Channel2_IRQHandler                 0x0800015f   Thumb Code     0  startup_stm32f10x_hd.o(.text)
-    DMA1_Channel3_IRQHandler                 0x0800015f   Thumb Code     0  startup_stm32f10x_hd.o(.text)
-    DMA1_Channel4_IRQHandler                 0x0800015f   Thumb Code     0  startup_stm32f10x_hd.o(.text)
-    DMA1_Channel5_IRQHandler                 0x0800015f   Thumb Code     0  startup_stm32f10x_hd.o(.text)
-    DMA1_Channel6_IRQHandler                 0x0800015f   Thumb Code     0  startup_stm32f10x_hd.o(.text)
-    DMA1_Channel7_IRQHandler                 0x0800015f   Thumb Code     0  startup_stm32f10x_hd.o(.text)
-    DMA2_Channel1_IRQHandler                 0x0800015f   Thumb Code     0  startup_stm32f10x_hd.o(.text)
-    DMA2_Channel2_IRQHandler                 0x0800015f   Thumb Code     0  startup_stm32f10x_hd.o(.text)
-    DMA2_Channel3_IRQHandler                 0x0800015f   Thumb Code     0  startup_stm32f10x_hd.o(.text)
-    DMA2_Channel4_5_IRQHandler               0x0800015f   Thumb Code     0  startup_stm32f10x_hd.o(.text)
-    EXTI0_IRQHandler                         0x0800015f   Thumb Code     0  startup_stm32f10x_hd.o(.text)
-    EXTI15_10_IRQHandler                     0x0800015f   Thumb Code     0  startup_stm32f10x_hd.o(.text)
-    EXTI1_IRQHandler                         0x0800015f   Thumb Code     0  startup_stm32f10x_hd.o(.text)
-    EXTI2_IRQHandler                         0x0800015f   Thumb Code     0  startup_stm32f10x_hd.o(.text)
-    EXTI3_IRQHandler                         0x0800015f   Thumb Code     0  startup_stm32f10x_hd.o(.text)
-    EXTI4_IRQHandler                         0x0800015f   Thumb Code     0  startup_stm32f10x_hd.o(.text)
-    EXTI9_5_IRQHandler                       0x0800015f   Thumb Code     0  startup_stm32f10x_hd.o(.text)
-    FLASH_IRQHandler                         0x0800015f   Thumb Code     0  startup_stm32f10x_hd.o(.text)
-    FSMC_IRQHandler                          0x0800015f   Thumb Code     0  startup_stm32f10x_hd.o(.text)
-    I2C1_ER_IRQHandler                       0x0800015f   Thumb Code     0  startup_stm32f10x_hd.o(.text)
-    I2C1_EV_IRQHandler                       0x0800015f   Thumb Code     0  startup_stm32f10x_hd.o(.text)
-    I2C2_ER_IRQHandler                       0x0800015f   Thumb Code     0  startup_stm32f10x_hd.o(.text)
-    I2C2_EV_IRQHandler                       0x0800015f   Thumb Code     0  startup_stm32f10x_hd.o(.text)
-    PVD_IRQHandler                           0x0800015f   Thumb Code     0  startup_stm32f10x_hd.o(.text)
-    RCC_IRQHandler                           0x0800015f   Thumb Code     0  startup_stm32f10x_hd.o(.text)
-    RTCAlarm_IRQHandler                      0x0800015f   Thumb Code     0  startup_stm32f10x_hd.o(.text)
-    RTC_IRQHandler                           0x0800015f   Thumb Code     0  startup_stm32f10x_hd.o(.text)
-    SDIO_IRQHandler                          0x0800015f   Thumb Code     0  startup_stm32f10x_hd.o(.text)
-    SPI1_IRQHandler                          0x0800015f   Thumb Code     0  startup_stm32f10x_hd.o(.text)
-    SPI2_IRQHandler                          0x0800015f   Thumb Code     0  startup_stm32f10x_hd.o(.text)
-    SPI3_IRQHandler                          0x0800015f   Thumb Code     0  startup_stm32f10x_hd.o(.text)
-    TAMPER_IRQHandler                        0x0800015f   Thumb Code     0  startup_stm32f10x_hd.o(.text)
-    TIM1_BRK_IRQHandler                      0x0800015f   Thumb Code     0  startup_stm32f10x_hd.o(.text)
-    TIM1_CC_IRQHandler                       0x0800015f   Thumb Code     0  startup_stm32f10x_hd.o(.text)
-    TIM1_TRG_COM_IRQHandler                  0x0800015f   Thumb Code     0  startup_stm32f10x_hd.o(.text)
-    TIM1_UP_IRQHandler                       0x0800015f   Thumb Code     0  startup_stm32f10x_hd.o(.text)
-    TIM2_IRQHandler                          0x0800015f   Thumb Code     0  startup_stm32f10x_hd.o(.text)
-    TIM3_IRQHandler                          0x0800015f   Thumb Code     0  startup_stm32f10x_hd.o(.text)
-    TIM4_IRQHandler                          0x0800015f   Thumb Code     0  startup_stm32f10x_hd.o(.text)
-    TIM5_IRQHandler                          0x0800015f   Thumb Code     0  startup_stm32f10x_hd.o(.text)
-    TIM6_IRQHandler                          0x0800015f   Thumb Code     0  startup_stm32f10x_hd.o(.text)
-    TIM7_IRQHandler                          0x0800015f   Thumb Code     0  startup_stm32f10x_hd.o(.text)
-    TIM8_BRK_IRQHandler                      0x0800015f   Thumb Code     0  startup_stm32f10x_hd.o(.text)
-    TIM8_CC_IRQHandler                       0x0800015f   Thumb Code     0  startup_stm32f10x_hd.o(.text)
-    TIM8_TRG_COM_IRQHandler                  0x0800015f   Thumb Code     0  startup_stm32f10x_hd.o(.text)
-    TIM8_UP_IRQHandler                       0x0800015f   Thumb Code     0  startup_stm32f10x_hd.o(.text)
-    UART4_IRQHandler                         0x0800015f   Thumb Code     0  startup_stm32f10x_hd.o(.text)
-    UART5_IRQHandler                         0x0800015f   Thumb Code     0  startup_stm32f10x_hd.o(.text)
-    USBWakeUp_IRQHandler                     0x0800015f   Thumb Code     0  startup_stm32f10x_hd.o(.text)
-    USB_HP_CAN1_TX_IRQHandler                0x0800015f   Thumb Code     0  startup_stm32f10x_hd.o(.text)
-    USB_LP_CAN1_RX0_IRQHandler               0x0800015f   Thumb Code     0  startup_stm32f10x_hd.o(.text)
-    WWDG_IRQHandler                          0x0800015f   Thumb Code     0  startup_stm32f10x_hd.o(.text)
-    __scatterload                            0x08000169   Thumb Code    28  init.o(.text)
-    __scatterload_rt2                        0x08000169   Thumb Code     0  init.o(.text)
-    BusFault_Handler                         0x0800018d   Thumb Code     4  stm32f10x_it.o(i.BusFault_Handler)
-    DebugMon_Handler                         0x08000191   Thumb Code     2  stm32f10x_it.o(i.DebugMon_Handler)
-    HardFault_Handler                        0x08000193   Thumb Code     4  stm32f10x_it.o(i.HardFault_Handler)
-    MemManage_Handler                        0x08000197   Thumb Code     4  stm32f10x_it.o(i.MemManage_Handler)
-    NMI_Handler                              0x0800019b   Thumb Code     2  stm32f10x_it.o(i.NMI_Handler)
-    PendSV_Handler                           0x0800019d   Thumb Code     2  stm32f10x_it.o(i.PendSV_Handler)
-    SVC_Handler                              0x0800019f   Thumb Code     2  stm32f10x_it.o(i.SVC_Handler)
-    SysTick_Handler                          0x080001a1   Thumb Code     2  stm32f10x_it.o(i.SysTick_Handler)
-    SystemInit                               0x080001a5   Thumb Code    92  system_stm32f10x.o(i.SystemInit)
-    USART1_IRQHandler                        0x08000211   Thumb Code    12  interrupt.o(i.USART1_IRQHandler)
-    USART2_IRQHandler                        0x08000221   Thumb Code    12  interrupt.o(i.USART2_IRQHandler)
-    USART3_IRQHandler                        0x08000231   Thumb Code    12  interrupt.o(i.USART3_IRQHandler)
-    USART_ClearITPendingBit                  0x08000241   Thumb Code    30  stm32f10x_usart.o(i.USART_ClearITPendingBit)
-    USART_GetITStatus                        0x0800025f   Thumb Code    84  stm32f10x_usart.o(i.USART_GetITStatus)
-    USART_ReceiveData                        0x080002b3   Thumb Code    10  stm32f10x_usart.o(i.USART_ReceiveData)
-    UsageFault_Handler                       0x080002bd   Thumb Code     4  stm32f10x_it.o(i.UsageFault_Handler)
-    RingBuffer::store_char(unsigned char)    0x080003e1   Thumb Code    24  ringbuffer.o(i._ZN10RingBuffer10store_charEh)
-    HardwareSerial::irq()                    0x080003f9   Thumb Code    68  hardwareserial.o(i._ZN14HardwareSerial3irqEv)
-    __scatterload_copy                       0x08000441   Thumb Code    14  handlers.o(i.__scatterload_copy)
-    __scatterload_null                       0x0800044f   Thumb Code     2  handlers.o(i.__scatterload_null)
-    __scatterload_zeroinit                   0x08000451   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
-    main                                     0x0800045f   Thumb Code     4  main.o(i.main)
-    Region$$Table$$Base                      0x08000464   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x08000484   Number         0  anon$$obj.o(Region$$Table)
-    SERIAL_USART                             0x20000000   Data          12  hardwareserial.o(.data)
-    SERIAL_PORT                              0x2000000c   Data          12  hardwareserial.o(.data)
-    Serial1                                  0x20000018   Data           4  interrupt.o(.data)
-    Serial2                                  0x2000001c   Data           4  interrupt.o(.data)
-    Serial3                                  0x20000020   Data           4  interrupt.o(.data)
-    __initial_sp                             0x20000428   Data           0  startup_stm32f10x_hd.o(STACK)
+    _main_cpp_init$empty                     0x08000139   Thumb Code     0  entry8a.o(.ARM.Collect$$$$00000009)
+    _main_cpp_init                           0x0800013d   Thumb Code     0  entry8b.o(.ARM.Collect$$$$0000000A)
+    _main_init                               0x0800013d   Thumb Code     0  entry9a.o(.ARM.Collect$$$$0000000B)
+    __rt_final_cpp                           0x08000145   Thumb Code     0  entry10a.o(.ARM.Collect$$$$0000000D)
+    __rt_final_cpp$nonempty                  0x08000145   Thumb Code     0  entry10b.o(.ARM.Collect$$$$0000000E)
+    __rt_final_exit                          0x08000149   Thumb Code     0  entry11a.o(.ARM.Collect$$$$0000000F)
+    Reset_Handler                            0x0800014d   Thumb Code     8  startup_stm32f10x_hd.o(.text)
+    ADC1_2_IRQHandler                        0x08000167   Thumb Code     0  startup_stm32f10x_hd.o(.text)
+    ADC3_IRQHandler                          0x08000167   Thumb Code     0  startup_stm32f10x_hd.o(.text)
+    CAN1_RX1_IRQHandler                      0x08000167   Thumb Code     0  startup_stm32f10x_hd.o(.text)
+    CAN1_SCE_IRQHandler                      0x08000167   Thumb Code     0  startup_stm32f10x_hd.o(.text)
+    DMA1_Channel1_IRQHandler                 0x08000167   Thumb Code     0  startup_stm32f10x_hd.o(.text)
+    DMA1_Channel2_IRQHandler                 0x08000167   Thumb Code     0  startup_stm32f10x_hd.o(.text)
+    DMA1_Channel3_IRQHandler                 0x08000167   Thumb Code     0  startup_stm32f10x_hd.o(.text)
+    DMA1_Channel4_IRQHandler                 0x08000167   Thumb Code     0  startup_stm32f10x_hd.o(.text)
+    DMA1_Channel5_IRQHandler                 0x08000167   Thumb Code     0  startup_stm32f10x_hd.o(.text)
+    DMA1_Channel6_IRQHandler                 0x08000167   Thumb Code     0  startup_stm32f10x_hd.o(.text)
+    DMA1_Channel7_IRQHandler                 0x08000167   Thumb Code     0  startup_stm32f10x_hd.o(.text)
+    DMA2_Channel1_IRQHandler                 0x08000167   Thumb Code     0  startup_stm32f10x_hd.o(.text)
+    DMA2_Channel2_IRQHandler                 0x08000167   Thumb Code     0  startup_stm32f10x_hd.o(.text)
+    DMA2_Channel3_IRQHandler                 0x08000167   Thumb Code     0  startup_stm32f10x_hd.o(.text)
+    DMA2_Channel4_5_IRQHandler               0x08000167   Thumb Code     0  startup_stm32f10x_hd.o(.text)
+    EXTI0_IRQHandler                         0x08000167   Thumb Code     0  startup_stm32f10x_hd.o(.text)
+    EXTI15_10_IRQHandler                     0x08000167   Thumb Code     0  startup_stm32f10x_hd.o(.text)
+    EXTI1_IRQHandler                         0x08000167   Thumb Code     0  startup_stm32f10x_hd.o(.text)
+    EXTI2_IRQHandler                         0x08000167   Thumb Code     0  startup_stm32f10x_hd.o(.text)
+    EXTI3_IRQHandler                         0x08000167   Thumb Code     0  startup_stm32f10x_hd.o(.text)
+    EXTI4_IRQHandler                         0x08000167   Thumb Code     0  startup_stm32f10x_hd.o(.text)
+    EXTI9_5_IRQHandler                       0x08000167   Thumb Code     0  startup_stm32f10x_hd.o(.text)
+    FLASH_IRQHandler                         0x08000167   Thumb Code     0  startup_stm32f10x_hd.o(.text)
+    FSMC_IRQHandler                          0x08000167   Thumb Code     0  startup_stm32f10x_hd.o(.text)
+    I2C1_ER_IRQHandler                       0x08000167   Thumb Code     0  startup_stm32f10x_hd.o(.text)
+    I2C1_EV_IRQHandler                       0x08000167   Thumb Code     0  startup_stm32f10x_hd.o(.text)
+    I2C2_ER_IRQHandler                       0x08000167   Thumb Code     0  startup_stm32f10x_hd.o(.text)
+    I2C2_EV_IRQHandler                       0x08000167   Thumb Code     0  startup_stm32f10x_hd.o(.text)
+    PVD_IRQHandler                           0x08000167   Thumb Code     0  startup_stm32f10x_hd.o(.text)
+    RCC_IRQHandler                           0x08000167   Thumb Code     0  startup_stm32f10x_hd.o(.text)
+    RTCAlarm_IRQHandler                      0x08000167   Thumb Code     0  startup_stm32f10x_hd.o(.text)
+    RTC_IRQHandler                           0x08000167   Thumb Code     0  startup_stm32f10x_hd.o(.text)
+    SDIO_IRQHandler                          0x08000167   Thumb Code     0  startup_stm32f10x_hd.o(.text)
+    SPI1_IRQHandler                          0x08000167   Thumb Code     0  startup_stm32f10x_hd.o(.text)
+    SPI2_IRQHandler                          0x08000167   Thumb Code     0  startup_stm32f10x_hd.o(.text)
+    SPI3_IRQHandler                          0x08000167   Thumb Code     0  startup_stm32f10x_hd.o(.text)
+    TAMPER_IRQHandler                        0x08000167   Thumb Code     0  startup_stm32f10x_hd.o(.text)
+    TIM1_BRK_IRQHandler                      0x08000167   Thumb Code     0  startup_stm32f10x_hd.o(.text)
+    TIM1_CC_IRQHandler                       0x08000167   Thumb Code     0  startup_stm32f10x_hd.o(.text)
+    TIM1_TRG_COM_IRQHandler                  0x08000167   Thumb Code     0  startup_stm32f10x_hd.o(.text)
+    TIM1_UP_IRQHandler                       0x08000167   Thumb Code     0  startup_stm32f10x_hd.o(.text)
+    TIM2_IRQHandler                          0x08000167   Thumb Code     0  startup_stm32f10x_hd.o(.text)
+    TIM3_IRQHandler                          0x08000167   Thumb Code     0  startup_stm32f10x_hd.o(.text)
+    TIM4_IRQHandler                          0x08000167   Thumb Code     0  startup_stm32f10x_hd.o(.text)
+    TIM5_IRQHandler                          0x08000167   Thumb Code     0  startup_stm32f10x_hd.o(.text)
+    TIM6_IRQHandler                          0x08000167   Thumb Code     0  startup_stm32f10x_hd.o(.text)
+    TIM7_IRQHandler                          0x08000167   Thumb Code     0  startup_stm32f10x_hd.o(.text)
+    TIM8_BRK_IRQHandler                      0x08000167   Thumb Code     0  startup_stm32f10x_hd.o(.text)
+    TIM8_CC_IRQHandler                       0x08000167   Thumb Code     0  startup_stm32f10x_hd.o(.text)
+    TIM8_TRG_COM_IRQHandler                  0x08000167   Thumb Code     0  startup_stm32f10x_hd.o(.text)
+    TIM8_UP_IRQHandler                       0x08000167   Thumb Code     0  startup_stm32f10x_hd.o(.text)
+    UART4_IRQHandler                         0x08000167   Thumb Code     0  startup_stm32f10x_hd.o(.text)
+    UART5_IRQHandler                         0x08000167   Thumb Code     0  startup_stm32f10x_hd.o(.text)
+    USBWakeUp_IRQHandler                     0x08000167   Thumb Code     0  startup_stm32f10x_hd.o(.text)
+    USB_HP_CAN1_TX_IRQHandler                0x08000167   Thumb Code     0  startup_stm32f10x_hd.o(.text)
+    USB_LP_CAN1_RX0_IRQHandler               0x08000167   Thumb Code     0  startup_stm32f10x_hd.o(.text)
+    WWDG_IRQHandler                          0x08000167   Thumb Code     0  startup_stm32f10x_hd.o(.text)
+    __aeabi_memcpy                           0x08000171   Thumb Code    36  memcpya.o(.text)
+    __aeabi_memcpy4                          0x08000171   Thumb Code     0  memcpya.o(.text)
+    __aeabi_memcpy8                          0x08000171   Thumb Code     0  memcpya.o(.text)
+    __aeabi_memset                           0x08000195   Thumb Code    14  memseta.o(.text)
+    __aeabi_memset4                          0x08000195   Thumb Code     0  memseta.o(.text)
+    __aeabi_memset8                          0x08000195   Thumb Code     0  memseta.o(.text)
+    __aeabi_memclr                           0x080001a3   Thumb Code     4  memseta.o(.text)
+    __aeabi_memclr4                          0x080001a3   Thumb Code     0  memseta.o(.text)
+    __aeabi_memclr8                          0x080001a3   Thumb Code     0  memseta.o(.text)
+    _memset$wrapper                          0x080001a7   Thumb Code    18  memseta.o(.text)
+    strlen                                   0x080001b9   Thumb Code    14  strlen.o(.text)
+    __cpp_initialize__aeabi_                 0x080001c9   Thumb Code    22  cpp_init.o(.text)
+    __aeabi_atexit                           0x080001e9   Thumb Code    46  aeabi_atexit.o(.text)
+    __aeabi_i2f                              0x08000217   Thumb Code    18  fflti.o(.text)
+    __aeabi_cfcmpeq                          0x08000229   Thumb Code     0  cfcmple.o(.text)
+    __aeabi_cfcmple                          0x08000229   Thumb Code    20  cfcmple.o(.text)
+    __I$use$fp                               0x0800023d   Thumb Code     0  iusefp.o(.text)
+    __rt_ddtor_pointer_addr                  0x0800023d   Thumb Code     4  cpp_dtor.o(.text)
+    __rt_SIGPVFN                             0x08000245   Thumb Code     2  cpp_signal.o(.text)
+    __cxa_finalize                           0x08000247   Thumb Code    66  cxa_finalize.o(.text)
+    _float_round                             0x08000289   Thumb Code    18  fepilogue.o(.text)
+    _float_epilogue                          0x0800029b   Thumb Code    92  fepilogue.o(.text)
+    __scatterload                            0x080002f9   Thumb Code    28  init.o(.text)
+    __scatterload_rt2                        0x080002f9   Thumb Code     0  init.o(.text)
+    __rt_lib_shutdown_cpp_2                  0x0800031d   Thumb Code     2  cpp_final.o(.text)
+    BusFault_Handler                         0x0800031f   Thumb Code     4  stm32f10x_it.o(i.BusFault_Handler)
+    DebugMon_Handler                         0x08000323   Thumb Code     2  stm32f10x_it.o(i.DebugMon_Handler)
+    GPIO_Init                                0x08000325   Thumb Code   278  stm32f10x_gpio.o(i.GPIO_Init)
+    GPIO_ReadInputDataBit                    0x0800043b   Thumb Code    18  stm32f10x_gpio.o(i.GPIO_ReadInputDataBit)
+    GPIO_ResetBits                           0x0800044d   Thumb Code     4  stm32f10x_gpio.o(i.GPIO_ResetBits)
+    GPIO_SetBits                             0x08000451   Thumb Code     4  stm32f10x_gpio.o(i.GPIO_SetBits)
+    HardFault_Handler                        0x08000455   Thumb Code     4  stm32f10x_it.o(i.HardFault_Handler)
+    MemManage_Handler                        0x08000459   Thumb Code     4  stm32f10x_it.o(i.MemManage_Handler)
+    NMI_Handler                              0x0800045d   Thumb Code     2  stm32f10x_it.o(i.NMI_Handler)
+    NVIC_Init                                0x08000461   Thumb Code   100  misc.o(i.NVIC_Init)
+    PendSV_Handler                           0x080004d1   Thumb Code     2  stm32f10x_it.o(i.PendSV_Handler)
+    RCC_APB1PeriphClockCmd                   0x080004d5   Thumb Code    26  stm32f10x_rcc.o(i.RCC_APB1PeriphClockCmd)
+    RCC_APB2PeriphClockCmd                   0x080004f5   Thumb Code    26  stm32f10x_rcc.o(i.RCC_APB2PeriphClockCmd)
+    RCC_GetClocksFreq                        0x08000515   Thumb Code   374  stm32f10x_rcc.o(i.RCC_GetClocksFreq)
+    SVC_Handler                              0x080006a1   Thumb Code     2  stm32f10x_it.o(i.SVC_Handler)
+    SysTick_Handler                          0x080006a5   Thumb Code    12  millisecondtimer.o(i.SysTick_Handler)
+    SystemInit                               0x080006b5   Thumb Code    92  system_stm32f10x.o(i.SystemInit)
+    USART1_IRQHandler                        0x08000721   Thumb Code    12  interrupt.o(i.USART1_IRQHandler)
+    USART2_IRQHandler                        0x08000731   Thumb Code    12  interrupt.o(i.USART2_IRQHandler)
+    USART3_IRQHandler                        0x08000741   Thumb Code    12  interrupt.o(i.USART3_IRQHandler)
+    USART_ClearITPendingBit                  0x08000751   Thumb Code    30  stm32f10x_usart.o(i.USART_ClearITPendingBit)
+    USART_Cmd                                0x0800076f   Thumb Code    24  stm32f10x_usart.o(i.USART_Cmd)
+    USART_GetFlagStatus                      0x08000787   Thumb Code    26  stm32f10x_usart.o(i.USART_GetFlagStatus)
+    USART_GetITStatus                        0x080007a1   Thumb Code    84  stm32f10x_usart.o(i.USART_GetITStatus)
+    USART_ITConfig                           0x080007f5   Thumb Code    74  stm32f10x_usart.o(i.USART_ITConfig)
+    USART_Init                               0x08000841   Thumb Code   210  stm32f10x_usart.o(i.USART_Init)
+    USART_ReceiveData                        0x08000919   Thumb Code    10  stm32f10x_usart.o(i.USART_ReceiveData)
+    USART_SendData                           0x08000923   Thumb Code     8  stm32f10x_usart.o(i.USART_SendData)
+    UsageFault_Handler                       0x0800092b   Thumb Code     4  stm32f10x_it.o(i.UsageFault_Handler)
+    publish_imu()                            0x08000939   Thumb Code    42  main.o(i._Z11publish_imuv)
+    check_imu()                              0x08000a89   Thumb Code    34  main.o(i._Z9check_imuv)
+    RingBuffer::store_char(unsigned char)    0x08000acd   Thumb Code    24  ringbuffer.o(i._ZN10RingBuffer10store_charEh)
+    RingBuffer::RingBuffer()                 0x08000ae5   Thumb Code    22  ringbuffer.o(i._ZN10RingBufferC1Ev)
+    RingBuffer::RingBuffer__sub_object()     0x08000ae5   Thumb Code     0  ringbuffer.o(i._ZN10RingBufferC1Ev)
+    STM32Hardware::time()                    0x08000afb   Thumb Code    10  main.o(i._ZN13STM32Hardware4timeEv)
+    geometry_msgs::Vector3::getMD5()         0x08000b05   Thumb Code     6  main.o(i._ZN13geometry_msgs7Vector36getMD5Ev)
+    geometry_msgs::Vector3::getType()        0x08000b11   Thumb Code     6  main.o(i._ZN13geometry_msgs7Vector37getTypeEv)
+    geometry_msgs::Vector3::Vector3()        0x08000b1d   Thumb Code    20  main.o(i._ZN13geometry_msgs7Vector3C1Ev)
+    geometry_msgs::Vector3::Vector3__sub_object() 0x08000b1d   Thumb Code     0  main.o(i._ZN13geometry_msgs7Vector3C1Ev)
+    geometry_msgs::Vector3::operator =(const geometry_msgs::Vector3&) 0x08000b35   Thumb Code    14  main.o(i._ZN13geometry_msgs7Vector3aSERKS0_)
+    HardwareSerial::irq()                    0x08000b45   Thumb Code    68  hardwareserial.o(i._ZN14HardwareSerial3irqEv)
+    HardwareSerial::read()                   0x08000b8d   Thumb Code    34  hardwareserial.o(i._ZN14HardwareSerial4readEv)
+    HardwareSerial::begin(unsigned)          0x08000bb1   Thumb Code   270  hardwareserial.o(i._ZN14HardwareSerial5beginEj)
+    HardwareSerial::write(unsigned char)     0x08000ce1   Thumb Code    48  hardwareserial.o(i._ZN14HardwareSerial5writeEh)
+    HardwareSerial::available()              0x08000d15   Thumb Code    18  hardwareserial.o(i._ZN14HardwareSerial9availableEv)
+    HardwareSerial::HardwareSerial(Serial_TypeDef) 0x08000d29   Thumb Code    56  hardwareserial.o(i._ZN14HardwareSerialC1E14Serial_TypeDef)
+    HardwareSerial::HardwareSerial__sub_object(Serial_TypeDef) 0x08000d29   Thumb Code     0  hardwareserial.o(i._ZN14HardwareSerialC1E14Serial_TypeDef)
+    HardwareSerial::~HardwareSerial()        0x08000d6d   Thumb Code     2  main.o(i._ZN14HardwareSerialD1Ev)
+    HardwareSerial::~HardwareSerial__sub_object() 0x08000d6d   Thumb Code     0  main.o(i._ZN14HardwareSerialD1Ev)
+    rosserial_msgs::RequestParamResponse::deserialize(unsigned char*) 0x08000d6f   Thumb Code   324  main.o(i._ZN14rosserial_msgs20RequestParamResponse11deserializeEPh)
+    rosserial_msgs::RequestParamResponse::getMD5() 0x08000eb5   Thumb Code     6  main.o(i._ZN14rosserial_msgs20RequestParamResponse6getMD5Ev)
+    rosserial_msgs::RequestParamResponse::getType() 0x08000ec1   Thumb Code     6  main.o(i._ZN14rosserial_msgs20RequestParamResponse7getTypeEv)
+    rosserial_msgs::Log::getMD5()            0x08000ecd   Thumb Code     6  main.o(i._ZN14rosserial_msgs3Log6getMD5Ev)
+    rosserial_msgs::Log::getType()           0x08000ed9   Thumb Code     6  main.o(i._ZN14rosserial_msgs3Log7getTypeEv)
+    rosserial_msgs::TopicInfo::getMD5()      0x08000ee5   Thumb Code     6  main.o(i._ZN14rosserial_msgs9TopicInfo6getMD5Ev)
+    rosserial_msgs::TopicInfo::getType()     0x08000ef1   Thumb Code     6  main.o(i._ZN14rosserial_msgs9TopicInfo7getTypeEv)
+    MPU::send_value(int, unsigned char)      0x08000efd   Thumb Code    38  mpu6050.o(i._ZN3MPU10send_valueEih)
+    MPU::measure_gyroscope()                 0x08000f23   Thumb Code   116  mpu6050.o(i._ZN3MPU17measure_gyroscopeEv)
+    MPU::write_to_register(int, unsigned char, unsigned char) 0x08000f97   Thumb Code    54  mpu6050.o(i._ZN3MPU17write_to_registerEihh)
+    MPU::measure_acceleration()              0x08000fcd   Thumb Code   116  mpu6050.o(i._ZN3MPU20measure_accelerationEv)
+    MPU::init()                              0x08001041   Thumb Code    16  mpu6050.o(i._ZN3MPU4initEv)
+    MPU::check_id(int, unsigned char)        0x08001051   Thumb Code    58  mpu6050.o(i._ZN3MPU8check_idEih)
+    MPU::check_mpu()                         0x0800108b   Thumb Code   114  mpu6050.o(i._ZN3MPU9check_mpuEv)
+    MPU::~MPU()                              0x080010fd   Thumb Code    20  main.o(i._ZN3MPUD1Ev)
+    MPU::~MPU__sub_object()                  0x080010fd   Thumb Code     0  main.o(i._ZN3MPUD1Ev)
+    ros::normalizeSecNSec(unsigned long&, unsigned long&) 0x08001111   Thumb Code    30  time.o(i._ZN3ros16normalizeSecNSecERmS0_)
+    ros::Msg::Msg__sub_object()              0x08001135   Thumb Code     6  main.o(i._ZN3ros3MsgC2Ev)
+    TwoWire::i2c_get_ack()                   0x08001141   Thumb Code    50  wire.o(i._ZN7TwoWire11i2c_get_ackEv)
+    TwoWire::i2c_send_ack()                  0x08001173   Thumb Code    30  wire.o(i._ZN7TwoWire12i2c_send_ackEv)
+    TwoWire::i2c_shift_in()                  0x08001191   Thumb Code    60  wire.o(i._ZN7TwoWire12i2c_shift_inEv)
+    TwoWire::i2c_send_nack()                 0x080011cd   Thumb Code    30  wire.o(i._ZN7TwoWire13i2c_send_nackEv)
+    TwoWire::i2c_shift_out(unsigned char)    0x080011eb   Thumb Code    60  wire.o(i._ZN7TwoWire13i2c_shift_outEh)
+    TwoWire::begin(unsigned char)            0x08001229   Thumb Code   102  wire.o(i._ZN7TwoWire5beginEh)
+    TwoWire::process()                       0x08001295   Thumb Code   170  wire.o(i._ZN7TwoWire7processEv)
+    TwoWire::set_scl(bool)                   0x08001341   Thumb Code    50  wire.o(i._ZN7TwoWire7set_sclEb)
+    TwoWire::set_sda(bool)                   0x08001379   Thumb Code    50  wire.o(i._ZN7TwoWire7set_sdaEb)
+    TwoWire::i2c_stop()                      0x080013b1   Thumb Code    30  wire.o(i._ZN7TwoWire8i2c_stopEv)
+    TwoWire::sda_read()                      0x080013d1   Thumb Code    22  wire.o(i._ZN7TwoWire8sda_readEv)
+    TwoWire::i2c_start()                     0x080013ed   Thumb Code    22  wire.o(i._ZN7TwoWire9i2c_startEv)
+    TwoWire::TwoWire(unsigned char)          0x08001405   Thumb Code    16  wire.o(i._ZN7TwoWireC1Eh)
+    TwoWire::TwoWire__sub_object(unsigned char) 0x08001405   Thumb Code     0  wire.o(i._ZN7TwoWireC1Eh)
+    TwoWire::~TwoWire()                      0x0800141d   Thumb Code     8  wire.o(i._ZN7TwoWireD1Ev)
+    TwoWire::~TwoWire__sub_object()          0x0800141d   Thumb Code     0  wire.o(i._ZN7TwoWireD1Ev)
+    WireBase::requestFrom(unsigned char, int) 0x08001425   Thumb Code    64  wirebase.o(i._ZN8WireBase11requestFromEhi)
+    WireBase::requestFrom(int, int)          0x08001465   Thumb Code    20  wirebase.o(i._ZN8WireBase11requestFromEii)
+    WireBase::endTransmission()              0x08001479   Thumb Code    38  wirebase.o(i._ZN8WireBase15endTransmissionEv)
+    WireBase::beginTransmission(unsigned char) 0x0800149f   Thumb Code    22  wirebase.o(i._ZN8WireBase17beginTransmissionEh)
+    WireBase::beginTransmission(int)         0x080014b5   Thumb Code    16  wirebase.o(i._ZN8WireBase17beginTransmissionEi)
+    WireBase::read()                         0x080014c5   Thumb Code    84  wirebase.o(i._ZN8WireBase4readEv)
+    WireBase::write(unsigned char)           0x08001519   Thumb Code    44  wirebase.o(i._ZN8WireBase5writeEh)
+    WireBase::available()                    0x08001545   Thumb Code    16  wirebase.o(i._ZN8WireBase9availableEv)
+    std_msgs::Time::deserialize(unsigned char*) 0x08001555   Thumb Code    92  main.o(i._ZN8std_msgs4Time11deserializeEPh)
+    std_msgs::Time::getMD5()                 0x080015b1   Thumb Code     6  main.o(i._ZN8std_msgs4Time6getMD5Ev)
+    std_msgs::Time::getType()                0x080015bd   Thumb Code     6  main.o(i._ZN8std_msgs4Time7getTypeEv)
+    std_msgs::Time::Time()                   0x080015c9   Thumb Code    32  main.o(i._ZN8std_msgs4TimeC1Ev)
+    std_msgs::Time::Time__sub_object()       0x080015c9   Thumb Code     0  main.o(i._ZN8std_msgs4TimeC1Ev)
+    riki_msgs::Imu::getMD5()                 0x080015ed   Thumb Code     6  main.o(i._ZN9riki_msgs3Imu6getMD5Ev)
+    riki_msgs::Imu::getType()                0x080015f9   Thumb Code     6  main.o(i._ZN9riki_msgs3Imu7getTypeEv)
+    geometry_msgs::Vector3::serialize(unsigned char*) const 0x08001605   Thumb Code   428  main.o(i._ZNK13geometry_msgs7Vector39serializeEPh)
+    rosserial_msgs::RequestParamResponse::serialize(unsigned char*) const 0x080017b1   Thumb Code   254  main.o(i._ZNK14rosserial_msgs20RequestParamResponse9serializeEPh)
+    rosserial_msgs::Log::serialize(unsigned char*) const 0x080018af   Thumb Code    48  main.o(i._ZNK14rosserial_msgs3Log9serializeEPh)
+    rosserial_msgs::TopicInfo::serialize(unsigned char*) const 0x080018df   Thumb Code   146  main.o(i._ZNK14rosserial_msgs9TopicInfo9serializeEPh)
+    std_msgs::Time::serialize(unsigned char*) const 0x08001971   Thumb Code    68  main.o(i._ZNK8std_msgs4Time9serializeEPh)
+    riki_msgs::Imu::serialize(unsigned char*) const 0x080019b5   Thumb Code    34  main.o(i._ZNK9riki_msgs3Imu9serializeEPh)
+    __cxa_pure_virtual                       0x080019d7   Thumb Code     6  pure_virt.o(i.__cxa_pure_virtual)
+    free                                     0x080019dd   Thumb Code    88  mallocr.o(i.__free$realloc)
+    malloc                                   0x08001a39   Thumb Code    64  mallocr.o(i.__malloc$realloc)
+    __scatterload_copy                       0x08001a89   Thumb Code    14  handlers.o(i.__scatterload_copy)
+    __scatterload_null                       0x08001a97   Thumb Code     2  handlers.o(i.__scatterload_null)
+    __scatterload_zeroinit                   0x08001a99   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
+    main                                     0x08001bb5   Thumb Code   144  main.o(i.main)
+    millis                                   0x08001c55   Thumb Code     6  millisecondtimer.o(i.millis)
+    realloc                                  0x08001c61   Thumb Code   102  mallocr.o(i.realloc)
+    ros::NodeHandle_<STM32Hardware, (int)25, (int)25, (int)1024, (int)1024>::negotiateTopics() 0x08001ccd   Thumb Code   288  main.o(t._ZN3ros11NodeHandle_I13STM32HardwareLi25ELi25ELi1024ELi1024EE15negotiateTopicsEv)
+    ros::NodeHandle_<STM32Hardware, (int)25, (int)25, (int)1024, (int)1024>::requestSyncTime() 0x08001df1   Thumb Code    32  main.o(t._ZN3ros11NodeHandle_I13STM32HardwareLi25ELi25ELi1024ELi1024EE15requestSyncTimeEv)
+    ros::NodeHandle_<STM32Hardware, (int)25, (int)25, (int)1024, (int)1024>::publish(int, const ros::Msg*) 0x08001e11   Thumb Code   222  main.o(t._ZN3ros11NodeHandle_I13STM32HardwareLi25ELi25ELi1024ELi1024EE7publishEiPKNS_3MsgE)
+    ros::NodeHandle_<STM32Hardware, (int)25, (int)25, (int)1024, (int)1024>::logerror(const char*) 0x08001ef5   Thumb Code    44  main.o(t._ZN3ros11NodeHandle_I13STM32HardwareLi25ELi25ELi1024ELi1024EE8logerrorEPKc)
+    ros::NodeHandle_<STM32Hardware, (int)25, (int)25, (int)1024, (int)1024>::spinOnce() 0x08001f25   Thumb Code   642  main.o(t._ZN3ros11NodeHandle_I13STM32HardwareLi25ELi25ELi1024ELi1024EE8spinOnceEv)
+    ros::NodeHandle_<STM32Hardware, (int)25, (int)25, (int)1024, (int)1024>::syncTime(unsigned char*) 0x080021a9   Thumb Code   154  main.o(t._ZN3ros11NodeHandle_I13STM32HardwareLi25ELi25ELi1024ELi1024EE8syncTimeEPh)
+    ros::NodeHandle_<STM32Hardware, (int)25, (int)25, (int)1024, (int)1024>::NodeHandle_() 0x08002249   Thumb Code   172  main.o(t._ZN3ros11NodeHandle_I13STM32HardwareLi25ELi25ELi1024ELi1024EEC1Ev)
+    ros::NodeHandle_<STM32Hardware, (int)25, (int)25, (int)1024, (int)1024>::NodeHandle___sub_object() 0x08002249   Thumb Code     0  main.o(t._ZN3ros11NodeHandle_I13STM32HardwareLi25ELi25ELi1024ELi1024EEC1Ev)
+    vtable for TwoWire                       0x08002350   Data          16  wire.o(.constdata__ZTV7TwoWire)
+    vtable for WireBase                      0x08002360   Data          16  wirebase.o(.constdata__ZTV8WireBase)
+    vtable for geometry_msgs::Vector3        0x08002370   Data          24  main.o(.constdata__ZTVN13geometry_msgs7Vector3E)
+    vtable for rosserial_msgs::RequestParamResponse 0x08002388   Data          24  main.o(.constdata__ZTVN14rosserial_msgs20RequestParamResponseE)
+    vtable for rosserial_msgs::Log           0x080023a0   Data          24  main.o(.constdata__ZTVN14rosserial_msgs3LogE)
+    vtable for rosserial_msgs::TopicInfo     0x080023b8   Data          24  main.o(.constdata__ZTVN14rosserial_msgs9TopicInfoE)
+    vtable for ros::NodeHandle_<STM32Hardware, (int)25, (int)25, (int)1024, (int)1024> 0x080023d0   Data          20  main.o(.constdata__ZTVN3ros11NodeHandle_I13STM32HardwareLi25ELi25ELi1024ELi1024EEE)
+    vtable for ros::NodeHandleBase_          0x080023e4   Data          20  main.o(.constdata__ZTVN3ros15NodeHandleBase_E)
+    vtable for ros::Msg                      0x080023f8   Data          24  main.o(.constdata__ZTVN3ros3MsgE)
+    vtable for std_msgs::Time                0x08002410   Data          24  main.o(.constdata__ZTVN8std_msgs4TimeE)
+    vtable for riki_msgs::Imu                0x08002428   Data          24  main.o(.constdata__ZTVN9riki_msgs3ImuE)
+    geometry_msgs::Vector3::getMD5()::string 0x08002440   Data          33  main.o(.constdata__ZZN13geometry_msgs7Vector36getMD5EvEs)
+    geometry_msgs::Vector3::getType()::string 0x08002461   Data          22  main.o(.constdata__ZZN13geometry_msgs7Vector37getTypeEvEs)
+    rosserial_msgs::RequestParamResponse::getMD5()::string 0x08002477   Data          33  main.o(.constdata__ZZN14rosserial_msgs20RequestParamResponse6getMD5EvEs)
+    rosserial_msgs::Log::getMD5()::string    0x08002498   Data          33  main.o(.constdata__ZZN14rosserial_msgs3Log6getMD5EvEs)
+    rosserial_msgs::Log::getType()::string   0x080024b9   Data          19  main.o(.constdata__ZZN14rosserial_msgs3Log7getTypeEvEs)
+    rosserial_msgs::TopicInfo::getMD5()::string 0x080024cc   Data          33  main.o(.constdata__ZZN14rosserial_msgs9TopicInfo6getMD5EvEs)
+    rosserial_msgs::TopicInfo::getType()::string 0x080024ed   Data          25  main.o(.constdata__ZZN14rosserial_msgs9TopicInfo7getTypeEvEs)
+    ros::NodeHandle_<STM32Hardware, (int)25, (int)25, (int)1024, (int)1024>::publish(int, const ros::Msg*)::string 0x08002506   Data          57  main.o(.constdata__ZZN3ros11NodeHandle_I13STM32HardwareLi25ELi25ELi1024ELi1024EE7publishEiPKNS_3MsgEEs)
+    std_msgs::Time::getMD5()::string         0x0800253f   Data          33  main.o(.constdata__ZZN8std_msgs4Time6getMD5EvEs)
+    std_msgs::Time::getType()::string        0x08002560   Data          14  main.o(.constdata__ZZN8std_msgs4Time7getTypeEvEs)
+    riki_msgs::Imu::getMD5()::string         0x0800256e   Data          33  main.o(.constdata__ZZN9riki_msgs3Imu6getMD5EvEs)
+    riki_msgs::Imu::getType()::string        0x0800258f   Data          14  main.o(.constdata__ZZN9riki_msgs3Imu7getTypeEvEs)
+    Region$$Table$$Base                      0x080025a0   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x080025c0   Number         0  anon$$obj.o(Region$$Table)
+    SHT$$INIT_ARRAY$$Base                    0x080025c0   Number         0  main.o(.init_array)
+    SHT$$INIT_ARRAY$$Limit                   0x080025c4   Number         0  cpp_init.o(.init_array)
+    mpu_stay                                 0x20000014   Data           1  main.o(.data)
+    is_first                                 0x20000015   Data           1  main.o(.data)
+    SERIAL_USART                             0x20000018   Data          12  hardwareserial.o(.data)
+    SERIAL_PORT                              0x20000024   Data          12  hardwareserial.o(.data)
+    Serial1                                  0x20000030   Data           4  interrupt.o(.data)
+    Serial2                                  0x20000034   Data           4  interrupt.o(.data)
+    Serial3                                  0x20000038   Data           4  interrupt.o(.data)
+    _counter                                 0x2000003c   Data           4  millisecondtimer.o(.data)
+    __microlib_freelist                      0x20000040   Data           4  mvars.o(.data)
+    __microlib_freelist_initialised          0x20000044   Data           4  mvars.o(.data)
+    Serial                                   0x2000004c   Data          76  main.o(.bss)
+    mpu6050                                  0x20000098   Data         132  main.o(.bss)
+    nh                                       0x2000011c   Data        2352  main.o(.bss)
+    raw_imu_msg                              0x20000a4c   Data          36  main.o(.bss)
+    raw_imu_pub                              0x20000a70   Data          20  main.o(.bss)
+    __heap_base                              0x20000a88   Data           0  startup_stm32f10x_hd.o(HEAP)
+    __heap_limit                             0x20000c88   Data           0  startup_stm32f10x_hd.o(HEAP)
+    __initial_sp                             0x20001088   Data           0  startup_stm32f10x_hd.o(STACK)
 
 
 
@@ -2345,61 +2913,220 @@ Memory Map of the image
 
   Image Entry point : 0x08000131
 
-  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x000004a8, Max: 0x00020000, ABSOLUTE)
+  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x00002610, Max: 0x00020000, ABSOLUTE)
 
-    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x00000484, Max: 0x00020000, ABSOLUTE)
+    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x000025c4, Max: 0x00020000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
     0x08000000   0x08000000   0x00000130   Data   RO            3    RESET               startup_stm32f10x_hd.o
-    0x08000130   0x08000130   0x00000000   Code   RO         4343  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
-    0x08000130   0x08000130   0x00000004   Code   RO         4397    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
-    0x08000134   0x08000134   0x00000004   Code   RO         4400    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
-    0x08000138   0x08000138   0x00000000   Code   RO         4402    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
-    0x08000138   0x08000138   0x00000000   Code   RO         4404    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
-    0x08000138   0x08000138   0x00000008   Code   RO         4405    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
-    0x08000140   0x08000140   0x00000000   Code   RO         4407    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
-    0x08000140   0x08000140   0x00000000   Code   RO         4409    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
-    0x08000140   0x08000140   0x00000004   Code   RO         4398    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
-    0x08000144   0x08000144   0x00000024   Code   RO            4    .text               startup_stm32f10x_hd.o
-    0x08000168   0x08000168   0x00000024   Code   RO         4446    .text               mc_w.l(init.o)
-    0x0800018c   0x0800018c   0x00000004   Code   RO         3663    i.BusFault_Handler  stm32f10x_it.o
-    0x08000190   0x08000190   0x00000002   Code   RO         3664    i.DebugMon_Handler  stm32f10x_it.o
-    0x08000192   0x08000192   0x00000004   Code   RO         3665    i.HardFault_Handler  stm32f10x_it.o
-    0x08000196   0x08000196   0x00000004   Code   RO         3666    i.MemManage_Handler  stm32f10x_it.o
-    0x0800019a   0x0800019a   0x00000002   Code   RO         3667    i.NMI_Handler       stm32f10x_it.o
-    0x0800019c   0x0800019c   0x00000002   Code   RO         3668    i.PendSV_Handler    stm32f10x_it.o
-    0x0800019e   0x0800019e   0x00000002   Code   RO         3669    i.SVC_Handler       stm32f10x_it.o
-    0x080001a0   0x080001a0   0x00000002   Code   RO         3670    i.SysTick_Handler   stm32f10x_it.o
-    0x080001a2   0x080001a2   0x00000002   PAD
-    0x080001a4   0x080001a4   0x0000006c   Code   RO           25    i.SystemInit        system_stm32f10x.o
-    0x08000210   0x08000210   0x00000010   Code   RO         3838    i.USART1_IRQHandler  interrupt.o
-    0x08000220   0x08000220   0x00000010   Code   RO         3839    i.USART2_IRQHandler  interrupt.o
-    0x08000230   0x08000230   0x00000010   Code   RO         3840    i.USART3_IRQHandler  interrupt.o
-    0x08000240   0x08000240   0x0000001e   Code   RO         3380    i.USART_ClearITPendingBit  stm32f10x_usart.o
-    0x0800025e   0x0800025e   0x00000054   Code   RO         3387    i.USART_GetITStatus  stm32f10x_usart.o
-    0x080002b2   0x080002b2   0x0000000a   Code   RO         3397    i.USART_ReceiveData  stm32f10x_usart.o
-    0x080002bc   0x080002bc   0x00000004   Code   RO         3671    i.UsageFault_Handler  stm32f10x_it.o
-    0x080002c0   0x080002c0   0x00000008   Code   RO           26    i._Z11SetSysClockv  system_stm32f10x.o
-    0x080002c8   0x080002c8   0x00000118   Code   RO           27    i._Z15SetSysClockTo72v  system_stm32f10x.o
-    0x080003e0   0x080003e0   0x00000018   Code   RO         3871    i._ZN10RingBuffer10store_charEh  ringbuffer.o
-    0x080003f8   0x080003f8   0x00000048   Code   RO         3735    i._ZN14HardwareSerial3irqEv  hardwareserial.o
-    0x08000440   0x08000440   0x0000000e   Code   RO         4498    i.__scatterload_copy  mc_w.l(handlers.o)
-    0x0800044e   0x0800044e   0x00000002   Code   RO         4499    i.__scatterload_null  mc_w.l(handlers.o)
-    0x08000450   0x08000450   0x0000000e   Code   RO         4500    i.__scatterload_zeroinit  mc_w.l(handlers.o)
-    0x0800045e   0x0800045e   0x00000004   Code   RO         3650    i.main              main.o
-    0x08000462   0x08000462   0x00000002   PAD
-    0x08000464   0x08000464   0x00000020   Data   RO         4496    Region$$Table       anon$$obj.o
+    0x08000130   0x08000130   0x00000000   Code   RO         4775  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
+    0x08000130   0x08000130   0x00000004   Code   RO         4862    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
+    0x08000134   0x08000134   0x00000004   Code   RO         4865    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
+    0x08000138   0x08000138   0x00000000   Code   RO         4867    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
+    0x08000138   0x08000138   0x00000004   Code   RO         4868    .ARM.Collect$$$$00000009  mc_w.l(entry8a.o)
+    0x0800013c   0x0800013c   0x00000000   Code   RO         4869    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
+    0x0800013c   0x0800013c   0x00000008   Code   RO         4870    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
+    0x08000144   0x08000144   0x00000000   Code   RO         4872    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
+    0x08000144   0x08000144   0x00000004   Code   RO         4873    .ARM.Collect$$$$0000000E  mc_w.l(entry10b.o)
+    0x08000148   0x08000148   0x00000000   Code   RO         4874    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
+    0x08000148   0x08000148   0x00000004   Code   RO         4863    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
+    0x0800014c   0x0800014c   0x00000024   Code   RO            4    .text               startup_stm32f10x_hd.o
+    0x08000170   0x08000170   0x00000024   Code   RO         4778    .text               mc_w.l(memcpya.o)
+    0x08000194   0x08000194   0x00000024   Code   RO         4780    .text               mc_w.l(memseta.o)
+    0x080001b8   0x080001b8   0x0000000e   Code   RO         4782    .text               mc_w.l(strlen.o)
+    0x080001c6   0x080001c6   0x00000002   PAD
+    0x080001c8   0x080001c8   0x00000020   Code   RO         4835    .text               mc_w.l(cpp_init.o)
+    0x080001e8   0x080001e8   0x0000002e   Code   RO         4837    .text               mc_w.l(aeabi_atexit.o)
+    0x08000216   0x08000216   0x00000012   Code   RO         4841    .text               mf_w.l(fflti.o)
+    0x08000228   0x08000228   0x00000014   Code   RO         4847    .text               mf_w.l(cfcmple.o)
+    0x0800023c   0x0800023c   0x00000000   Code   RO         4897    .text               mc_w.l(iusefp.o)
+    0x0800023c   0x0800023c   0x00000008   Code   RO         4898    .text               mc_w.l(cpp_dtor.o)
+    0x08000244   0x08000244   0x00000002   Code   RO         4901    .text               mc_w.l(cpp_signal.o)
+    0x08000246   0x08000246   0x00000042   Code   RO         4903    .text               mc_w.l(cxa_finalize.o)
+    0x08000288   0x08000288   0x0000006e   Code   RO         4905    .text               mf_w.l(fepilogue.o)
+    0x080002f6   0x080002f6   0x00000002   PAD
+    0x080002f8   0x080002f8   0x00000024   Code   RO         4930    .text               mc_w.l(init.o)
+    0x0800031c   0x0800031c   0x00000002   Code   RO         4938    .text               mc_w.l(cpp_final.o)
+    0x0800031e   0x0800031e   0x00000004   Code   RO         4091    i.BusFault_Handler  stm32f10x_it.o
+    0x08000322   0x08000322   0x00000002   Code   RO         4092    i.DebugMon_Handler  stm32f10x_it.o
+    0x08000324   0x08000324   0x00000116   Code   RO         1478    i.GPIO_Init         stm32f10x_gpio.o
+    0x0800043a   0x0800043a   0x00000012   Code   RO         1482    i.GPIO_ReadInputDataBit  stm32f10x_gpio.o
+    0x0800044c   0x0800044c   0x00000004   Code   RO         1485    i.GPIO_ResetBits    stm32f10x_gpio.o
+    0x08000450   0x08000450   0x00000004   Code   RO         1486    i.GPIO_SetBits      stm32f10x_gpio.o
+    0x08000454   0x08000454   0x00000004   Code   RO         4093    i.HardFault_Handler  stm32f10x_it.o
+    0x08000458   0x08000458   0x00000004   Code   RO         4094    i.MemManage_Handler  stm32f10x_it.o
+    0x0800045c   0x0800045c   0x00000002   Code   RO         4095    i.NMI_Handler       stm32f10x_it.o
+    0x0800045e   0x0800045e   0x00000002   PAD
+    0x08000460   0x08000460   0x00000070   Code   RO          144    i.NVIC_Init         misc.o
+    0x080004d0   0x080004d0   0x00000002   Code   RO         4096    i.PendSV_Handler    stm32f10x_it.o
+    0x080004d2   0x080004d2   0x00000002   PAD
+    0x080004d4   0x080004d4   0x00000020   Code   RO         1961    i.RCC_APB1PeriphClockCmd  stm32f10x_rcc.o
+    0x080004f4   0x080004f4   0x00000020   Code   RO         1963    i.RCC_APB2PeriphClockCmd  stm32f10x_rcc.o
+    0x08000514   0x08000514   0x0000018c   Code   RO         1971    i.RCC_GetClocksFreq  stm32f10x_rcc.o
+    0x080006a0   0x080006a0   0x00000002   Code   RO         4097    i.SVC_Handler       stm32f10x_it.o
+    0x080006a2   0x080006a2   0x00000002   PAD
+    0x080006a4   0x080006a4   0x00000010   Code   RO         4498    i.SysTick_Handler   millisecondtimer.o
+    0x080006b4   0x080006b4   0x0000006c   Code   RO           25    i.SystemInit        system_stm32f10x.o
+    0x08000720   0x08000720   0x00000010   Code   RO         4243    i.USART1_IRQHandler  interrupt.o
+    0x08000730   0x08000730   0x00000010   Code   RO         4244    i.USART2_IRQHandler  interrupt.o
+    0x08000740   0x08000740   0x00000010   Code   RO         4245    i.USART3_IRQHandler  interrupt.o
+    0x08000750   0x08000750   0x0000001e   Code   RO         3380    i.USART_ClearITPendingBit  stm32f10x_usart.o
+    0x0800076e   0x0800076e   0x00000018   Code   RO         3383    i.USART_Cmd         stm32f10x_usart.o
+    0x08000786   0x08000786   0x0000001a   Code   RO         3386    i.USART_GetFlagStatus  stm32f10x_usart.o
+    0x080007a0   0x080007a0   0x00000054   Code   RO         3387    i.USART_GetITStatus  stm32f10x_usart.o
+    0x080007f4   0x080007f4   0x0000004a   Code   RO         3389    i.USART_ITConfig    stm32f10x_usart.o
+    0x0800083e   0x0800083e   0x00000002   PAD
+    0x08000840   0x08000840   0x000000d8   Code   RO         3390    i.USART_Init        stm32f10x_usart.o
+    0x08000918   0x08000918   0x0000000a   Code   RO         3397    i.USART_ReceiveData  stm32f10x_usart.o
+    0x08000922   0x08000922   0x00000008   Code   RO         3400    i.USART_SendData    stm32f10x_usart.o
+    0x0800092a   0x0800092a   0x00000004   Code   RO         4098    i.UsageFault_Handler  stm32f10x_it.o
+    0x0800092e   0x0800092e   0x00000008   Code   RO           26    i._Z11SetSysClockv  system_stm32f10x.o
+    0x08000936   0x08000936   0x00000002   PAD
+    0x08000938   0x08000938   0x00000038   Code   RO         3650    i._Z11publish_imuv  main.o
+    0x08000970   0x08000970   0x00000118   Code   RO           27    i._Z15SetSysClockTo72v  system_stm32f10x.o
+    0x08000a88   0x08000a88   0x00000044   Code   RO         3651    i._Z9check_imuv     main.o
+    0x08000acc   0x08000acc   0x00000018   Code   RO         4276    i._ZN10RingBuffer10store_charEh  ringbuffer.o
+    0x08000ae4   0x08000ae4   0x00000016   Code   RO         4277    i._ZN10RingBufferC1Ev  ringbuffer.o
+    0x08000afa   0x08000afa   0x0000000a   Code   RO         3762    i._ZN13STM32Hardware4timeEv  main.o
+    0x08000b04   0x08000b04   0x0000000c   Code   RO         3949    i._ZN13geometry_msgs7Vector36getMD5Ev  main.o
+    0x08000b10   0x08000b10   0x0000000c   Code   RO         3943    i._ZN13geometry_msgs7Vector37getTypeEv  main.o
+    0x08000b1c   0x08000b1c   0x00000018   Code   RO         3780    i._ZN13geometry_msgs7Vector3C1Ev  main.o
+    0x08000b34   0x08000b34   0x0000000e   Code   RO         3759    i._ZN13geometry_msgs7Vector3aSERKS0_  main.o
+    0x08000b42   0x08000b42   0x00000002   PAD
+    0x08000b44   0x08000b44   0x00000048   Code   RO         4156    i._ZN14HardwareSerial3irqEv  hardwareserial.o
+    0x08000b8c   0x08000b8c   0x00000022   Code   RO         4157    i._ZN14HardwareSerial4readEv  hardwareserial.o
+    0x08000bae   0x08000bae   0x00000002   PAD
+    0x08000bb0   0x08000bb0   0x00000130   Code   RO         4158    i._ZN14HardwareSerial5beginEj  hardwareserial.o
+    0x08000ce0   0x08000ce0   0x00000034   Code   RO         4161    i._ZN14HardwareSerial5writeEh  hardwareserial.o
+    0x08000d14   0x08000d14   0x00000012   Code   RO         4163    i._ZN14HardwareSerial9availableEv  hardwareserial.o
+    0x08000d26   0x08000d26   0x00000002   PAD
+    0x08000d28   0x08000d28   0x00000044   Code   RO         4164    i._ZN14HardwareSerialC1E14Serial_TypeDef  hardwareserial.o
+    0x08000d6c   0x08000d6c   0x00000002   Code   RO         3774    i._ZN14HardwareSerialD1Ev  main.o
+    0x08000d6e   0x08000d6e   0x00000144   Code   RO         3712    i._ZN14rosserial_msgs20RequestParamResponse11deserializeEPh  main.o
+    0x08000eb2   0x08000eb2   0x00000002   PAD
+    0x08000eb4   0x08000eb4   0x0000000c   Code   RO         3913    i._ZN14rosserial_msgs20RequestParamResponse6getMD5Ev  main.o
+    0x08000ec0   0x08000ec0   0x0000000c   Code   RO         3907    i._ZN14rosserial_msgs20RequestParamResponse7getTypeEv  main.o
+    0x08000ecc   0x08000ecc   0x0000000c   Code   RO         3895    i._ZN14rosserial_msgs3Log6getMD5Ev  main.o
+    0x08000ed8   0x08000ed8   0x0000000c   Code   RO         3889    i._ZN14rosserial_msgs3Log7getTypeEv  main.o
+    0x08000ee4   0x08000ee4   0x0000000c   Code   RO         3871    i._ZN14rosserial_msgs9TopicInfo6getMD5Ev  main.o
+    0x08000ef0   0x08000ef0   0x0000000c   Code   RO         3865    i._ZN14rosserial_msgs9TopicInfo7getTypeEv  main.o
+    0x08000efc   0x08000efc   0x00000026   Code   RO         4612    i._ZN3MPU10send_valueEih  mpu6050.o
+    0x08000f22   0x08000f22   0x00000074   Code   RO         4613    i._ZN3MPU17measure_gyroscopeEv  mpu6050.o
+    0x08000f96   0x08000f96   0x00000036   Code   RO         4614    i._ZN3MPU17write_to_registerEihh  mpu6050.o
+    0x08000fcc   0x08000fcc   0x00000074   Code   RO         4615    i._ZN3MPU20measure_accelerationEv  mpu6050.o
+    0x08001040   0x08001040   0x00000010   Code   RO         4616    i._ZN3MPU4initEv    mpu6050.o
+    0x08001050   0x08001050   0x0000003a   Code   RO         4617    i._ZN3MPU8check_idEih  mpu6050.o
+    0x0800108a   0x0800108a   0x00000072   Code   RO         4618    i._ZN3MPU9check_mpuEv  mpu6050.o
+    0x080010fc   0x080010fc   0x00000014   Code   RO         3783    i._ZN3MPUD1Ev       main.o
+    0x08001110   0x08001110   0x00000024   Code   RO         4579    i._ZN3ros16normalizeSecNSecERmS0_  time.o
+    0x08001134   0x08001134   0x0000000c   Code   RO         3756    i._ZN3ros3MsgC2Ev   main.o
+    0x08001140   0x08001140   0x00000032   Code   RO         4304    i._ZN7TwoWire11i2c_get_ackEv  wire.o
+    0x08001172   0x08001172   0x0000001e   Code   RO         4305    i._ZN7TwoWire12i2c_send_ackEv  wire.o
+    0x08001190   0x08001190   0x0000003c   Code   RO         4306    i._ZN7TwoWire12i2c_shift_inEv  wire.o
+    0x080011cc   0x080011cc   0x0000001e   Code   RO         4307    i._ZN7TwoWire13i2c_send_nackEv  wire.o
+    0x080011ea   0x080011ea   0x0000003c   Code   RO         4308    i._ZN7TwoWire13i2c_shift_outEh  wire.o
+    0x08001226   0x08001226   0x00000002   PAD
+    0x08001228   0x08001228   0x0000006c   Code   RO         4309    i._ZN7TwoWire5beginEh  wire.o
+    0x08001294   0x08001294   0x000000aa   Code   RO         4310    i._ZN7TwoWire7processEv  wire.o
+    0x0800133e   0x0800133e   0x00000002   PAD
+    0x08001340   0x08001340   0x00000038   Code   RO         4311    i._ZN7TwoWire7set_sclEb  wire.o
+    0x08001378   0x08001378   0x00000038   Code   RO         4312    i._ZN7TwoWire7set_sdaEb  wire.o
+    0x080013b0   0x080013b0   0x0000001e   Code   RO         4313    i._ZN7TwoWire8i2c_stopEv  wire.o
+    0x080013ce   0x080013ce   0x00000002   PAD
+    0x080013d0   0x080013d0   0x0000001c   Code   RO         4314    i._ZN7TwoWire8sda_readEv  wire.o
+    0x080013ec   0x080013ec   0x00000016   Code   RO         4315    i._ZN7TwoWire9i2c_startEv  wire.o
+    0x08001402   0x08001402   0x00000002   PAD
+    0x08001404   0x08001404   0x00000018   Code   RO         4316    i._ZN7TwoWireC1Eh   wire.o
+    0x0800141c   0x0800141c   0x00000008   Code   RO         4317    i._ZN7TwoWireD1Ev   wire.o
+    0x08001424   0x08001424   0x00000040   Code   RO         4408    i._ZN8WireBase11requestFromEhi  wirebase.o
+    0x08001464   0x08001464   0x00000014   Code   RO         4409    i._ZN8WireBase11requestFromEii  wirebase.o
+    0x08001478   0x08001478   0x00000026   Code   RO         4410    i._ZN8WireBase15endTransmissionEv  wirebase.o
+    0x0800149e   0x0800149e   0x00000016   Code   RO         4411    i._ZN8WireBase17beginTransmissionEh  wirebase.o
+    0x080014b4   0x080014b4   0x00000010   Code   RO         4412    i._ZN8WireBase17beginTransmissionEi  wirebase.o
+    0x080014c4   0x080014c4   0x00000054   Code   RO         4413    i._ZN8WireBase4readEv  wirebase.o
+    0x08001518   0x08001518   0x0000002c   Code   RO         4418    i._ZN8WireBase5writeEh  wirebase.o
+    0x08001544   0x08001544   0x00000010   Code   RO         4420    i._ZN8WireBase9availableEv  wirebase.o
+    0x08001554   0x08001554   0x0000005c   Code   RO         3718    i._ZN8std_msgs4Time11deserializeEPh  main.o
+    0x080015b0   0x080015b0   0x0000000c   Code   RO         3847    i._ZN8std_msgs4Time6getMD5Ev  main.o
+    0x080015bc   0x080015bc   0x0000000c   Code   RO         3841    i._ZN8std_msgs4Time7getTypeEv  main.o
+    0x080015c8   0x080015c8   0x00000024   Code   RO         3702    i._ZN8std_msgs4TimeC1Ev  main.o
+    0x080015ec   0x080015ec   0x0000000c   Code   RO         3937    i._ZN9riki_msgs3Imu6getMD5Ev  main.o
+    0x080015f8   0x080015f8   0x0000000c   Code   RO         3931    i._ZN9riki_msgs3Imu7getTypeEv  main.o
+    0x08001604   0x08001604   0x000001ac   Code   RO         3744    i._ZNK13geometry_msgs7Vector39serializeEPh  main.o
+    0x080017b0   0x080017b0   0x000000fe   Code   RO         3901    i._ZNK14rosserial_msgs20RequestParamResponse9serializeEPh  main.o
+    0x080018ae   0x080018ae   0x00000030   Code   RO         3877    i._ZNK14rosserial_msgs3Log9serializeEPh  main.o
+    0x080018de   0x080018de   0x00000092   Code   RO         3853    i._ZNK14rosserial_msgs9TopicInfo9serializeEPh  main.o
+    0x08001970   0x08001970   0x00000044   Code   RO         3835    i._ZNK8std_msgs4Time9serializeEPh  main.o
+    0x080019b4   0x080019b4   0x00000022   Code   RO         3919    i._ZNK9riki_msgs3Imu9serializeEPh  main.o
+    0x080019d6   0x080019d6   0x00000006   Code   RO         4666    i.__cxa_pure_virtual  cpprt_w.l(pure_virt.o)
+    0x080019dc   0x080019dc   0x0000005c   Code   RO         4814    i.__free$realloc    mc_w.l(mallocr.o)
+    0x08001a38   0x08001a38   0x00000050   Code   RO         4815    i.__malloc$realloc  mc_w.l(mallocr.o)
+    0x08001a88   0x08001a88   0x0000000e   Code   RO         4950    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x08001a96   0x08001a96   0x00000002   Code   RO         4951    i.__scatterload_null  mc_w.l(handlers.o)
+    0x08001a98   0x08001a98   0x0000000e   Code   RO         4952    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x08001aa6   0x08001aa6   0x00000002   PAD
+    0x08001aa8   0x08001aa8   0x000000bc   Code   RO         3652    i.__sti___6_main_c_Serial  main.o
+    0x08001b64   0x08001b64   0x00000050   Code   RO         4816    i.internal_alloc    mc_w.l(mallocr.o)
+    0x08001bb4   0x08001bb4   0x000000a0   Code   RO         3653    i.main              main.o
+    0x08001c54   0x08001c54   0x0000000c   Code   RO         4501    i.millis            millisecondtimer.o
+    0x08001c60   0x08001c60   0x0000006c   Code   RO         4817    i.realloc           mc_w.l(mallocr.o)
+    0x08001ccc   0x08001ccc   0x00000124   Code   RO         3724    t._ZN3ros11NodeHandle_I13STM32HardwareLi25ELi25ELi1024ELi1024EE15negotiateTopicsEv  main.o
+    0x08001df0   0x08001df0   0x00000020   Code   RO         3705    t._ZN3ros11NodeHandle_I13STM32HardwareLi25ELi25ELi1024ELi1024EE15requestSyncTimeEv  main.o
+    0x08001e10   0x08001e10   0x000000e4   Code   RO         3828    t._ZN3ros11NodeHandle_I13STM32HardwareLi25ELi25ELi1024ELi1024EE7publishEiPKNS_3MsgE  main.o
+    0x08001ef4   0x08001ef4   0x00000030   Code   RO         3695    t._ZN3ros11NodeHandle_I13STM32HardwareLi25ELi25ELi1024ELi1024EE8logerrorEPKc  main.o
+    0x08001f24   0x08001f24   0x00000282   Code   RO         3731    t._ZN3ros11NodeHandle_I13STM32HardwareLi25ELi25ELi1024ELi1024EE8spinOnceEv  main.o
+    0x080021a6   0x080021a6   0x00000002   PAD
+    0x080021a8   0x080021a8   0x000000a0   Code   RO         3768    t._ZN3ros11NodeHandle_I13STM32HardwareLi25ELi25ELi1024ELi1024EE8syncTimeEPh  main.o
+    0x08002248   0x08002248   0x000000bc   Code   RO         3738    t._ZN3ros11NodeHandle_I13STM32HardwareLi25ELi25ELi1024ELi1024EEC1Ev  main.o
+    0x08002304   0x08002304   0x0000001c   Data   RO         3659    .constdata          main.o
+    0x08002320   0x08002320   0x00000030   Data   RO         4174    .constdata          hardwareserial.o
+    0x08002350   0x08002350   0x00000010   Data   RO         4392    .constdata__ZTV7TwoWire  wire.o
+    0x08002360   0x08002360   0x00000010   Data   RO         4492    .constdata__ZTV8WireBase  wirebase.o
+    0x08002370   0x08002370   0x00000018   Data   RO         3799    .constdata__ZTVN13geometry_msgs7Vector3E  main.o
+    0x08002388   0x08002388   0x00000018   Data   RO         3795    .constdata__ZTVN14rosserial_msgs20RequestParamResponseE  main.o
+    0x080023a0   0x080023a0   0x00000018   Data   RO         3793    .constdata__ZTVN14rosserial_msgs3LogE  main.o
+    0x080023b8   0x080023b8   0x00000018   Data   RO         3791    .constdata__ZTVN14rosserial_msgs9TopicInfoE  main.o
+    0x080023d0   0x080023d0   0x00000014   Data   RO         3803    .constdata__ZTVN3ros11NodeHandle_I13STM32HardwareLi25ELi25ELi1024ELi1024EEE  main.o
+    0x080023e4   0x080023e4   0x00000014   Data   RO         3797    .constdata__ZTVN3ros15NodeHandleBase_E  main.o
+    0x080023f8   0x080023f8   0x00000018   Data   RO         3787    .constdata__ZTVN3ros3MsgE  main.o
+    0x08002410   0x08002410   0x00000018   Data   RO         3789    .constdata__ZTVN8std_msgs4TimeE  main.o
+    0x08002428   0x08002428   0x00000018   Data   RO         3801    .constdata__ZTVN9riki_msgs3ImuE  main.o
+    0x08002440   0x08002440   0x00000021   Data   RO         3691    .constdata__ZZN13geometry_msgs7Vector36getMD5EvEs  main.o
+    0x08002461   0x08002461   0x00000016   Data   RO         3690    .constdata__ZZN13geometry_msgs7Vector37getTypeEvEs  main.o
+    0x08002477   0x08002477   0x00000021   Data   RO         3689    .constdata__ZZN14rosserial_msgs20RequestParamResponse6getMD5EvEs  main.o
+    0x08002498   0x08002498   0x00000021   Data   RO         3688    .constdata__ZZN14rosserial_msgs3Log6getMD5EvEs  main.o
+    0x080024b9   0x080024b9   0x00000013   Data   RO         3687    .constdata__ZZN14rosserial_msgs3Log7getTypeEvEs  main.o
+    0x080024cc   0x080024cc   0x00000021   Data   RO         3686    .constdata__ZZN14rosserial_msgs9TopicInfo6getMD5EvEs  main.o
+    0x080024ed   0x080024ed   0x00000019   Data   RO         3685    .constdata__ZZN14rosserial_msgs9TopicInfo7getTypeEvEs  main.o
+    0x08002506   0x08002506   0x00000039   Data   RO         3694    .constdata__ZZN3ros11NodeHandle_I13STM32HardwareLi25ELi25ELi1024ELi1024EE7publishEiPKNS_3MsgEEs  main.o
+    0x0800253f   0x0800253f   0x00000021   Data   RO         3684    .constdata__ZZN8std_msgs4Time6getMD5EvEs  main.o
+    0x08002560   0x08002560   0x0000000e   Data   RO         3683    .constdata__ZZN8std_msgs4Time7getTypeEvEs  main.o
+    0x0800256e   0x0800256e   0x00000021   Data   RO         3693    .constdata__ZZN9riki_msgs3Imu6getMD5EvEs  main.o
+    0x0800258f   0x0800258f   0x0000000e   Data   RO         3692    .constdata__ZZN9riki_msgs3Imu7getTypeEvEs  main.o
+    0x0800259d   0x0800259d   0x00000003   PAD
+    0x080025a0   0x080025a0   0x00000020   Data   RO         4948    Region$$Table       anon$$obj.o
+    0x080025c0   0x080025c0   0x00000004   Data   RO         3661    .init_array         main.o
+    0x080025c4   0x080025c0   0x00000000   Data   RO         4833    .init_array         mc_w.l(cpp_init.o)
 
 
-    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x08000484, Size: 0x00000428, Max: 0x00010000, ABSOLUTE)
+    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x080025c4, Size: 0x00001088, Max: 0x00010000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x20000000   0x08000484   0x00000018   Data   RW         3754    .data               hardwareserial.o
-    0x20000018   0x0800049c   0x0000000c   Data   RW         3844    .data               interrupt.o
-    0x20000024   0x080004a8   0x00000004   PAD
-    0x20000028        -       0x00000400   Zero   RW            1    STACK               startup_stm32f10x_hd.o
+    0x20000000   0x080025c4   0x00000014   Data   RW         2040    .data               stm32f10x_rcc.o
+    0x20000014   0x080025d8   0x00000002   Data   RW         3660    .data               main.o
+    0x20000016   0x080025da   0x00000002   PAD
+    0x20000018   0x080025dc   0x00000018   Data   RW         4175    .data               hardwareserial.o
+    0x20000030   0x080025f4   0x0000000c   Data   RW         4249    .data               interrupt.o
+    0x2000003c   0x08002600   0x00000004   Data   RW         4508    .data               millisecondtimer.o
+    0x20000040   0x08002604   0x00000004   Data   RW         4895    .data               mc_w.l(mvars.o)
+    0x20000044   0x08002608   0x00000004   Data   RW         4896    .data               mc_w.l(mvars.o)
+    0x20000048   0x0800260c   0x00000004   Data   RW         4899    .data               mc_w.l(cpp_dtor.o)
+    0x2000004c        -       0x00000a38   Zero   RW         3658    .bss                main.o
+    0x20000a84   0x08002610   0x00000004   PAD
+    0x20000a88        -       0x00000200   Zero   RW            2    HEAP                startup_stm32f10x_hd.o
+    0x20000c88        -       0x00000400   Zero   RW            1    STACK               startup_stm32f10x_hd.o
 
 
 ==============================================================================
@@ -2410,47 +3137,75 @@ Image component sizes
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
          0          0          0          0          0       3080   core_cm3.o
-        72          4          0         24          0       8887   hardwareserial.o
+       548         54         48         24          0       4763   hardwareserial.o
         48         12          0         12          0       1842   interrupt.o
-         4          0          0          0          0        391   main.o
-        24          0          0          0          0       2220   ringbuffer.o
-        36          8        304          0       1024        840   startup_stm32f10x_hd.o
-        26          0          0          0          0       3622   stm32f10x_it.o
-       124          0          0          0          0       3486   stm32f10x_usart.o
-       396         32          0          0          0     228809   system_stm32f10x.o
+      3718        232        589          2       2616      56519   main.o
+        28         10          0          4          0       1474   millisecondtimer.o
+       112         12          0          0          0       1240   misc.o
+       512          0          0          0          0      15952   mpu6050.o
+        46          0          0          0          0       2676   ringbuffer.o
+        36          8        304          0       1536        840   startup_stm32f10x_hd.o
+       304          0          0          0          0       3928   stm32f10x_gpio.o
+        24          0          0          0          0       3220   stm32f10x_it.o
+       460         34          0         20          0       5474   stm32f10x_rcc.o
+       472          6          0          0          0       7155   stm32f10x_usart.o
+       396         32          0          0          0     252421   system_stm32f10x.o
+        36          6          0          0          0        532   time.o
+       732         32         16          0          0       9372   wire.o
+       304          0         16          0          0       4004   wirebase.o
 
     ----------------------------------------------------------------------
-       734         56        336         36       1028     253177   Object Totals
+      7804        438       1008         64       4156     374492   Object Totals
          0          0         32          0          0          0   (incl. Generated)
-         4          0          0          0          4          0   (incl. Padding)
+        28          0          3          2          4          0   (incl. Padding)
 
     ----------------------------------------------------------------------
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Member Name
 
+         6          0          0          0          0         68   pure_virt.o
+        46          0          0          0          0         84   aeabi_atexit.o
+         8          4          0          4          0         68   cpp_dtor.o
+         2          0          0          0          0         68   cpp_final.o
+        32         10          0          0          0         80   cpp_init.o
+         2          0          0          0          0         68   cpp_signal.o
+        66          0          0          0          0         84   cxa_finalize.o
          0          0          0          0          0          0   entry.o
          0          0          0          0          0          0   entry10a.o
+         4          0          0          0          0          0   entry10b.o
          0          0          0          0          0          0   entry11a.o
          8          4          0          0          0          0   entry2.o
          4          0          0          0          0          0   entry5.o
          0          0          0          0          0          0   entry7b.o
+         4          0          0          0          0          0   entry8a.o
          0          0          0          0          0          0   entry8b.o
          8          4          0          0          0          0   entry9a.o
         30          0          0          0          0          0   handlers.o
         36          8          0          0          0         68   init.o
+         0          0          0          0          0          0   iusefp.o
+       360         30          0          0          0        356   mallocr.o
+        36          0          0          0          0         68   memcpya.o
+        36          0          0          0          0        108   memseta.o
+         0          0          0          8          0          0   mvars.o
+        14          0          0          0          0         68   strlen.o
+        20          0          0          0          0         68   cfcmple.o
+       110          0          0          0          0        168   fepilogue.o
+        18          0          0          0          0         68   fflti.o
 
     ----------------------------------------------------------------------
-        86         16          0          0          0         68   Library Totals
-         0          0          0          0          0          0   (incl. Padding)
+       856         60          0         12          0       1492   Library Totals
+         6          0          0          0          0          0   (incl. Padding)
 
     ----------------------------------------------------------------------
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Name
 
-        86         16          0          0          0         68   mc_w.l
+         6          0          0          0          0         68   cpprt_w.l
+       696         60          0         12          0       1120   mc_w.l
+       148          0          0          0          0        304   mf_w.l
 
     ----------------------------------------------------------------------
-        86         16          0          0          0         68   Library Totals
+       856         60          0         12          0       1492   Library Totals
 
     ----------------------------------------------------------------------
 
@@ -2459,15 +3214,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-       820         72        336         36       1028     252513   Grand Totals
-       820         72        336         36       1028     252513   ELF Image Totals
-       820         72        336         36          0          0   ROM Totals
+      8660        498       1008         76       4156     370104   Grand Totals
+      8660        498       1008         76       4156     370104   ELF Image Totals
+      8660        498       1008         76          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                 1156 (   1.13kB)
-    Total RW  Size (RW Data + ZI Data)              1064 (   1.04kB)
-    Total ROM Size (Code + RO Data + RW Data)       1192 (   1.16kB)
+    Total RO  Size (Code + RO Data)                 9668 (   9.44kB)
+    Total RW  Size (RW Data + ZI Data)              4232 (   4.13kB)
+    Total ROM Size (Code + RO Data + RW Data)       9744 (   9.52kB)
 
 ==============================================================================
 

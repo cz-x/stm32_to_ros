@@ -324,8 +324,8 @@
             <wLevel>2</wLevel>
             <uThumb>0</uThumb>
             <uSurpInc>0</uSurpInc>
-            <uC99>0</uC99>
-            <uGnu>0</uGnu>
+            <uC99>1</uC99>
+            <uGnu>1</uGnu>
             <useXO>0</useXO>
             <v6Lang>0</v6Lang>
             <v6LangP>0</v6LangP>
@@ -336,7 +336,7 @@
             <v6Rtti>0</v6Rtti>
             <VariousControls>
               <MiscControls>--cpp</MiscControls>
-              <Define>USE_STDPERIPH_DRIVER,</Define>
+              <Define>USE_STDPERIPH_DRIVER,STM32F10X_CL</Define>
               <Undefine></Undefine>
               <IncludePath>..\Libraries\CMSIS;..\Libraries\STM32F10x_StdPeriph_Driver\inc;..\User;..\RosLibs;..\Bsp;..\Hardsware\Mpu6050;..\Hardsware</IncludePath>
             </VariousControls>
@@ -576,6 +576,11 @@
               <FileName>WireBase.cpp</FileName>
               <FileType>8</FileType>
               <FilePath>..\Bsp\WireBase.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>millisecondtimer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Bsp\millisecondtimer.c</FilePath>
             </File>
           </Files>
         </Group>

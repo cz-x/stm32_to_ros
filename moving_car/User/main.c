@@ -74,5 +74,6 @@ int main()
 			}
 			
 		}
+	nh.spinonce();
 		
 }
